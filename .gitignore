@@ -1,0 +1,11 @@
+*.rpyb
+
+*.rpyc
+
+*.png
+
+*.jpg
+
+*.txt
+
+game/saves
