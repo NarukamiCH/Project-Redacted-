@@ -49,7 +49,7 @@ label chapter_one_intro:
 
                     $ first_counter += 1
                 else:
-                    ch_xavier "Wake up, [Player.name]."
+                    ch_xavier_tele "Wake up, [Player.name]."
 
                     $ sleeping = False
 
@@ -77,7 +77,7 @@ label chapter_one_intro:
 
                     $ second_counter += 1
                 else:
-                    ch_xavier "Time to get moving."
+                    ch_xavier_tele "Time to get moving."
 
                     $ waiting = False
 
@@ -109,7 +109,7 @@ label chapter_one_intro:
     ch_xavier "Your abilities emerged yesterday while you were under duress, although I believe Mr. Farouk has been watching you for some time already."
     ch_player "Farouk??? That was him???"
     ch_player "Jesus, he really does suck."
-    ch_xavier "Indeed. I don't know why he has developed such an interest in you, but you are safe here from him."
+    ch_xavier "Indeed. I don't know why he has developed an interest in you, but you are safe here from him."
     ch_xavier "You see, this is both a school and a haven that I have built for people like you and me."
     ch_xavier "There are many forces out there that wish to harm or use mutants. I fear Mr. Farouk is not the worst of them."
 
@@ -125,7 +125,13 @@ label chapter_one_intro:
 
                 $ asked_mutant = True
             "So. . . what's your power?" if asked_mutant and not asked_Xavier:
-                ch_xavier "I'm a telepath, not unlike your old professor. But then again, we are very unalike."
+                $ Xavier.psychic = True
+                $ Xavier.change_face("dazed")
+
+                ch_xavier_tele "I'm a telepath, not unlike your old professor. But then again, we are very unalike."
+
+                $ Xavier.psychic = False
+                $ Xavier.change_face("neutral")
 
                 $ asked_Xavier = True
             "Well, I'm out of questions.":

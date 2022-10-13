@@ -134,6 +134,15 @@ init python:
                 self.used_to_anal = False
 
                 Students.append(self)
+            elif self.tag == "Kitty":
+                self.player_petname = Player.name[0]
+                self.player_petnames = [self.player_petname]
+
+                self.pubes = "strip"
+
+                self.used_to_anal = False
+
+                Students.append(self)
             elif self.tag == "Laura":
                 self.names.append("X-23")
 
@@ -151,7 +160,7 @@ init python:
                 self.player_petname = Player.name
                 self.player_petnames = [self.player_petname]
 
-                self.pubes = "Triangle"
+                self.pubes = "triangle"
 
                 self.used_to_anal = False
 

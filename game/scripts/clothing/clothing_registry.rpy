@@ -15,6 +15,21 @@ init python:
 
         return Outfits
 
+    def all_Kitty_Clothes(Girl):
+        return []
+
+    def set_default_Kitty_Outfits(Girl, Outfits):
+        for Outfit in Outfits:
+            update = {}
+
+            if Outfit.name == "shower":
+                update = {
+                    "top": towel(Girl)}
+
+            Outfit.update_Clothes(update)
+
+        return Outfits
+
     def all_Laura_Clothes(Girl):
         Clothes = [
             black_lace_bra(Girl),
@@ -74,6 +89,21 @@ init python:
 
             Outfit.update_Clothes(update)
             
+        return Outfits
+
+    def all_Storm_Clothes(Girl):
+        return []
+
+    def set_default_Storm_Outfits(Girl, Outfits):
+        for Outfit in Outfits:
+            update = {}
+
+            if Outfit.name == "shower":
+                update = {
+                    "top": towel(Girl)}
+
+            Outfit.update_Clothes(update)
+
         return Outfits
 
     def all_Jean_Clothes(Girl):

@@ -7,15 +7,18 @@ layeredimage Laura_sex_legs:
     always:
         "images/Laura_sex/Laura_sex_legs.png"
 
+    # always:
+    #     "images/Laura_sex/Laura_sex_pussy_anus_reference.png"
+
     if Laura.ass_Action.type == "anal":
-        "Laura_sex_anus_animation[Laura.ass_Action.speed]" pos (0.805, 1.505)
+        "Laura_sex_anus_animation[Laura.ass_Action.speed]" pos (0.6, 1.115)
     else:
-        "images/Laura_sex/Laura_sex_anus_closed.png" anchor (0.5, 0.5) pos (0.805, 1.505)
+        "images/Laura_sex/Laura_sex_anus_closed.png" anchor (0.5, 0.5) pos (0.6, 1.115)
 
     if Laura.pussy_Action.type == "sex":
-        "Laura_sex_pussy_animation[Laura.pussy_Action.speed]" pos (0.77, 1.4)
+        "Laura_sex_pussy_animation[Laura.pussy_Action.speed]" pos (0.575, 1.036)
     else:
-        "images/Laura_sex/Laura_sex_pussy_closed.png" anchor (0.5, 0.5) pos (0.77, 1.4)
+        "images/Laura_sex/Laura_sex_pussy_closed.png" anchor (0.5, 0.5) pos (0.575, 1.036)
 
     if Laura.pubes:
         "images/Laura_sex/Laura_sex_pubes_[Laura.pubes].png"
@@ -422,4 +425,4 @@ image Laura_sprite sex:
             "Laura in Player.cock_Action.Actors", "Laura_sex_feet_animation[Player.cock_Action.speed]",
             "True", "Laura_sex_feet_animation0")
 
-    anchor (0.5, 0.0) offset (500, 550) zoom 0.9
+    anchor (0.5, 0.0) offset (1100, 1100) zoom 0.6

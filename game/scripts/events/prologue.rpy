@@ -24,7 +24,7 @@ label prologue:
         "No":
             pass
 
-    $ Player.location = "bg_lecture_hall_blurred"
+    $ Player.location = "bg_lecture_blurred"
 
     "The year is 2022.{p}The world's population of mutants - individuals born with mutations that can give rise to superhuman abilities - grows everyday."
     "Tensions between mutants and non-mutants are at an all-time high."
@@ -43,10 +43,10 @@ label prologue:
 
     $ last_name = get_last_name(Player)
 
-    $ Player.location = "bg_lecture_hall"
+    $ Player.location = "bg_lecture"
 
     ch_farouk "Mr. [last_name]!" with vpunch
-    ch_farouk "Have you ever considered that, if you spent less time on your phone in class and more time paying attention, you might not have failed our last midterm exam?"
+    ch_farouk "Have you ever considered that, if you spent less time on your computer in class and more time paying attention, you might not have failed our last midterm exam?"
     ch_farouk "Do you have no respect for yourself or - better yet - my lecture?"
     "Your face flushes as you feel an entire lecture hall of students turn your way."
 
@@ -68,7 +68,7 @@ label prologue:
 
     pause 1.0
 
-    $ Player.location = "bg_bathroom_stall"
+    $ Player.location = "bg_stall_closed"
 
     "Some time later. . ."
 
@@ -85,23 +85,55 @@ label prologue:
 
     pause 1.0
 
+    "Your attention suddenly shifts to the sound of the bathroom door slamming shut." with vpunch
+
     $ Farouk.name = "???"
 
-    "Your attention suddenly shifts to the sound of the bathroom door slamming shut." with vpunch
-    ch_farouk "Mr. [last_name]." with rumble
+    $ i = 10
+
+    while i > 0:
+        if i % 2 == 0:
+            $ Player.location = "bg_stall_dark_closed"
+        else:
+            $ Player.location = "bg_stall_closed"
+
+        pause 0.02
+
+        $ i -= 1
+
+    $ Player.location = "bg_stall_dark_closed"
+
+    ch_farouk_tele "Mr. [last_name]." with rumble
     "The deep, inhuman voice is like something from your nightmares."
     "You cover your ears in a primal reaction."
-    ch_farouk "I know you are in there." with rumble
+    ch_farouk_tele "I know you are in there." with rumble
     "You realize the voice is coming from inside your head."
     "Panic fills your lungs. Something inside you knows it's already too late to call for help."
+
+    $ Player.location = "bg_stall_dark_open"
+
     "The stall door unlocks itself and begins to open."
     "You kick out wildly, trying to shut the door."
-    ch_farouk "Do not resist. Sleep." with rumble
+    ch_farouk_tele "Do not resist. Sleep." with rumble
     "The command causes you to collapse to the floor."
     "An immense weight presses down on you."
     "You are an insect being crushed under a boot."
 
     pause 1.0
+
+    $ i = 10
+
+    while i > 0:
+        if i % 2 == 0:
+            $ Player.location = "bg_stall_dark_open"
+        else:
+            $ Player.location = "bg_stall_open"
+
+        pause 0.02
+
+        $ i -= 1
+
+    $ Player.location = "bg_stall_open"
 
     "Suddenly, the weight lifts off you."
     "The stall door hangs aimlessly."
@@ -110,7 +142,7 @@ label prologue:
 
     $ Xavier.name = "???"
 
-    ch_xavier "You're okay, [Player.name]. . . You're safe. . . You're with friends now. . ."
+    ch_xavier_tele "You're okay, [Player.name]. . . You're safe. . . You're with friends now. . ."
 
     show black_screen onlayer black
 

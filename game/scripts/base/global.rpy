@@ -6,19 +6,25 @@ init -1:
     define ch_rogue = Character("[Rogue.name]", who_color = "#2ca05aff", image = "Rogue_sprite")
     define ch_rogue_nvl = Character("[Rogue.name]", kind = nvl)
 
+    define ch_kitty = Character("[Kitty.name]", who_color = "#9012d9", image = "Kitty_sprite")
+    define ch_kitty_nvl = Character("[Kitty.name]", kind = nvl)
+
     define ch_laura = Character("[Laura.name]", who_color = "#d9bb12", image = "Laura_sprite")
     define ch_laura_nvl = Character("[Laura.name]", kind = nvl)
 
-    define ch_storm = Character("[Storm.name]", who_color = "#9012d9", image = "Storm_sprite")
+    define ch_storm = Character("[Storm.name]", who_color = "#85f2f9", image = "Storm_sprite")
     define ch_storm_nvl = Character("[Storm.name]", kind = nvl)
 
     define ch_jean = Character("[Jean.name]", who_color = "#d92912", image = "Jean_sprite")
     define ch_jean_nvl = Character("[Jean.name]", kind = nvl)
+    define ch_jean_tele = Character("[Jean.name]", who_color = "#d92912", what_italic = True)
 
-    define ch_xavier = Character("[Xavier.name]", who_color = "#1b867d")
+    define ch_xavier = Character("[Xavier.name]", who_color = "#1b867d", image = "Xavier_sprite")
+    define ch_xavier_tele = Character("[Xavier.name]", who_color = "#1b867d", what_italic = True)
 
     define ch_reporter = Character("Reporter", who_color = "#000000")
     define ch_farouk = Character("[Farouk.name]", who_color = "#592c99")
+    define ch_farouk_tele = Character("[Farouk.name]", who_color = "#592c99", what_italic = True)
     define ch_unknown = Character("???", who_color = "#ad2b2b")
 
     default chapter = 0

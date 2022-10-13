@@ -4,11 +4,11 @@ layeredimage Laura_sprite standing:
     else:
         "images/Laura_standing/Laura_standing_hair_back.png"
 
-    # if Laura.claws:
-    #     "images/Laura_standing/Laura_standing_right_claws.png"
-
     always:
         "images/Laura_standing/Laura_standing_right_arm.png"
+
+    # if Laura.claws:
+    #     "images/Laura_standing/Laura_standing_right_claws.png"
 
     if Laura.Clothes["bodysuit"].string in ["blackyellow_Wolverine_suit", "blueyellow_Wolverine_suit"]:
         "images/Laura_standing/Laura_standing_bodysuit_[Laura.Clothes[bodysuit].string]_right_sleeve.png"
@@ -24,23 +24,6 @@ layeredimage Laura_sprite standing:
 
     always:
         "images/Laura_standing/Laura_standing_breasts.png"
-
-    always:
-        "images/Laura_standing/Laura_standing_head.png"
-
-    if Laura.eyes in ["closed", "down", "side", "squint"]:
-        "images/Laura_standing/Laura_standing_eyes_[Laura.eyes].png"
-    else:
-        "Laura_standing_blinking"
-
-    always:
-        "images/Laura_standing/Laura_standing_brows_[Laura.brows].png"
-
-    always:
-        "images/Laura_standing/Laura_standing_mouth_[Laura.mouth].png"
-
-    if Laura.blush:
-        "images/Laura_standing/Laura_standing_blush_[Laura.blush].png"
 
     if Laura.Clothes["underwear"].string:
         "images/Laura_standing/Laura_standing_underwear_[Laura.Clothes[underwear].string]_[Laura.Clothes[underwear].state].png"
@@ -67,6 +50,23 @@ layeredimage Laura_sprite standing:
     else:
         "images/Laura_standing/Laura_standing_jacket_[Laura.Clothes[jacket].string].png"
 
+    always:
+        "images/Laura_standing/Laura_standing_head.png"
+
+    if Laura.eyes in ["closed", "down", "side", "squint"]:
+        "images/Laura_standing/Laura_standing_eyes_[Laura.eyes].png"
+    else:
+        "Laura_standing_blinking"
+
+    always:
+        "images/Laura_standing/Laura_standing_brows_[Laura.brows].png"
+
+    always:
+        "images/Laura_standing/Laura_standing_mouth_[Laura.mouth].png"
+
+    if Laura.blush:
+        "images/Laura_standing/Laura_standing_blush_[Laura.blush].png"
+
     if not Laura.Clothes["face_inner_accessory"].string:
         Null()
     elif Laura.mouth in ["sucking", "surprised", "tongue"]:
@@ -82,18 +82,18 @@ layeredimage Laura_sprite standing:
         "images/Laura_standing/Laura_standing_hair_[Laura.Clothes[hair].string].png"
 
     always:
-        "images/Laura_standing/Laura_standing_left_arm_[Laura.arm_pose].png"
+        "images/Laura_standing/Laura_standing_left_arm[Laura.arm_pose].png"
 
     if Laura.Clothes["bodysuit"].string in ["blackyellow_Wolverine_suit", "blueyellow_Wolverine_suit"]:
-        "images/Laura_standing/Laura_standing_bodysuit_[Laura.Clothes[bodysuit].string]_left_sleeve_[Laura.arm_pose].png"
+        "images/Laura_standing/Laura_standing_bodysuit[Laura.arm_pose]_[Laura.Clothes[bodysuit].string]_left_sleeve.png"
 
     if Laura.Clothes["jacket"].string:
-        "images/Laura_standing/Laura_standing_jacket_[Laura.Clothes[jacket].string]_left_sleeve_[Laura.arm_pose].png"
+        "images/Laura_standing/Laura_standing_jacket[Laura.arm_pose]_[Laura.Clothes[jacket].string]_left_sleeve.png"
 
     if Laura.claws:
-        "images/Laura_standing/Laura_standing_left_claws_[Laura.arm_pose].png"
+        "images/Laura_standing/Laura_standing_left_claws[Laura.arm_pose].png"
 
-    anchor (0.5, 0.0) offset (0, 60) zoom 1.1
+    anchor (0.5, 0.0) offset (0, -10) zoom 0.6
 
 image Laura_standing_blinking:
     "images/Laura_standing/Laura_standing_eyes_[Laura.eyes].png"

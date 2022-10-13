@@ -1,5 +1,5 @@
 layeredimage Storm_sprite standing:
-    if Storm.arm_pose == 1:
+    if Storm.arm_pose == 2:
         "images/Storm_standing/Storm_standing_right_arm_[Storm.arm_pose].png"
 
     always:
@@ -17,13 +17,13 @@ layeredimage Storm_sprite standing:
     if Storm.tan["top"]:
         "images/Storm_standing/Storm_standing_tan_lines_top.png"
 
-    if Storm.arm_pose == 2:
-        "images/Storm_standing/Storm_standing_right_arm_[Storm.arm_pose].png"
+    if Storm.arm_pose == 1:
+        "images/Storm_standing/Storm_standing_right_arm[Storm.arm_pose].png"
 
     always:
         "images/Storm_standing/Storm_standing_left_arm.png"
 
-    anchor (0.5, 0.0) offset (0, -25) zoom 0.84
+    anchor (0.5, 0.0) offset (0, -95) zoom 0.6
 
 image Storm_standing_blinking:
     "images/Storm_standing/Storm_standing_eyes_[Storm.eyes].png"

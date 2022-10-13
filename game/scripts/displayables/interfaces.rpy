@@ -3,6 +3,8 @@ init python:
     def Girl_color(d):
         if Player.focused_Girl.tag == "Rogue":
             return Rogue_color(d)
+        elif Player.focused_Girl.tag == "Kitty":
+            return Kitty_color(d)
         elif Player.focused_Girl.tag == "Laura":
             return Laura_color(d)
         elif Player.focused_Girl.tag == "Storm":
@@ -22,11 +24,14 @@ transform desire_color:
 transform Rogue_color:
     matrixcolor TintMatrix("#2ca05aff")
 
+transform Kitty_color:
+    matrixcolor TintMatrix("#9012d9")
+
 transform Laura_color:
     matrixcolor TintMatrix("#d9bb12")
 
 transform Storm_color:
-    matrixcolor TintMatrix("#9012d9")
+    matrixcolor TintMatrix("#85f2f9")
 
 transform Jean_color:
     matrixcolor TintMatrix("#d92912")

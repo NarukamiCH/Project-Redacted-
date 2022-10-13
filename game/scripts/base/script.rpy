@@ -6,7 +6,7 @@ label start:
         renpy.start_predict("images/backgrounds/*.png")
         renpy.start_predict("images/GUI/*.png")
 
-        for G in ["Rogue", "Laura", "Jean"]:
+        for G in ["Rogue", "Kitty", "Laura", "Storm", "Jean"]:
             renpy.start_predict(f"images/{G}_standing/*.png")
 
         renpy.start_predict("images/Xavier/*.png")
@@ -36,6 +36,11 @@ label start:
             "Rogue",
             voice = ch_rogue, text = ch_rogue_nvl,
             love = 20, trust = 20, desire = 0)
+
+        Kitty = GirlClass(
+            "Kitty",
+            voice = ch_kitty, text = ch_kitty_nvl,
+            love = 10, trust = 10, desire = 0)
 
         Laura = GirlClass(
             "Laura",
@@ -88,6 +93,11 @@ label after_load:
                 "Rogue",
                 voice = ch_rogue, text = ch_rogue_nvl,
                 love = 20, trust = 20, desire = 0)
+        elif "Kitty" not in all_Character_names:
+            Kitty = GirlClass(
+                "Kitty",
+                voice = ch_kitty, text = ch_kitty_nvl,
+                love = 10, trust = 10, desire = 0)
         elif "Laura" not in all_Character_names:
             Laura = GirlClass(
                 "Laura",

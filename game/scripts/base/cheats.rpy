@@ -25,6 +25,7 @@ label cheat_menu(Girl):
 
                     if chapter >= 1:
                         Girls.append(Rogue)
+                        Girls.append(Kitty)
                         Girls.append(Laura)
                         Girls.append(Storm)
 

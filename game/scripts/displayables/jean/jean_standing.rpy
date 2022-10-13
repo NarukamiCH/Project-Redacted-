@@ -1,6 +1,6 @@
 layeredimage Jean_sprite standing:
     always:
-        "images/Jean_standing/Jean_standing_right_arm_[Jean.arm_pose].png"
+        "images/Jean_standing/Jean_standing_right_arm[Jean.arm_pose].png"
 
     always:
         "images/Jean_standing/Jean_standing_body.png"
@@ -14,7 +14,7 @@ layeredimage Jean_sprite standing:
     always:
         "images/Jean_standing/Jean_standing_left_arm.png"
 
-    anchor (0.5, 0.0) offset (0, -10) zoom 0.84
+    anchor (0.5, 0.0) offset (0, -80) zoom 0.6
 
 image Jean_standing_blinking:
     "images/Jean_standing/Jean_standing_eyes_[Jean.eyes].png"
