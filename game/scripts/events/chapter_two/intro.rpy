@@ -7,7 +7,7 @@ label chapter_two_intro:
 
     call set_the_scene(location = "bg_entrance", fade = True)
 
-    "It looks like the X-Men are back from their mission. You see some familiar faces."
+    "It looks like the X-Men are back from their mission. You recognize some familiar faces from news broadcasts."
     
     call show_Character(Xavier, x_position = stage_left, transition = easeinleft)
     
@@ -16,7 +16,7 @@ label chapter_two_intro:
         ch_xavier "It is extremely fortunate that she realized the deception before the X-Sentinels entered the school."
 
         if approval_check(Rogue, threshold = 100):
-            ch_xavier "She seemed more interested in leaving to make sure you were alright than in basking in any praise."
+            ch_xavier "She seemed more interested in leaving to make sure you were alright than in basking in any praise, at least from me."
             
             if approval_check(Rogue, "love", 40):
                 ch_xavier "You might have an admirer, young man."
@@ -42,7 +42,7 @@ label chapter_two_intro:
     $ Player.focused_Girl = Jean
 
     ch_xavier "Ah, [Jean.name]. We should get you to the infirmary."
-    ch_jean "Are you sure, Professor? I don't think I'm hurt. If anything, I feel more alive than ever."
+    ch_jean "Are you sure, Professor? I don't think I'm hurt. I feel so alive!"
     ch_xavier "Hmm. . . There are some diagnostics we should run, just for peace of mind."
     ch_xavier "What you were exposed to up there. . . It's a miracle you're alive at all."
     ch_xavier "We will talk more later, [Player.name]. Come, [Jean.name]."
@@ -50,7 +50,7 @@ label chapter_two_intro:
     call hide_Character(Xavier, transition = easeoutright)
     
     "[Jean.name] seems to notice you staring at her."
-    ch_jean "Sorry, do I know you?"
+    ch_jean "Uh, do I know you?"
 
     menu:
         extend ""

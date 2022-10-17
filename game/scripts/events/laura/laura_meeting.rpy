@@ -148,6 +148,7 @@ label Laura_meeting:
                 ch_laura "I can heal fast."
                 ch_laura "Also, I have claws."
 
+                $ Laura.arm_pose = 2
                 $ Laura.claws = True
 
                 "*snikt*"
@@ -168,6 +169,7 @@ label Laura_meeting:
                         ch_laura "Probably."
 
                 $ Laura.claws = False
+                $ Laura.arm_pose = 1
             "Don't you want to know my power?" if "claws" in topics and "powers" not in topics:
                 $ topics.append("powers")
 

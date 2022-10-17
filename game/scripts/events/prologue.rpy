@@ -26,10 +26,10 @@ label prologue:
 
     $ Player.location = "bg_lecture_blurred"
 
-    "The year is 2022.{p}The world's population of mutants - individuals born with mutations that can give rise to superhuman abilities - grows everyday."
+    "The year is 2022.{p}The world's population of mutants - individuals born with the X-Gene that can give rise to superhuman abilities - grows everyday."
     "Tensions between mutants and non-mutants are at an all-time high."
-    "A select team known as the X-Men fight against intolerant humans and villainous mutants for the safety and survival of mutantkind."
-    "As a young college student, however, stories about mutants and superheroes seem very far away."
+    "A team of mutant heroes known as the X-Men fight against threats to the tenuous peace between human and mutantkind."
+    "As a young college student, however, a geopolitcal inter-species power struggle is a little outside your worldview."
 
     hide black_screen onlayer black
 
@@ -47,16 +47,16 @@ label prologue:
 
     ch_farouk "Mr. [last_name]!" with vpunch
     ch_farouk "Have you ever considered that, if you spent less time on your computer in class and more time paying attention, you might not have failed our last midterm exam?"
-    ch_farouk "Do you have no respect for yourself or - better yet - my lecture?"
+    ch_farouk "Do you have no respect for my lecture, [last_name], no discipline?"
     "Your face flushes as you feel an entire lecture hall of students turn your way."
 
     menu:
         extend ""
         "Sorry, Prof. Farouk. You know freshman Psych is the reason I wake up every morning.":
             call prologue_1A
-        "What put you in such a nasty mood, Prof. Farouk?":
+        "Grumpy college professor is a little cliche, isn't it Farouk?":
             call prologue_1B
-        "You're right, Prof. Farouk. How am I supposed to respect your lectures when you manage to make even the interesting content mind-numbingly boring?":
+        "You're right, Prof. Farouk, fuck this class. You could make the Oedipus complex sound boring.":
             call prologue_1C
 
     "For the briefest moment, a terrifying look of malice flashes across Prof. Farouk's face. . .{p}quickly replaced by mild irritation."
@@ -64,7 +64,7 @@ label prologue:
 
     show black_screen onlayer black
 
-    "Shit, now you've done it. . ."
+    "Shit, now I've done it. . ."
 
     pause 1.0
 
@@ -136,13 +136,13 @@ label prologue:
     $ Player.location = "bg_stall_open"
 
     "Suddenly, the weight lifts off you."
-    "The stall door hangs aimlessly."
+    "The stall door drifts, afloat in the air."
     "Gasping for air, you drift in and out of consciousness. You hear a new voice."
     "A human voice."
 
     $ Xavier.name = "???"
 
-    ch_xavier_tele "You're okay, [Player.name]. . . You're safe. . . You're with friends now. . ."
+    ch_xavier_tele "You're okay, [Player.name]. . . You're safe. . . You're among friends now. . ."
 
     show black_screen onlayer black
 
@@ -153,11 +153,11 @@ label prologue:
 label prologue_1A:
     "You succeed in making some of your classmates chuckle."
     ch_farouk "I am honored by your enthusiasm, Mr. [last_name]."
-    ch_farouk "Perhaps you would care to go one step further and share with us your thoughts on today's subject?"
+    ch_farouk "Perhaps you would care to prove your fervor, and enlighten us with your insights on today's subject?"
 
     menu:
         extend ""
-        "Let's see. . . You were doing a terrible job discussing Jung's Shadow, and failing to explain how it encompasses not only our darkest, most reprehensible tendencies, but also our strongest creative desires.":
+        "Let's see. . . Jung's Shadow, encompasses not only our darkest, most reprehensible tendencies, but also our strongest creative desires. For example, your driving urge to find new ways to suck my dick":
             pass
 
     return
@@ -169,7 +169,7 @@ label prologue_1B:
 
     menu:
         extend ""
-        "If I'm paying for your fancy crib, could I at least stay there for a couple of weeks next summer? I'll take good care of it. Hey, your wife can come too!":
+        "If I'm paying for your fancy crib, could I at least stay there for a couple of weeks next summer? I'll take good care of it, ask your wife!":
             pass
 
     return
@@ -181,7 +181,7 @@ label prologue_1C:
 
     menu:
         extend ""
-        "Well, suck my dick, asshole!":
+        "Alright, peace, dickhead.":
             pass
 
     return

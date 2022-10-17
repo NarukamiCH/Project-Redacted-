@@ -1,7 +1,7 @@
 init python:
 
     config.name = _("Project [Redacted]")
-    config.version = "0.1d"
+    config.version = "0.2a"
 
     build.name = "Project-Redacted-"
 

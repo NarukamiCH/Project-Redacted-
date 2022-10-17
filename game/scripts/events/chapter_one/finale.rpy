@@ -30,7 +30,7 @@ label chapter_one_finale:
         $ Player.History.update("chapter_one_bad_ending")
 
     "You wake up from a night filled with vivid dreams."
-    "Dreams of shouting, crashes, and even explosions around you.{p}You must be spending too much time in the Danger Room."
+    "Dreams of bedlam, mayhem, and killer robots.{p}You must be spending too much time in the Danger Room."
 
     call set_the_scene(location = "bg_hallway", fade = True)
 
@@ -57,13 +57,13 @@ label chapter_one_finale:
         ch_rogue "Oh, hey, [Player.name]."
         ch_rogue "I thought something bad might have happened to you, no one knew where you were."
         ch_player "What do you mean?"
-        ch_rogue "Wait, were you. . . Did you really miss the alarm and commotion?"
+        ch_rogue "Wait, were you. . . Did you really miss the alarm and that whole hullabaloo?"
 
     ch_player "Uh. . . what?"
 
     if good_ending:
         ch_rogue "!!!"
-        ch_rogue "They thought they could catch us offguard while the X-Men were away on mission!"
+        ch_rogue "Thought we were defenseless with the X-men away, but they didn't count on ya girl!"
         ch_rogue "Maybe now people will think twice before trying to attack the school."
     else:
         ch_rogue ". . ."

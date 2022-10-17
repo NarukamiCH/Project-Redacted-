@@ -29,7 +29,7 @@ image Xavier_blinking:
     "images/Xavier/Xavier_eyes_half_blink.png"
     0.05
     "images/Xavier/Xavier_eyes_closed.png"
-    0.15
+    0.07
     "images/Xavier/Xavier_eyes_half_blink.png"
-    0.05
+    0.15
     repeat

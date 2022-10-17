@@ -55,7 +55,7 @@ label chapter_one_intro:
 
     hide black_screen onlayer black
 
-    "You climb out of the (incredibly comfy, luxurious) bed."
+    "You climb out of the ultra-posh bed."
     "The rest of the room is just as nice."
 
     $ waiting = True
@@ -108,10 +108,10 @@ label chapter_one_intro:
     ch_xavier "You're a mutant, [Player.name]. Like me."
     ch_xavier "Your abilities emerged yesterday while you were under duress, although I believe Mr. Farouk has been watching you for some time already."
     ch_player "Farouk??? That was him???"
-    ch_player "Jesus, he really does suck."
-    ch_xavier "Indeed. I don't know why he has developed an interest in you, but you are safe here from him."
+    ch_player "Jesus, I thought he was just a shitty professor."
+    ch_xavier "That too. I don't know why he has developed an interest in you, but you are safe here from him."
     ch_xavier "You see, this is both a school and a haven that I have built for people like you and me."
-    ch_xavier "There are many forces out there that wish to harm or use mutants. I fear Mr. Farouk is not the worst of them."
+    ch_xavier "There are many forces out there that wish to harm or use mutants like yourself. I fear Mr. Farouk is not the worst of them."
 
     $ chatting = True
     $ asked_mutant = False
@@ -128,7 +128,7 @@ label chapter_one_intro:
                 $ Xavier.psychic = True
                 $ Xavier.change_face("dazed")
 
-                ch_xavier_tele "I'm a telepath, not unlike your old professor. But then again, we are very unalike."
+                ch_xavier_tele "I'm a telepath, not unlike your old professor. A professor myself as well, in fact. But that is where the similarities end."
 
                 $ Xavier.psychic = False
                 $ Xavier.change_face("neutral")
@@ -178,12 +178,12 @@ label chapter_one_intro:
 
     menu:
         extend ""
-        "Bless you, old man.":
+        "Bless you, old man":
             ch_xavier ". . ."
-        "Yes, that seems best to me.":
+        "Capable hands indeed.":
             call change_Girl_stat(Rogue, "love", 1)
 
-            ch_rogue "Heh, you're pretty funny."
+            ch_rogue "Heh, okay Romeo."
 
     call hide_Character(Xavier, transition = easeoutright)
 
@@ -236,16 +236,16 @@ label chapter_one_tour:
     call set_the_scene(location = "bg_player", fade = True)
     call add_Characters(Rogue)
 
-    ch_rogue "You've already seen your room, right? We each get private rooms now that the campus has been expanded."
-    ch_player "Where do you live?"
+    ch_rogue "You've already seen your room, right [Rogue.player_petname]? We each get private rooms now that the campus has been expanded."
+    ch_player "Nice, where's yours?"
     ch_rogue "Oh, right down the hall, all the doors are labeled."
 
     call hide_Character(Rogue)
     call set_the_scene(location = "bg_classroom", fade = True)
     call add_Characters(Rogue)
 
-    ch_rogue "This is one of our classrooms."
-    ch_rogue "We have a bunch of really cool classes you can sign up to take."
+    ch_rogue "This here is one of our classrooms."
+    ch_rogue "We gotta bunch of real neat classes you can sign up to take."
 
     menu:
         extend ""
@@ -258,14 +258,15 @@ label chapter_one_tour:
             ch_rogue "'Fraid so, [Rogue.player_petname]."
 
     if approval_check(Rogue, threshold = 40):
-        ch_rogue "If you sign up for a class with me, we can study together!"
+        ch_rogue "Ya know, if you sign up for a class with me, we could study together…"
 
     call hide_Character(Rogue)
     call set_the_scene(location = "bg_dangerroom", fade = True)
     call add_Characters(Rogue)
 
     ch_rogue "This is the Danger Room. It's decked out with all sorts of advanced tech. It can even simulate realistic battlefield scenarios."
-    ch_rogue "You'll spend a lot of time here with the rest of us, training to use our powers and work together as a team."
+    ch_rogue "You'll spend a lot of time here with the rest of us, training to use our powers."
+    ch_rogue "If you show some combat promise, you'll do teamwork exercises with your X-squad here too."
 
     call hide_Character(Rogue)
     call set_the_scene(location = "bg_campus", fade = True)
@@ -274,13 +275,13 @@ label chapter_one_tour:
     ch_player "Wow, nice place."
     ch_rogue "Yeah, it's a treat getting to live here. Prof. X was really generous to turn his mansion into the Institute."    
     ch_rogue "Well [Rogue.player_petname], that's the end of the tour."
-    ch_rogue "So uh. . . is it true what they're saying? That other mutants' abilities don't work on you?"
+    ch_rogue "So uh. . . is it true what Xavier said? That other mutants' abilities don't work on you?"
 
     menu:
         extend ""
-        "Yeah, apparently.":
-            ch_rogue "That's. . . interesting. . ."
-            ch_rogue "My power is the ability to absorb the mutant powers and memories of those I touch."
+        "Seems that way.":
+            ch_rogue "Wow. . ."
+            ch_rogue "So. . . my power is the ability to absorb the mutant powers and memories of those I touch."
         "I guess. Why do you care?":
             call change_Girl_stat(Rogue, "love", -1)
 
@@ -291,7 +292,7 @@ label chapter_one_tour:
 
     menu:
         extend ""
-        "Well, maybe you'd want to give it a try with me?":
+        "So? Whatcha waiting for?":
             ch_rogue ". . . Really? You don't mind?"
 
             menu:
