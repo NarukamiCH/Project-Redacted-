@@ -24,7 +24,7 @@ screen Wardrobe_picker(Girl):
 
             for Clothing in Girl.Wardrobe.Clothes.values():
                 imagebutton anchor (0.5, 0.5) pos (0.5, 0.5) xysize (512, 512):
-                    idle "images/GUI/phone/phone_received_icon.png" hover "images/GUI/phone/phone_send_icon.png"
+                    idle "images/GUI/phone/phone_received_icon.webp" hover "images/GUI/phone/phone_send_icon.webp"
                     action Return(Clothing)
 
 screen shopping_picker(Girl):
@@ -45,5 +45,5 @@ screen shopping_picker(Girl):
             for Clothing in register_Clothes(Girl):
                 if Clothing.name not in Girl.Wardrobe.Clothes.keys():
                     imagebutton anchor (0.5, 0.5) pos (0.5, 0.5) xysize (512, 512):
-                        idle "images/GUI/phone/phone_received_icon.png" hover "images/GUI/phone/phone_send_icon.png"
+                        idle "images/GUI/phone/phone_received_icon.webp" hover "images/GUI/phone/phone_send_icon.webp"
                         action Return(Clothing)

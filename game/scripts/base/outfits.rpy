@@ -40,7 +40,7 @@ init -2 python:
                 self.state -= 1
 
                 if not instant:
-                    renpy.pause(0.1)
+                    renpy.pause(0.15)
 
             self.set_Clothing_flags()
 
@@ -51,7 +51,7 @@ init -2 python:
                 self.state += 1
 
                 if not instant:
-                    renpy.pause(0.1)
+                    renpy.pause(0.15)
 
             self.set_Clothing_flags()
 
@@ -146,7 +146,7 @@ init -2 python:
                     self.remove_Clothing(covering_Clothes[c])
 
                     if not instant:
-                        renpy.pause(0.1)
+                        renpy.pause(0.15)
 
             for current_Clothing in self.Clothes.values():
                 if Clothing.type in current_Clothing.incompatibilities:
@@ -154,21 +154,18 @@ init -2 python:
                     self.remove_Clothing(current_Clothing.type)
 
                     if not instant:
-                        renpy.pause(0.1)
+                        renpy.pause(0.15)
 
             if Clothing.type in ["underwear", "hose"]:
                 if self.Clothes["skirt"].string and "skirt" not in covering_Clothes:
                     self.Clothes["skirt"].take_off(instant = instant)
-
-                if self.Clothes["dress"].string and "dress" not in covering_Clothes:
-                    self.Clothes["dress"].take_off(instant = instant)
 
             if self.Clothes[Clothing.type].name and Clothing.type in removable_Clothing_types:
                 self.Clothes[Clothing.type].take_off(instant = instant)
                 self.remove_Clothing(Clothing.type)
 
                 if not instant:
-                    renpy.pause(0.1)
+                    renpy.pause(0.15)
 
             for incompatibility in Clothing.incompatibilities:
                 if self.Clothes[incompatibility].string:
@@ -176,22 +173,19 @@ init -2 python:
                     self.remove_Clothing(incompatibility)
 
                     if not instant:
-                        renpy.pause(0.1)
+                        renpy.pause(0.15)
 
             Clothing.state = Clothing.undressed_state
             self.add_Clothing(Clothing)
 
             if not instant:
-                renpy.pause(0.1)
+                renpy.pause(0.15)
 
             self.Clothes[Clothing.type].put_on(instant = instant)
 
             if Clothing.type in ["underwear", "hose"]:
                 if self.Clothes["skirt"].string and "skirt" not in covering_Clothes:
                     self.Clothes["skirt"].put_on(instant = instant)
-
-                if self.Clothes["dress"].string and "dress" not in covering_Clothes:
-                    self.Clothes["dress"].put_on(instant = instant)
 
             for old_Clothing in temp_Clothes.values():
                 if old_Clothing.type and not self.Clothes[old_Clothing.type].string:
@@ -200,7 +194,7 @@ init -2 python:
                         self.add_Clothing(temp_Clothes[covering_Clothes[c]])
 
                         if not instant:
-                            renpy.pause(0.1)
+                            renpy.pause(0.15)
 
                         self.Clothes[covering_Clothes[c]].put_on(instant = instant)
 
@@ -226,7 +220,7 @@ init -2 python:
                     self.remove_Clothing(covering_Clothes[c])
 
                     if not instant:
-                        renpy.pause(0.1)
+                        renpy.pause(0.15)
 
             if type in ["underwear", "hose"]:
                 if self.Clothes["skirt"].string and "skirt" not in covering_Clothes:
@@ -239,7 +233,7 @@ init -2 python:
             self.remove_Clothing(type)
 
             if not instant:
-                renpy.pause(0.1)
+                renpy.pause(0.15)
 
             if type in ["underwear", "hose"]:
                 if self.Clothes["skirt"].string and "skirt" not in covering_Clothes:
@@ -254,7 +248,7 @@ init -2 python:
                     self.add_Clothing(temp_Clothes[covering_Clothes[c]])
 
                     if not instant:
-                        renpy.pause(0.1)
+                        renpy.pause(0.15)
 
                     self.Clothes[covering_Clothes[c]].put_on(instant = instant)
 
@@ -273,7 +267,7 @@ init -2 python:
                     self.remove_Clothing(type)
 
                     if not instant:
-                        renpy.pause(0.1)
+                        renpy.pause(0.15)
 
             return
 
@@ -438,17 +432,13 @@ init -2 python:
             if not instant:
                 self.current_Outfit.undress(instant = instant)
 
-                for type in intrinsic_Clothing_types:
-                    if Outfit.Clothes[type]:
-                        self.current_Outfit.add_Clothing(Outfit.Clothes[type])
-
                 for type in removable_Clothing_types:
                     if Outfit.Clothes[type].name:
                         Outfit.Clothes[type].state = Outfit.Clothes[type].undressed_state
 
                         self.current_Outfit.add_Clothing(Outfit.Clothes[type])
 
-                        renpy.pause(0.1)
+                        renpy.pause(0.15)
 
                         self.current_Outfit.Clothes[type].put_on(instant = instant)
 

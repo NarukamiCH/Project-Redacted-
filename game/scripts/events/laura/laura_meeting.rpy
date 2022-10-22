@@ -5,7 +5,7 @@ init python:
 
         conditions = [
             "Laura not in active_Girls",
-            "Player.destination == 'bg_dangerroom'"]
+            "Player.destination == 'bg_danger'"]
 
         conversation = False
 
@@ -16,7 +16,7 @@ init python:
         return EventClass(label, conditions, conversation = conversation, priority = priority, repeatable = repeatable)
 
 label Laura_meeting:
-    call set_the_scene(location = "bg_dangerroom", show_Characters = False, fade = True)
+    call set_the_scene(location = "bg_danger", show_Characters = False, fade = True)
     call remove_all
 
     "As you approach the Danger Room, you hear a ferocious clanging of metal."

@@ -46,7 +46,7 @@ label summon(Girl):
                 Girl.text "im kinda in class right now, [Girl.player_petname], you could join me"
             elif Girl.tag == "Laura":
                 Girl.text "I'm in class, did you want to come too?"
-        elif Girl.location == "bg_dangerroom":
+        elif Girl.location == "bg_danger":
             if Girl.tag == "Rogue":
                 Girl.text "im training at the moment, [Girl.player_petname], care to join me?"
             elif Girl.tag == "Laura":
@@ -155,7 +155,7 @@ label summon(Girl):
                 Girl.text "see you!"
             elif Girl.tag == "Laura":
                 Girl.text "K, there's room next to me."
-        elif Girl.location == "bg_dangerroom":
+        elif Girl.location == "bg_danger":
             if Girl.tag == "Rogue":
                 Girl.text "ill be warming up!"
             elif Girl.tag == "Laura":
@@ -180,7 +180,7 @@ label summon(Girl):
             jump girls_room
         elif Girl.location == "bg_classroom":
             jump classroom
-        elif Girl.location == "bg_dangerroom":
+        elif Girl.location == "bg_danger":
             jump danger_room
         elif Girl.location == "bg_pool":
             jump pool
@@ -194,7 +194,7 @@ label summon(Girl):
                 Girl.text "I seriously cant, [Girl.player_petname], big test coming up"
             elif Girl.tag == "Laura":
                 Girl.text "I can't skip this lecture."
-        elif Girl.location == "bg_dangerroom":
+        elif Girl.location == "bg_danger":
             if Girl.tag == "Rogue":
                 Girl.text "wish I could, [Girl.player_petname], but I need to get some hours in"
             elif Girl.tag == "Laura":
@@ -315,7 +315,7 @@ label Girl_leaves(Girl):
                 Girl.voice "I'm headed to class right now, [Girl.player_petname]."
             elif Girl.tag == "Laura":
                 Girl.voice "I've got class."
-        elif Girl.destination == "bg_dangerroom":
+        elif Girl.destination == "bg_danger":
             if Girl.tag == "Rogue":
                 Girl.voice "I'm hitting the Danger Room, [Girl.player_petname]."
             elif Girl.tag == "Laura":
@@ -366,7 +366,7 @@ label Girl_leaves(Girl):
             Girl.voice "I'm headed to class right now, [Girl.player_petname], you could join me."
         elif Girl.tag == "Laura":
             Girl.voice "I've got class, want in?"
-    elif Girl.destination == "bg_dangerroom":
+    elif Girl.destination == "bg_danger":
         if Girl.tag == "Rogue":
             Girl.voice "I'm hitting the Danger Room, [Girl.player_petname], care to join me?"
         elif Girl.tag == "Laura":
@@ -440,7 +440,7 @@ label Girl_leaves(Girl):
                 Girl.voice "I seriously can't, [Girl.player_petname], big test coming up."
             elif Girl.tag == "Laura":
                 Girl.voice "I really can't miss this one."
-        elif Girl.destination == "bg_dangerroom":
+        elif Girl.destination == "bg_danger":
             if Girl.tag == "Rogue":
                 Girl.voice "Wish I could, [Girl.player_petname], but I need to get some hours in."
             elif Girl.tag == "Laura":
@@ -477,7 +477,7 @@ label Girl_leaves(Girl):
                 Girl.voice "See you then!"
             elif Girl.tag == "Laura":
                 Girl.voice "Ok, get a move on then."
-        elif Girl.destination == "bg_dangerroom":
+        elif Girl.destination == "bg_danger":
             if Girl.tag == "Rogue":
                 Girl.voice "I'll be warming up!"
             elif Girl.tag == "Laura":
@@ -507,7 +507,7 @@ label Girl_leaves(Girl):
             jump girls_room
         elif Girl.destination == "bg_classroom":
             jump classroom
-        elif Girl.destination == "bg_dangerroom":
+        elif Girl.destination == "bg_danger":
             jump danger_room
         elif Girl.destination == "bg_pool":
             jump pool

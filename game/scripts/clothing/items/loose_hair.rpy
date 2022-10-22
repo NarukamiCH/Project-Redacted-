@@ -1,19 +1,12 @@
 init -1 python:
 
-    def long_hair(Owner):
-        name = "long hair"
-        string = "long_hair"
+    def loose_hair(Owner):
+        name = "loose hair"
+        string = "loose"
 
         type = "hair"
 
         dialogue_lines = {}
-
-        if Owner.tag == "Laura":
-            dialogue_lines.update({
-                "shopping": None,
-                "purchased": None,
-                "gift": None,
-                "change": "Okay."})
 
         price = 0
 

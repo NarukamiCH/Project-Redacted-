@@ -103,7 +103,7 @@ label sleep:
                 $ decision = "leave"
             "Ok, see you later then. Goodnight." if Player.Party[0].home != Player.location:
                 $ decision = "leave"
-            "Are you sure I can't stay thenight? . ." if not Player.Party[0].History.check("had_sleepover") and Player.Party[0].home == Player.location:
+            "Are you sure I can't stay the night? . ." if not Player.Party[0].History.check("had_sleepover") and Player.Party[0].home == Player.location:
                 $ decision = "please"
             "Are you sure you can't stay? . ." if not Player.Party[0].History.check("had_sleepover") and Player.Party[0].home != Player.location:
                 $ decision = "please"

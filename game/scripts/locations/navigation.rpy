@@ -28,9 +28,9 @@ label world_map:
                 $ Player.destination = "bg_classroom"
             "Class (locked)" if Player.location == "bg_classroom":
                 pass
-            "The Danger Room" if Player.location != "bg_dangerroom":
-                $ Player.destination = "bg_dangerroom"
-            "The Danger Room (locked)" if Player.location == "bg_dangerroom":
+            "The Danger Room" if Player.location != "bg_danger":
+                $ Player.destination = "bg_danger"
+            "The Danger Room (locked)" if Player.location == "bg_danger":
                 pass
             "The pool" if Player.location != "bg_pool":
                 $ Player.destination = "bg_pool"
@@ -72,7 +72,7 @@ label world_map:
                 jump girls_room
             elif Player.destination == "bg_classroom":
                 jump classroom
-            elif Player.destination == "bg_dangerroom":
+            elif Player.destination == "bg_danger":
                 jump danger_room
             elif Player.destination == "bg_pool":
                 jump pool
@@ -246,9 +246,9 @@ label danger_room:
         if Player.destination != Player.location:
             $ Nearby = []
 
-            call set_the_scene(location = "bg_dangerroom", fade = True)
+            call set_the_scene(location = "bg_danger", fade = True)
     else:
-        call set_the_scene(location = "bg_dangerroom")
+        call set_the_scene(location = "bg_danger")
 
     if clock <= 10:
         if time_index > 2:

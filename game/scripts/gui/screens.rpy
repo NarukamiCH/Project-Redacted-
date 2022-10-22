@@ -5,7 +5,7 @@ init -3:
         size 36
 
     style window:
-        background Frame("images/GUI/window.png", 24, 24)
+        background Frame("images/GUI/window.webp", 24, 24)
 
         left_margin 12
         right_margin 12
@@ -22,7 +22,7 @@ init -3:
         yminimum 10
 
     style say_what_window is default:
-        background Frame("images/GUI/word_balloon.png", 100, 100)
+        background Frame("images/GUI/word_balloon.webp", 100, 100)
 
         left_padding 50
         right_padding 50
@@ -34,7 +34,7 @@ init -3:
         yminimum 0
 
     style say_who_window:
-        background Frame("images/GUI/word_balloon.png", 60, 60)
+        background Frame("images/GUI/word_balloon.webp", 60, 60)
 
         left_padding 40
         right_padding 40

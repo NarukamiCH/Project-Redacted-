@@ -1,8 +1,8 @@
 init -1 python:
 
-    def messy_hair(Owner):
-        name = "messy hair"
-        string = "messy_hair"
+    def wet_hair(Owner):
+        name = "wet hair"
+        string = "wet"
         
         type = "hair"
         
@@ -10,9 +10,9 @@ init -1 python:
         
         if Owner.tag == "Laura":
             dialogue_lines.update({
-                "shopping": "n/a",
-                "purchased": "n/a",
-                "gift": "n/a",
+                "shopping": None,
+                "purchased": None,
+                "gift": None,
                 "change": "You like it all messed up?"})
         
         price = 0

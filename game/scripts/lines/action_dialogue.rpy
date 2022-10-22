@@ -2330,9 +2330,6 @@ label first_Action_approval_craving_lines(Girl, Action_type):
             "Sounds fun. . .",
             "Hmm, sounds fun. . .",
             "Hrmm. . ."]
-
-        if Action_type in ["blowjob", "kiss"]:
-            $ lines.append("[wipes away a little drool]")
     elif Girl.tag == "Jean":
         $ lines = [
             "Hmm. . . .",

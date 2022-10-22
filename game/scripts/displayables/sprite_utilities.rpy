@@ -15,13 +15,13 @@ init python:
         return entrance_transition, exit_transition
 
     def get_color_transform(location):
-        if location in ["bg_campus", "bg_classroom", "bg_pool"] and time_index == 0:
+        if location in ["bg_campus", "bg_classroom", "bg_mall", "bg_pool"] and time_index == 0:
             color_transform = morning
-        elif location in ["bg_campus", "bg_classroom", "bg_pool"] and time_index == 1:
+        elif location in ["bg_campus", "bg_classroom", "bg_mall", "bg_pool"] and time_index == 1:
             color_transform = daylight
-        elif location in ["bg_campus", "bg_classroom", "bg_pool"] and time_index == 2:
+        elif location in ["bg_campus", "bg_classroom", "bg_mall", "bg_pool"] and time_index == 2:
             color_transform = sunset
-        elif location in ["bg_campus", "bg_classroom", "bg_pool"] and time_index > 2:
+        elif location in ["bg_campus", "bg_classroom", "bg_mall", "bg_pool"] and time_index > 2:
             color_transform = moonlight
         elif time_index == 4:
             color_transform = lights_off
@@ -74,10 +74,10 @@ transform null:
 label show_Character(Character, x_position = None, y_position = None, sprite_layer = None, color_transform = None, animation_transform = None, transition = None):
     python:
         if Character in all_Girls:
-            # renpy.start_predict(f"images/{Character.tag}_standing/*.png")
-            renpy.stop_predict(f"images/{Character.tag}_blowjob/*.png")
-            renpy.stop_predict(f"images/{Character.tag}_sex/*.png")
-            renpy.stop_predict(f"images/{Character.tag}_doggy/*.png")
+            # renpy.start_predict(f"images/{Character.tag}_standing/*.webp")
+            renpy.stop_predict(f"images/{Character.tag}_blowjob/*.webp")
+            renpy.stop_predict(f"images/{Character.tag}_sex/*.webp")
+            renpy.stop_predict(f"images/{Character.tag}_doggy/*.webp")
 
         if x_position:
             Character.sprite_location = x_position
@@ -112,10 +112,10 @@ label hide_Character(Character, transition = None):
             transition = get_transition(Player.location)[1]
 
         if Character in all_Girls:
-            # renpy.stop_predict(f"images/{Character.tag}_standing/*.png")
-            renpy.stop_predict(f"images/{Character.tag}_blowjob/*.png")
-            renpy.stop_predict(f"images/{Character.tag}_sex/*.png")
-            renpy.stop_predict(f"images/{Character.tag}_doggy/*.png")
+            # renpy.stop_predict(f"images/{Character.tag}_standing/*.webp")
+            renpy.stop_predict(f"images/{Character.tag}_blowjob/*.webp")
+            renpy.stop_predict(f"images/{Character.tag}_sex/*.webp")
+            renpy.stop_predict(f"images/{Character.tag}_doggy/*.webp")
 
         renpy.hide(f"{Character.tag}_sprite")
 
@@ -202,10 +202,10 @@ label remove_all(location = None):
 
 label show_blowjob(Girl, x_position = None, y_position = None, sprite_layer = None):
     python:
-        # renpy.stop_predict(f"images/{Girl.tag}_standing/*.png")
-        renpy.start_predict(f"images/{Girl.tag}_blowjob/*.png")
-        renpy.stop_predict(f"images/{Girl.tag}_sex/*.png")
-        renpy.stop_predict(f"images/{Girl.tag}_doggy/*.png")
+        # renpy.stop_predict(f"images/{Girl.tag}_standing/*.webp")
+        renpy.start_predict(f"images/{Girl.tag}_blowjob/*.webp")
+        renpy.stop_predict(f"images/{Girl.tag}_sex/*.webp")
+        renpy.stop_predict(f"images/{Girl.tag}_doggy/*.webp")
 
         if x_position:
             Girl.sprite_location = x_position
@@ -226,10 +226,10 @@ label show_blowjob(Girl, x_position = None, y_position = None, sprite_layer = No
 
 label show_sex(Girl, x_position = None, y_position = None, sprite_layer = None):
     python:
-        # renpy.stop_predict(f"images/{Girl.tag}_standing/*.png")
-        renpy.stop_predict(f"images/{Girl.tag}_blowjob/*.png")
-        renpy.start_predict(f"images/{Girl.tag}_sex/*.png")
-        renpy.stop_predict(f"images/{Girl.tag}_doggy/*.png")
+        # renpy.stop_predict(f"images/{Girl.tag}_standing/*.webp")
+        renpy.stop_predict(f"images/{Girl.tag}_blowjob/*.webp")
+        renpy.start_predict(f"images/{Girl.tag}_sex/*.webp")
+        renpy.stop_predict(f"images/{Girl.tag}_doggy/*.webp")
 
         if x_position:
             Girl.sprite_location = x_position
@@ -250,10 +250,10 @@ label show_sex(Girl, x_position = None, y_position = None, sprite_layer = None):
 
 label show_doggy(Girl, x_position = None, y_position = None, sprite_layer = None):
     python:
-        # renpy.stop_predict(f"images/{Girl.tag}_standing/*.png")
-        renpy.stop_predict(f"images/{Girl.tag}_blowjob/*.png")
-        renpy.stop_predict(f"images/{Girl.tag}_sex/*.png")
-        renpy.start_predict(f"images/{Girl.tag}_doggy/*.png")
+        # renpy.stop_predict(f"images/{Girl.tag}_standing/*.webp")
+        renpy.stop_predict(f"images/{Girl.tag}_blowjob/*.webp")
+        renpy.stop_predict(f"images/{Girl.tag}_sex/*.webp")
+        renpy.start_predict(f"images/{Girl.tag}_doggy/*.webp")
 
         if x_position:
             Girl.sprite_location = x_position

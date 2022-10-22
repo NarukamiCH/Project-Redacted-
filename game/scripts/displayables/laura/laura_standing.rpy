@@ -1,112 +1,112 @@
-layeredimage Laura_sprite standing:
+layeredimage Laura_sprite standing old:
     if Laura.Clothes["face_inner_accessory"].string:
-        "images/Laura_standing/Laura_standing_hair_back_mask.png"
+        "images/Laura_standing/Laura_standing_hair_back_mask.webp"
     else:
-        "images/Laura_standing/Laura_standing_hair_back.png"
+        "images/Laura_standing/Laura_standing_hair_back.webp"
 
     always:
-        "images/Laura_standing/Laura_standing_right_arm.png"
+        "images/Laura_standing/Laura_standing_right_arm.webp"
 
     # if Laura.claws:
-    #     "images/Laura_standing/Laura_standing_right_claws.png"
+    #     "images/Laura_standing/Laura_standing_right_claws.webp"
 
     if Laura.Clothes["bodysuit"].string in ["blackyellow_Wolverine_suit", "blueyellow_Wolverine_suit"]:
-        "images/Laura_standing/Laura_standing_bodysuit_[Laura.Clothes[bodysuit].string]_right_sleeve.png"
+        "images/Laura_standing/Laura_standing_bodysuit_[Laura.Clothes[bodysuit].string]_right_sleeve.webp"
 
     if Laura.Clothes["jacket"].string:
-        "images/Laura_standing/Laura_standing_jacket_[Laura.Clothes[jacket].string]_right_sleeve.png"
+        "images/Laura_standing/Laura_standing_jacket_[Laura.Clothes[jacket].string]_right_sleeve.webp"
 
     always:
-        "images/Laura_standing/Laura_standing_body.png"
+        "images/Laura_standing/Laura_standing_body.webp"
 
     if Laura.pubes:
-        "images/Laura_standing/Laura_standing_pubes_[Laura.pubes].png"
+        "images/Laura_standing/Laura_standing_pubes_[Laura.pubes].webp"
 
     always:
-        "images/Laura_standing/Laura_standing_breasts.png"
+        "images/Laura_standing/Laura_standing_breasts.webp"
 
     if Laura.Clothes["underwear"].string:
-        "images/Laura_standing/Laura_standing_underwear_[Laura.Clothes[underwear].string]_[Laura.Clothes[underwear].state].png"
+        "images/Laura_standing/Laura_standing_underwear_[Laura.Clothes[underwear].string]_[Laura.Clothes[underwear].state].webp"
 
     if Laura.Clothes["bodysuit"].string:
-        "images/Laura_standing/Laura_standing_bodysuit_[Laura.Clothes[bodysuit].string]_[Laura.Clothes[bodysuit].state].png"
+        "images/Laura_standing/Laura_standing_bodysuit_[Laura.Clothes[bodysuit].string]_[Laura.Clothes[bodysuit].state].webp"
 
     if Laura.Clothes["pants"].string:
-        "images/Laura_standing/Laura_standing_pants_[Laura.Clothes[pants].string]_[Laura.Clothes[pants].state].png"
+        "images/Laura_standing/Laura_standing_pants_[Laura.Clothes[pants].string]_[Laura.Clothes[pants].state].webp"
 
     if Laura.Clothes["belt"].string:
-        "images/Laura_standing/Laura_standing_belt_[Laura.Clothes[belt].string].png"
+        "images/Laura_standing/Laura_standing_belt_[Laura.Clothes[belt].string].webp"
 
     if Laura.Clothes["bra"].string:
-        "images/Laura_standing/Laura_standing_bra_[Laura.Clothes[bra].string]_[Laura.Clothes[bra].state].png"
+        "images/Laura_standing/Laura_standing_bra_[Laura.Clothes[bra].string]_[Laura.Clothes[bra].state].webp"
 
     if Laura.Clothes["top"].string:
-        "images/Laura_standing/Laura_standing_top_[Laura.Clothes[top].string]_[Laura.Clothes[top].state].png"
+        "images/Laura_standing/Laura_standing_top_[Laura.Clothes[top].string]_[Laura.Clothes[top].state].webp"
 
     if not Laura.Clothes["jacket"].string:
         Null()
     elif Laura.Clothes["top"].string:
-        "images/Laura_standing/Laura_standing_jacket_[Laura.Clothes[jacket].string]_[Laura.Clothes[top].string].png"
+        "images/Laura_standing/Laura_standing_jacket_[Laura.Clothes[jacket].string]_[Laura.Clothes[top].string].webp"
     else:
-        "images/Laura_standing/Laura_standing_jacket_[Laura.Clothes[jacket].string].png"
+        "images/Laura_standing/Laura_standing_jacket_[Laura.Clothes[jacket].string].webp"
 
     always:
-        "images/Laura_standing/Laura_standing_head.png"
+        "images/Laura_standing/Laura_standing_head.webp"
 
     if Laura.eyes in ["closed", "down", "side", "squint"]:
-        "images/Laura_standing/Laura_standing_eyes_[Laura.eyes].png"
+        "images/Laura_standing/Laura_standing_eyes_[Laura.eyes].webp"
     else:
         "Laura_standing_blinking"
 
     always:
-        "images/Laura_standing/Laura_standing_brows_[Laura.brows].png"
+        "images/Laura_standing/Laura_standing_brows_[Laura.brows].webp"
 
     always:
-        "images/Laura_standing/Laura_standing_mouth_[Laura.mouth].png"
+        "images/Laura_standing/Laura_standing_mouth_[Laura.mouth].webp"
 
     if Laura.blush:
-        "images/Laura_standing/Laura_standing_blush_[Laura.blush].png"
+        "images/Laura_standing/Laura_standing_blush_[Laura.blush].webp"
 
     if not Laura.Clothes["face_inner_accessory"].string:
         Null()
     elif Laura.mouth in ["sucking", "surprised", "tongue"]:
-        "images/Laura_standing/Laura_standing_face_inner_accessory_[Laura.Clothes[face_inner_accessory].string]_open.png"
+        "images/Laura_standing/Laura_standing_face_inner_accessory_[Laura.Clothes[face_inner_accessory].string]_open.webp"
     else:
-        "images/Laura_standing/Laura_standing_face_inner_accessory_[Laura.Clothes[face_inner_accessory].string].png"
+        "images/Laura_standing/Laura_standing_face_inner_accessory_[Laura.Clothes[face_inner_accessory].string].webp"
 
     if Laura.Clothes["face_inner_accessory"].string:
         Null()
     elif Laura.wet:
-        "images/Laura_standing/Laura_standing_hair_messy_hair.png"
+        "images/Laura_standing/Laura_standing_hair_messy_hair.webp"
     else:
-        "images/Laura_standing/Laura_standing_hair_[Laura.Clothes[hair].string].png"
+        "images/Laura_standing/Laura_standing_hair_[Laura.Clothes[hair].string].webp"
 
     always:
-        "images/Laura_standing/Laura_standing_left_arm[Laura.arm_pose].png"
+        "images/Laura_standing/Laura_standing_left_arm[Laura.arm_pose].webp"
 
     if Laura.Clothes["bodysuit"].string in ["blackyellow_Wolverine_suit", "blueyellow_Wolverine_suit"]:
-        "images/Laura_standing/Laura_standing_bodysuit[Laura.arm_pose]_[Laura.Clothes[bodysuit].string]_left_sleeve.png"
+        "images/Laura_standing/Laura_standing_bodysuit[Laura.arm_pose]_[Laura.Clothes[bodysuit].string]_left_sleeve.webp"
 
     if Laura.Clothes["jacket"].string:
-        "images/Laura_standing/Laura_standing_jacket[Laura.arm_pose]_[Laura.Clothes[jacket].string]_left_sleeve.png"
+        "images/Laura_standing/Laura_standing_jacket[Laura.arm_pose]_[Laura.Clothes[jacket].string]_left_sleeve.webp"
 
     if Laura.claws:
-        "images/Laura_standing/Laura_standing_left_claws[Laura.arm_pose].png"
+        "images/Laura_standing/Laura_standing_left_claws[Laura.arm_pose].webp"
 
     anchor (0.5, 0.0) offset (0, -10) zoom 0.6
 
 image Laura_standing_blinking:
-    "images/Laura_standing/Laura_standing_eyes_[Laura.eyes].png"
+    "images/Laura_standing/Laura_standing_eyes_[Laura.eyes].webp"
     choice:
         3.5
     choice:
         3.25
     choice:
         3
-    "images/Laura_standing/Laura_standing_eyes_closed.png"
+    "images/Laura_standing/Laura_standing_eyes_closed.webp"
     0.05
-    "images/Laura_standing/Laura_standing_eyes_closed.png"
+    "images/Laura_standing/Laura_standing_eyes_closed.webp"
     0.15
-    "images/Laura_standing/Laura_standing_eyes_closed.png"
+    "images/Laura_standing/Laura_standing_eyes_closed.webp"
     0.05
     repeat

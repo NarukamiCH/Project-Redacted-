@@ -46,7 +46,7 @@ screen texting(dialogue, items = None):
 
                 for caption, action, chosen in items:
                     button xalign 0.5:
-                        background Frame("images/GUI/phone/phone_send_frame.png", 23, 23, 23, 23)
+                        background Frame("images/GUI/phone/phone_send_frame.webp", 23, 23, 23, 23)
 
                         padding (20, 20)
                         xsize 350
@@ -61,9 +61,9 @@ screen nvl_phonetext(dialogue):
 
     for id_d, d in enumerate(dialogue):
         if d.who == Player.name:
-            $ message_frame = "images/GUI/phone/phone_send_frame.png"
+            $ message_frame = "images/GUI/phone/phone_send_frame.webp"
         else:
-            $ message_frame = "images/GUI/phone/phone_received_frame.png"
+            $ message_frame = "images/GUI/phone/phone_received_frame.webp"
 
         hbox:
             spacing 10
@@ -73,7 +73,7 @@ screen nvl_phonetext(dialogue):
 
             if previous_d_who != d.who:
                 if d.who == Player.name:
-                    $ message_icon = "images/GUI/phone/phone_send_icon.png"
+                    $ message_icon = "images/GUI/phone/phone_send_icon.webp"
                 else:
                     $ message_icon = f"{Player.focused_Girl.tag}_hover"
 

@@ -37,11 +37,11 @@ transform Jean_color:
     matrixcolor TintMatrix("#d92912")
 
 image exit_hover:
-    "images/GUI/icons/exit_hover.png"
+    "images/GUI/icons/exit_hover.webp"
 
     anchor (0.5, 0.5) pos (0.5, 0.5) zoom 1.0
 
 image exit_idle:
-    "images/GUI/icons/exit_idle.png"
+    "images/GUI/icons/exit_idle.webp"
 
     anchor (0.5, 0.5) pos (0.5, 0.5) zoom 1.0

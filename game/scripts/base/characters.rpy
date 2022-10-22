@@ -83,12 +83,17 @@ init python:
             self.arm_pose = 1
 
             self.wet = False
-            self.tan = {
+            self.tan_lines = {
                 "top": False, "bottom": False}
+            self.piercings = {
+                "face": False,
+                "nipple": False,
+                "labia": False}
             self.grool = 0
-            self.spunk = {
+            self.cumshot = {
                 "hair": False, "face": False, "mouth": False, "chin": False,
-                "breasts": False, "back": False, "belly": False, "hand": False,
+                "breasts": False, "back": False, "belly": False, "hand": False}
+            self.creampie = {
                 "pussy": False, "anus": False}
 
             self.sprite_location = stage_center
@@ -178,6 +183,13 @@ init python:
                 self.psychic = False
 
                 Professors.append(self)
+            elif self.tag == "Daenerys":
+                self.player_petname = Player.name
+                self.player_petnames = [self.player_petname]
+
+                self.pubes = "triangle"
+
+                self.used_to_anal = False
 
             all_Girls.append(self)
             all_Characters.append(self)
@@ -202,23 +214,15 @@ init python:
                 self.brows = "neutral"
                 self.eyes = "neutral"
             elif face == "angry":
-                self.brows = "angry"
-                self.eyes = "neutral"
-                self.mouth = "kiss"
-            elif face == "bemused":
-                self.brows = "sad"
-                # self.eyes = "squint"
-                self.mouth = "lipbite"
-            elif face == "closed":
-                self.brows = "sad"
-                self.eyes = "closed"
-                self.mouth = "neutral"
+                self.brows = "furrowed"
+                self.eyes = "squint"
+                self.mouth = "frown"
             elif face == "confused":
-                self.brows = "confused"
-                # self.eyes = "squint"
+                self.brows = "cocked"
+                self.eyes = "squint"
                 self.mouth = "kiss"
             elif face == "kiss":
-                self.brows = "sad"
+                self.brows = "worried"
                 self.eyes = "closed"
                 self.mouth = "kiss"
             elif face == "manic":
@@ -227,37 +231,29 @@ init python:
                 self.mouth = "smile"
                 self.blush = 2
             elif face == "perplexed":
-                self.brows = "sad"
-                self.eyes = "wide"
-                self.mouth = "smile"
-            elif face == "sad":
-                self.brows = "sad"
+                self.brows = "cocked"
                 self.eyes = "neutral"
-                self.mouth = "sad"
+                self.mouth = "open"
+            elif face == "sad":
+                self.brows = "worried"
+                self.eyes = "neutral"
+                self.mouth = "frown"
             elif face == "sexy":
-                self.brows = "sad"
-                # self.eyes = "squint"
+                self.brows = "furrowed"
+                self.eyes = "sexy"
                 self.mouth = "lipbite"
             elif face == "sly":
                 self.brows = "neutral"
-                # self.eyes = "squint"
-                self.mouth = "smile"
+                self.eyes = "squint"
+                self.mouth = "smirk"
             elif face == "smile":
                 self.brows = "neutral"
                 self.eyes = "neutral"
                 self.mouth = "smile"
-            elif face == "snarl":
-                self.brows = "angry"
-                # self.eyes = "squint"
-                self.mouth = "surprised"
-            elif face == "startled":
-                self.mouth = "smile"
-                self.brows = "surprised"
-                self.eyes = "wide"
             elif face == "surprised":
-                self.brows = "surprised"
+                self.mouth = "open"
+                self.brows = "raised"
                 self.eyes = "wide"
-                self.mouth = "kiss"
 
             if blush:
                 self.blush = blush
@@ -286,7 +282,7 @@ init python:
             return face
 
         def travel(self):
-            if self.location in ["bg_dangerroom", "bg_pool"]:
+            if self.location in ["bg_danger", "bg_pool"]:
                 self.destination = "bg_shower"
             elif self.location != "hold":
                 possible_locations = []
@@ -303,7 +299,7 @@ init python:
                     possible_locations.append("bg_classroom")
 
                 if time_index < 3:
-                    possible_locations.append("bg_dangerroom")
+                    possible_locations.append("bg_danger")
 
                 if time_index > 2:
                     pass
@@ -413,7 +409,7 @@ init python:
 
         def change_Outfit(self, Outfit_name = None, instant = False):
             if not Outfit_name:
-                if self.location == "bg_dangerroom":
+                if self.location == "bg_danger":
                     Outfit_name = self.Wardrobe.gym_Outfit.name
                 elif self.location == "bg_pool":
                     Outfit_name = self.Wardrobe.swimming_Outfit.name
@@ -480,15 +476,11 @@ init python:
                 self.brows = "furrowed"
                 self.eyes = "neutral"
                 self.mouth = "frown"
-            elif face == "closed":
-                self.brows = "neutral"
-                self.eyes = "closed"
-                self.mouth = "neutral"
             elif face == "confused":
                 self.brows = "furrowed"
                 self.eyes = "squint"
                 self.mouth = "neutral"
-            elif face == "dazed":
+            elif face == "stunned":
                 self.brows = "neutral"
                 self.eyes = "up"
                 self.mouth = "neutral"

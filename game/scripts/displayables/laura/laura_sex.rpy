@@ -1,32 +1,32 @@
 image Laura_sex_body:
-    "images/Laura_sex/Laura_sex_body.png"
+    "images/Laura_sex/Laura_sex_body.webp"
 
     anchor (0.5, 0.5)
 
 layeredimage Laura_sex_legs:
     always:
-        "images/Laura_sex/Laura_sex_legs.png"
+        "images/Laura_sex/Laura_sex_legs.webp"
 
     # always:
-    #     "images/Laura_sex/Laura_sex_pussy_anus_reference.png"
+    #     "images/Laura_sex/Laura_sex_pussy_anus_reference.webp"
 
     if Laura.ass_Action.type == "anal":
         "Laura_sex_anus_animation[Laura.ass_Action.speed]" pos (0.6, 1.115)
     else:
-        "images/Laura_sex/Laura_sex_anus_closed.png" anchor (0.5, 0.5) pos (0.6, 1.115)
+        "images/Laura_sex/Laura_sex_anus_closed.webp" anchor (0.5, 0.5) pos (0.6, 1.115)
 
     if Laura.pussy_Action.type == "sex":
         "Laura_sex_pussy_animation[Laura.pussy_Action.speed]" pos (0.575, 1.036)
     else:
-        "images/Laura_sex/Laura_sex_pussy_closed.png" anchor (0.5, 0.5) pos (0.575, 1.036)
+        "images/Laura_sex/Laura_sex_pussy_closed.webp" anchor (0.5, 0.5) pos (0.575, 1.036)
 
     if Laura.pubes:
-        "images/Laura_sex/Laura_sex_pubes_[Laura.pubes].png"
+        "images/Laura_sex/Laura_sex_pubes_[Laura.pubes].webp"
 
     anchor (0.5, 0.5)
 
 image Laura_sex_feet:
-    "images/Laura_sex/Laura_sex_feet.png"
+    "images/Laura_sex/Laura_sex_feet.webp"
 
     anchor (0.5, 0.5)
 
@@ -211,13 +211,13 @@ image Laura_sex_feet_animation3:
         repeat
 
 image Laura_sex_pussy_animation0:
-    "images/Laura_sex/Laura_sex_pussy_closed.png"
+    "images/Laura_sex/Laura_sex_pussy_closed.webp"
 
     anchor (0.5, 0.5)
 
 image Laura_sex_pussy_animation1:
     animation
-    "images/Laura_sex/Laura_sex_pussy_open.png"
+    "images/Laura_sex/Laura_sex_pussy_open.webp"
 
     subpixel True
     anchor (0.5, 0.5)
@@ -229,7 +229,7 @@ image Laura_sex_pussy_animation1:
 
 image Laura_sex_pussy_animation2:
     animation
-    "images/Laura_sex/Laura_sex_pussy_fucking.png"
+    "images/Laura_sex/Laura_sex_pussy_fucking.webp"
 
     subpixel True
     anchor (0.5, 0.5)
@@ -241,7 +241,7 @@ image Laura_sex_pussy_animation2:
 
 image Laura_sex_pussy_animation3:
     animation
-    "images/Laura_sex/Laura_sex_pussy_fucking.png"
+    "images/Laura_sex/Laura_sex_pussy_fucking.webp"
 
     subpixel True
     anchor (0.5, 0.5)
@@ -252,13 +252,13 @@ image Laura_sex_pussy_animation3:
         repeat
 
 image Laura_sex_anus_animation0:
-    "images/Laura_sex/Laura_sex_anus_closed.png"
+    "images/Laura_sex/Laura_sex_anus_closed.webp"
 
     anchor (0.5, 0.5)
 
 image Laura_sex_anus_animation1:
     animation
-    "images/Laura_sex/Laura_sex_anus_open.png"
+    "images/Laura_sex/Laura_sex_anus_open.webp"
 
     subpixel True
     anchor (0.5, 0.5)
@@ -270,7 +270,7 @@ image Laura_sex_anus_animation1:
 
 image Laura_sex_anus_animation2:
     animation
-    "images/Laura_sex/Laura_sex_anus_fucking.png"
+    "images/Laura_sex/Laura_sex_anus_fucking.webp"
 
     subpixel True
     anchor (0.5, 0.5)
@@ -282,7 +282,7 @@ image Laura_sex_anus_animation2:
 
 image Laura_sex_anus_animation3:
     animation
-    "images/Laura_sex/Laura_sex_anus_fucking.png"
+    "images/Laura_sex/Laura_sex_anus_fucking.webp"
 
     subpixel True
     anchor (0.5, 0.5)

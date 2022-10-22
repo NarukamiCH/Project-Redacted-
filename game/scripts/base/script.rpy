@@ -3,13 +3,13 @@ label splashscreen:
 
 label start:
     python:
-        renpy.start_predict("images/backgrounds/*.png")
-        renpy.start_predict("images/GUI/*.png")
+        renpy.start_predict("images/backgrounds/*.webp")
+        renpy.start_predict("images/GUI/*.webp")
 
-        for G in ["Rogue", "Kitty", "Laura", "Storm", "Jean"]:
-            renpy.start_predict(f"images/{G}_standing/*.png")
+        for G in ["Rogue", "Kitty", "Laura", "Storm", "Jean", "Daenerys"]:
+            renpy.start_predict(f"images/{G}_standing/*.webp")
 
-        renpy.start_predict("images/Xavier/*.png")
+        renpy.start_predict("images/Xavier/*.webp")
         
         name = renpy.input("What is your name?", default = "Zero", length = 10)
         name = name.strip()
@@ -57,6 +57,11 @@ label start:
             voice = ch_jean, text = ch_jean_nvl,
             love = 10, trust = 20, desire = 0)
 
+        Daenerys = GirlClass(
+            "Daenerys",
+            voice = ch_dany, text = ch_dany_nvl,
+            love = 0, trust = 0, desire = 10)
+
         Farouk = NPCClass(
             "Farouk",
             voice = ch_farouk)
@@ -75,13 +80,13 @@ label after_load:
     python:
         renpy.block_rollback()
         
-        renpy.start_predict("images/backgrounds/*.png")
-        renpy.start_predict("images/GUI/*.png")
+        renpy.start_predict("images/backgrounds/*.webp")
+        renpy.start_predict("images/GUI/*.webp")
 
-        for G in ["Rogue", "Laura", "Jean"]:
-            renpy.start_predict(f"images/{G}_standing/*.png")
+        for G in ["Rogue", "Laura", "Jean", "Daenerys"]:
+            renpy.start_predict(f"images/{G}_standing/*.webp")
 
-        renpy.start_predict("images/Xavier/*.png")
+        renpy.start_predict("images/Xavier/*.webp")
 
         all_Character_names = []
 
@@ -113,6 +118,11 @@ label after_load:
                 "Jean",
                 voice = ch_jean, text = ch_jean_nvl,
                 love = 10, trust = 20, desire = 0)
+        elif "Daenerys" not in all_Character_names:
+            Daenerys = GirlClass(
+                "Daenerys",
+                voice = ch_dany, text = ch_dany_nvl,
+                love = 0, trust = 0, desire = 10)
 
         if "Farouk" not in all_Character_names:
             Farouk = NPCClass(

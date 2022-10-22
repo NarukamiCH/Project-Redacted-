@@ -309,7 +309,7 @@ label level_up:
 label reset_Girls_at_end_of_period:
     python:
         for G in active_Girls:
-            if G.location == "bg_classroom" or G.location == "bg_dangerroom":
+            if G.location == "bg_classroom" or G.location == "bg_danger":
                 G.XP += 10
             
             G.mood -= 1 if G.mood > 0 else 0

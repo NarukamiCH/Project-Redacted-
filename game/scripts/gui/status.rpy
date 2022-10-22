@@ -20,6 +20,6 @@ screen status():
 
     showif config.developer:
         imagebutton anchor (0.0, 1.0) pos (0.01, 0.99):
-            idle "images/GUI/phone/phone_received_icon.png" hover "images/GUI/phone/phone_send_icon.png"
+            idle "images/GUI/phone/phone_received_icon.webp" hover "images/GUI/phone/phone_send_icon.webp"
             action Function(renpy.call, "cheat_menu", Player.focused_Girl, from_current = True)
             focus_mask True

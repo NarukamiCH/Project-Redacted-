@@ -16,7 +16,7 @@ init python:
     config.gl2 = True
     config.cache_surfaces = False
     config.optimize_texture_bounds = True
-    config.image_cache_size = 200
+    config.image_cache_size = 120
 
     config.allow_underfull_grids = True
 
@@ -29,13 +29,13 @@ init python:
     preferences.text_cps = 0
     preferences.afm_time = 10
 
-    # config.window_icon = "images/GUI/icon.png"
+    # config.window_icon = "images/GUI/icon.webp"
 
     config.save_directory = "Project [Redacted]"
 
     build.classify("**.md", None)
 
-    build.classify("**.png", "archive")
+    build.classify("**.webp", "archive")
     build.classify("**.rpy", "archive")
     build.classify("**.rpyc", "archive")
     build.classify("**.ttf", "archive")

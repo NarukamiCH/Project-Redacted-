@@ -126,7 +126,7 @@ label chapter_one_intro:
                 $ asked_mutant = True
             "So. . . what's your power?" if asked_mutant and not asked_Xavier:
                 $ Xavier.psychic = True
-                $ Xavier.change_face("dazed")
+                $ Xavier.change_face("stunned")
 
                 ch_xavier_tele "I'm a telepath, not unlike your old professor. A professor myself as well, in fact. But that is where the similarities end."
 
@@ -261,7 +261,7 @@ label chapter_one_tour:
         ch_rogue "Ya know, if you sign up for a class with me, we could study together…"
 
     call hide_Character(Rogue)
-    call set_the_scene(location = "bg_dangerroom", fade = True)
+    call set_the_scene(location = "bg_danger", fade = True)
     call add_Characters(Rogue)
 
     ch_rogue "This is the Danger Room. It's decked out with all sorts of advanced tech. It can even simulate realistic battlefield scenarios."

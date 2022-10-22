@@ -5,7 +5,7 @@ init python:
 
         conditions = [
             "Laura in active_Girls",
-            "Player.location == 'bg_dangerroom'",
+            "Player.location == 'bg_danger'",
             "Laura.location == Player.location",
             "Player.level < 5",
             "Laura.mood < 3"]

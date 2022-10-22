@@ -19,13 +19,17 @@ init -1 python:
 
         shame = 2
 
-        hides = ["breasts", "pussy"]
-        covers = ["breasts", "pussy"]
+        if Owner.tag == "Daenerys":
+            hides = ["breasts"]
+            covers = ["breasts"]
+        else:
+            hides = ["breasts", "pussy"]
+            covers = ["breasts", "pussy"]
 
         number_of_states = 2
 
         poses = ["standing"]
 
-        incompatibilities = ["bodysuit", "pants", "jacket"]
+        incompatibilities = []
 
         return ClothingClass(Owner, name, string, type, dialogue_lines, price = price, shame = shame, hides = hides, covers = covers, number_of_states = number_of_states, poses = poses, incompatibilities = incompatibilities)

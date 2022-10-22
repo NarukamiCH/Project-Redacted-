@@ -19,6 +19,9 @@ init -1:
     define ch_jean_nvl = Character("[Jean.name]", kind = nvl)
     define ch_jean_tele = Character("[Jean.name]", who_color = "#d92912", what_italic = True)
 
+    define ch_dany = Character("[Daenerys.name]", who_color = "#1945a4", image = "Daenerys_sprite")
+    define ch_dany_nvl = Character("[Daenerys.name]", kind = nvl)
+
     define ch_xavier = Character("[Xavier.name]", who_color = "#1b867d", image = "Xavier_sprite")
     define ch_xavier_tele = Character("[Xavier.name]", who_color = "#1b867d", what_italic = True)
 
@@ -61,7 +64,7 @@ init -1:
     define location_names = {
         "bg_campus": "Campus",
         "bg_classroom": "Classroom",
-        "bg_dangerroom": "Danger Room",
+        "bg_danger": "Danger Room",
         "bg_entrance": "Main Entrance",
         "bg_hallway": "Hallway",
         "bg_jean": "[Jean.name]'s Bedroom",
@@ -76,18 +79,15 @@ init -1:
         "bg_shower": "Showers",
         "hold": ""}
 
-    define all_Clothing_types = ["face_tattoos", "face_piercings", "makeup", "gag",
+    define all_Clothing_types = ["makeup", "gag",
         "face_inner_accessory", "hair", "face_outer_accessory",
-        "body_tattoos", "body_piercings", "buttplug",
-        "nipple_accessories", "underwear", "hose",
+        "buttplug", "nipple_accessories", 
+        "underwear", "hose",
         "bodysuit", "rope",
         "socks", "pants", "skirt", "boots",
         "bra", "dress", "top",
         "neck", "gloves", "sleeves", "belt", "suspenders",
         "jacket", "cloak"]
-
-    define intrinsic_Clothing_types = ["face_tattoos", "face_piercings",
-        "body_tattoos", "body_piercings"]
 
     define removable_Clothing_types = ["makeup", "gag",
         "face_inner_accessory", "face_outer_accessory",
@@ -106,17 +106,13 @@ init -1:
     define thigh_covering_Clothing_types = ["bodysuit", "hose", "pants", "skirt", "boots", "dress"]
     define feet_covering_Clothing_types = ["hose", "socks", "boots"]
 
-    define Clothing_coverage = {"face_tattoos": [],
-        "face_piercings": [],
-        "makeup": [],
+    define Clothing_coverage = {"makeup": [],
         "gag": [],
         "face_inner_accessory": [],
         "hair": [],
         "face_outer_accessory": [],
-        "body_tattoos": [],
-        "body_piercings": [],
-        "buttplug": ["underwear"],
         "nipple_accessories": ["bodysuit", "bra", "dress", "top"],
+        "buttplug": ["underwear", "bodysuit", "pants"],
         "underwear": ["hose", "bodysuit", "pants", "belt", "suspenders", "boots"],
         "hose": ["bodysuit", "pants", "socks", "boots"],
         "bodysuit": ["bra", "dress", "top", "jacket", "cloak", "socks", "pants", "skirt", "boots"],
@@ -165,7 +161,7 @@ init -1:
 
     define rumble = Move((0, 4), (0, -4), 0.05, bounce = True, repeat = True, delay = 3.5)
 
-    define Emma_harden = ImageDissolve("images/wipes/Emma_harden.png", 0.5, 8)
-    define Mystique_dissolve = ImageDissolve("images/wipes/Mystique_dissolve.png", 1.0, 8)
+    define harden = ImageDissolve("images/effects/harden.webp", 0.5, 8)
+    define shapeshift = ImageDissolve("images/effects/shapeshift.webp", 1.0, 8)
 
     default EventScheduler = EventSchedulerClass()

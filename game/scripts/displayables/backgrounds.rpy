@@ -9,7 +9,7 @@ image black_screen:
         linear 0.4 alpha 0.0
 
 image steam_midground:
-    "images/backgrounds/steam2.png"
+    "images/effects/steam2.webp"
 
     subpixel True
     xpos -config.screen_width
@@ -19,7 +19,7 @@ image steam_midground:
         repeat
 
 image steam_cover:
-    "images/backgrounds/steam1.png"
+    "images/effects/steam1.webp"
 
     subpixel True
     xpos config.screen_width
@@ -29,29 +29,29 @@ image steam_cover:
         repeat
 
 layeredimage background:
-    always:
-        "images/backgrounds/sky_[current_time].png"
+    if Player.location in bedrooms:
+        "images/backgrounds/bg_sky_[current_time].webp"
 
-    if Player.location in ["hold", "bg_mall", "bg_shop", "bg_hallway"]:
+    if Player.location in ["hold", "bg_shop", "bg_hallway"]:
         "black_screen"
-    elif Player.location in ["bg_campus", "bg_classroom", "bg_pool"]:
-        "images/backgrounds/[Player.location]_[current_time].png"
+    elif Player.location in ["bg_campus", "bg_classroom", "bg_mall", "bg_pool"]:
+        "images/backgrounds/[Player.location]_[current_time].webp"
     else:
-        "images/backgrounds/[Player.location].png"
+        "images/backgrounds/[Player.location].webp"
 
 layeredimage midground:
     if Player.location == "bg_classroom":
-        "images/backgrounds/[Player.location]_[current_time]_podium.png"
-
-    if Player.location == "bg_shower":
+        "images/backgrounds/bg_classroom_[current_time]_podium.webp"
+    elif Player.location == "bg_mall" and current_time != "night":
+        "images/backgrounds/bg_mall_[current_time]_people.webp"
+    elif Player.location == "bg_pool":
+        AlphaMask("images/backgrounds/bg_pool_[current_time].webp", "images/backgrounds/bg_pool_mask.webp")
+    elif Player.location == "bg_shower":
         "steam_midground"
-
-    if Player.location == "bg_pool":
-        AlphaMask("images/backgrounds/bg_pool_[current_time].png", "images/backgrounds/bg_pool_mask.png")
 
 layeredimage foreground:
     if Player.location == "bg_classroom" and time_index < 2 and weekday < 5 and clock >= 30:
-        "images/backgrounds/[Player.location]_[current_time]_students.png"
+        "images/backgrounds/bg_classroom_students.webp"
 
 layeredimage cover:
     if Player.location == "bg_shower":
