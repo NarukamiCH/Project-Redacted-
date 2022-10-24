@@ -49,20 +49,20 @@ layeredimage Daenerys_sprite standing:
     if Daenerys.Clothes["dress"].string:
         "images/Daenerys_standing/dress_[Daenerys.Clothes[dress].string]_[Daenerys.Clothes[dress].state].webp"
 
-    if Daenerys.piercings["nipple"] in ["barbell", "both"] and (Daenerys.Clothes["bra"].string or Daenerys.Clothes["dress"].string) and Daenerys.Clothes["dress"].string != "war_dress":
+    if Daenerys.piercings["nipple"] in ["barbell", "both"] and (Daenerys.Clothes["bra"].string or Daenerys.Clothes["dress"].string == "cloth_dress"):
         "images/Daenerys_standing/nipple_piercings_barbell_covered.webp"
 
-    if Daenerys.piercings["nipple"] in ["ring", "both"] and (Daenerys.Clothes["bra"].string or Daenerys.Clothes["dress"].string) and Daenerys.Clothes["dress"].string != "war_dress":
+    if Daenerys.piercings["nipple"] in ["ring", "both"] and (Daenerys.Clothes["bra"].string or Daenerys.Clothes["dress"].string == "cloth_dress"):
         "images/Daenerys_standing/nipple_piercings_ring_covered.webp"
 
     if not Daenerys.Clothes["top"].string:
         Null()
-    elif (Daenerys.Clothes["top"].string == "towel" and Daenerys.Clothes["top"].state == 1) and ((Daenerys.Clothes["dress"].string and Daenerys.Clothes["dress"].state == 0)):
-        "images/Daenerys_standing/top_towel_1_[Daenerys.Clothes[dress].string].webp"
-    elif (Daenerys.Clothes["top"].string == "towel" and Daenerys.Clothes["top"].state == 1) and ((Daenerys.Clothes["bra"].string and Daenerys.Clothes["bra"].state == 0)):
-        "images/Daenerys_standing/top_towel_1_[Daenerys.Clothes[bra].string].webp"
-    else:
+    elif Daenerys.Clothes["top"].state == 0 or Daenerys.Clothes["top"].string != "towel":
         "images/Daenerys_standing/top_[Daenerys.Clothes[top].string]_[Daenerys.Clothes[top].state].webp"
+    elif Daenerys.Clothes["bra"].string and Daenerys.Clothes["bra"].state == 0:
+        "images/Daenerys_standing/top_towel_1_[Daenerys.Clothes[bra].string].webp"
+    elif Daenerys.Clothes["dress"].string and Daenerys.Clothes["dress"].state == 0:
+        "images/Daenerys_standing/top_towel_1_[Daenerys.Clothes[dress].string].webp"
 
     always:
         "images/Daenerys_standing/left_arm.webp"
@@ -111,7 +111,7 @@ layeredimage Daenerys_sprite standing:
     anchor (0.5, 0.0) offset (0, 50) zoom 0.6
 
 image Daenerys_standing_blinking:
-    "images/Daenerys_standing/eyes_[Daenerys.eyes].webp"
+    f"images/Daenerys_standing/eyes_{Daenerys.eyes}.webp"
     choice:
         4.5
     choice:

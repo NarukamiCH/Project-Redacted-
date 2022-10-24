@@ -24,7 +24,7 @@ label Laura_meeting:
 
     show black_screen onlayer black with vpunch
 
-    pause 0.5
+    pause 0.8
 
     $ Laura.name = "???"
     $ Laura.names = []
@@ -34,8 +34,6 @@ label Laura_meeting:
     $ color_transform = get_color_transform(location = Player.location)
 
     call show_Character(Laura, x_position = stage_center, color_transform = color_transform, transition = False)
-
-    pause 0.5
 
     hide black_screen onlayer black with dissolve
 

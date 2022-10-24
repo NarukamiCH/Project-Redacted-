@@ -36,7 +36,7 @@ label take_a_shower:
     if showering_Girls:
         python:
             for G in showering_Girls:
-                G.change_Outfit("shower")
+                G.change_into("towel")
 
     $ clock -= 30 if clock >= 30 else clock
 

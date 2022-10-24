@@ -1,16 +1,21 @@
 label splashscreen:
-    return
-
-label start:
     python:
+        Preference("gl powersave", "auto")
+
         renpy.start_predict("images/backgrounds/*.webp")
         renpy.start_predict("images/GUI/*.webp")
+        renpy.start_predict("images/GUI/*/*.webp")
+        renpy.start_predict("images/effects/*.webp")
 
         for G in ["Rogue", "Kitty", "Laura", "Storm", "Jean", "Daenerys"]:
             renpy.start_predict(f"images/{G}_standing/*.webp")
 
         renpy.start_predict("images/Xavier/*.webp")
         
+    return
+
+label start:
+    python:        
         name = renpy.input("What is your name?", default = "Zero", length = 10)
         name = name.strip()
 
@@ -79,14 +84,6 @@ return
 label after_load:
     python:
         renpy.block_rollback()
-        
-        renpy.start_predict("images/backgrounds/*.webp")
-        renpy.start_predict("images/GUI/*.webp")
-
-        for G in ["Rogue", "Laura", "Jean", "Daenerys"]:
-            renpy.start_predict(f"images/{G}_standing/*.webp")
-
-        renpy.start_predict("images/Xavier/*.webp")
 
         all_Character_names = []
 

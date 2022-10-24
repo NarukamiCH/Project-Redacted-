@@ -126,12 +126,12 @@ label set_the_scene(location = None, show_Characters = True, fade = False):
 
         pause 0.4
 
-    if location:
-        $ Player.location = location
-    else:
-        $ location = Player.location
-
     python:
+        if location:
+            Player.location = location
+        else:
+            location = Player.location
+
         for G in active_Girls:
             if G in Player.Party:
                 G.location = Player.location
@@ -185,8 +185,6 @@ label set_the_scene(location = None, show_Characters = True, fade = False):
 label set_Girls_locations:
     call set_the_scene(location = Player.location)
 
-    pause 0.4
-
     $ Nearby = []
 
     python:
@@ -194,14 +192,15 @@ label set_Girls_locations:
         arriving_Girls = []
 
         for G in active_Girls:
-            G.travel()
+            if G not in Player.Party:
+                G.travel()
 
-            if G.destination == G.location:
-                pass
-            elif G.location == Player.location:
-                leaving_Girls.append(G)
-            elif G.destination == Player.location:
-                arriving_Girls.append(G)
+                if G.destination == G.location:
+                    pass
+                elif G.location == Player.location:
+                    leaving_Girls.append(G)
+                elif G.destination == Player.location:
+                    arriving_Girls.append(G)
 
         renpy.random.shuffle(leaving_Girls)
         renpy.random.shuffle(arriving_Girls)
@@ -240,8 +239,6 @@ label wait:
 
         $ clock = 100
 
-        pause 0.4
-
         hide black_screen onlayer black
 
         call set_Girls_locations
@@ -261,8 +258,6 @@ label wait:
         $ day_of_week = week[weekday]
 
         call reset_Girls_at_end_of_day
-
-        pause 0.4
 
         hide black_screen onlayer black
 

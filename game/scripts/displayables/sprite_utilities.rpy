@@ -74,7 +74,6 @@ transform null:
 label show_Character(Character, x_position = None, y_position = None, sprite_layer = None, color_transform = None, animation_transform = None, transition = None):
     python:
         if Character in all_Girls:
-            # renpy.start_predict(f"images/{Character.tag}_standing/*.webp")
             renpy.stop_predict(f"images/{Character.tag}_blowjob/*.webp")
             renpy.stop_predict(f"images/{Character.tag}_sex/*.webp")
             renpy.stop_predict(f"images/{Character.tag}_doggy/*.webp")
@@ -112,7 +111,6 @@ label hide_Character(Character, transition = None):
             transition = get_transition(Player.location)[1]
 
         if Character in all_Girls:
-            # renpy.stop_predict(f"images/{Character.tag}_standing/*.webp")
             renpy.stop_predict(f"images/{Character.tag}_blowjob/*.webp")
             renpy.stop_predict(f"images/{Character.tag}_sex/*.webp")
             renpy.stop_predict(f"images/{Character.tag}_doggy/*.webp")
@@ -127,6 +125,8 @@ label hide_Character(Character, transition = None):
 label hide_all(fade = False):
     if fade:
         show black_screen onlayer black
+
+        pause 0.4
 
     $ temp_Characters = all_Characters[:]
 
@@ -202,7 +202,6 @@ label remove_all(location = None):
 
 label show_blowjob(Girl, x_position = None, y_position = None, sprite_layer = None):
     python:
-        # renpy.stop_predict(f"images/{Girl.tag}_standing/*.webp")
         renpy.start_predict(f"images/{Girl.tag}_blowjob/*.webp")
         renpy.stop_predict(f"images/{Girl.tag}_sex/*.webp")
         renpy.stop_predict(f"images/{Girl.tag}_doggy/*.webp")
@@ -226,7 +225,6 @@ label show_blowjob(Girl, x_position = None, y_position = None, sprite_layer = No
 
 label show_sex(Girl, x_position = None, y_position = None, sprite_layer = None):
     python:
-        # renpy.stop_predict(f"images/{Girl.tag}_standing/*.webp")
         renpy.stop_predict(f"images/{Girl.tag}_blowjob/*.webp")
         renpy.start_predict(f"images/{Girl.tag}_sex/*.webp")
         renpy.stop_predict(f"images/{Girl.tag}_doggy/*.webp")
@@ -250,7 +248,6 @@ label show_sex(Girl, x_position = None, y_position = None, sprite_layer = None):
 
 label show_doggy(Girl, x_position = None, y_position = None, sprite_layer = None):
     python:
-        # renpy.stop_predict(f"images/{Girl.tag}_standing/*.webp")
         renpy.stop_predict(f"images/{Girl.tag}_blowjob/*.webp")
         renpy.stop_predict(f"images/{Girl.tag}_sex/*.webp")
         renpy.start_predict(f"images/{Girl.tag}_doggy/*.webp")

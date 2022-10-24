@@ -32,6 +32,8 @@ label Laura_workout:
 
     show black_screen onlayer black
 
+    pause 0.4
+
     ". . . and wipe out." with vpunch
 
     pause 0.4

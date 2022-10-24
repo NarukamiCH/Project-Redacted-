@@ -6,9 +6,7 @@ label prologue:
 
     $ Player.location = "hold"
 
-    scene background onlayer background
-    scene
-
+    show background zorder 0
     show midground zorder 2
     show foreground zorder 4
     show cover zorder 7
@@ -63,6 +61,8 @@ label prologue:
     ch_farouk "I've had enough of your insolence, [last_name]. Get out of my lecture hall and don't come back."
 
     show black_screen onlayer black
+
+    pause 0.4
 
     "Shit, now I've done it. . ."
 

@@ -98,7 +98,7 @@ init python:
 
             self.sprite_location = stage_center
 
-            # sprite_layer = [background_characters (eg. teachers), midground (eg. pool mask), midground_characters (eg. students), foreground (eg. desks), foreground_characters (eg. Present), Player.focused_Girl, cover (eg. fog)]
+            # sprite_layer = [background_characters (eg. teachers), midground (eg. steam), midground_characters (eg. teachers), foreground (eg. podium), foreground_characters (eg. Present), Player.focused_Girl, cover (eg. steam)]
             self.sprite_layer = 6
 
             self.destination = "hold"

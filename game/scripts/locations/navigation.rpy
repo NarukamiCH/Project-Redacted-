@@ -50,14 +50,16 @@ label world_map:
                 return
 
         if Player.destination:
+            show black_screen onlayer black
+            
+            pause 0.4
+
             $ stack_depth = renpy.call_stack_depth()
 
             while stack_depth > 0:
                 $ stack_depth -= 1
 
                 $ renpy.pop_call()
-
-            show black_screen onlayer black
 
             call hide_all
 
@@ -89,6 +91,8 @@ label campus:
 
         if selected_Event:
             show black_screen onlayer black
+
+            pause 0.4
 
             $ selected_Event.start()
 
@@ -127,6 +131,8 @@ label player_room:
         if selected_Event:
             show black_screen onlayer black
 
+            pause 0.4
+
             $ selected_Event.start()
 
         if Player.destination != Player.location:
@@ -161,6 +167,8 @@ label girls_room:
         if selected_Event:
             show black_screen onlayer black
 
+            pause 0.4
+
             $ selected_Event.start()
 
         if Player.destination != Player.location:
@@ -194,6 +202,8 @@ label classroom:
 
         if selected_Event:
             show black_screen onlayer black
+
+            pause 0.4
 
             $ selected_Event.start()
 
@@ -241,6 +251,8 @@ label danger_room:
         if selected_Event:
             show black_screen onlayer black
 
+            pause 0.4
+
             $ selected_Event.start()
 
         if Player.destination != Player.location:
@@ -281,6 +293,8 @@ label pool:
 
         if selected_Event:
             show black_screen onlayer black
+
+            pause 0.4
 
             $ selected_Event.start()
 
@@ -323,6 +337,8 @@ label mall:
         if selected_Event:
             show black_screen onlayer black
 
+            pause 0.4
+
             $ selected_Event.start()
 
         $ Nearby = []
@@ -363,6 +379,8 @@ label showers:
 
         if selected_Event:
             show black_screen onlayer black
+
+            pause 0.4
 
             $ selected_Event.start()
 

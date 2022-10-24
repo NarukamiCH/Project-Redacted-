@@ -4,7 +4,7 @@ init python:
         label = "caught_changing"
 
         conditions = [
-            "len(active_Girls) > 0",
+            "len(active_Girls) > len(Player.Party)",
             "Player.destination != Player.location",
             "Player.destination == 'bg_shower' or (Player.destination in bedrooms and Player.destination != 'bg_player')"]
 
@@ -29,9 +29,9 @@ label caught_changing:
 
                     break
 
-        if not Girl:
+        while not Girl or Girl in Player.Party:
             Girl = renpy.random.choice(active_Girls)
-            
+
     $ Girl.location = Player.destination
 
     $ Player.focused_Girl = Girl

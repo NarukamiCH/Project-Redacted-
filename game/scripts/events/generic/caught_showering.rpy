@@ -4,7 +4,7 @@ init python:
         label = "caught_showering"
 
         conditions = [
-            "len(active_Girls) > 0",
+            "len(active_Girls) > len(Player.Party)",
             "Player.destination != Player.location",
             "Player.destination == 'bg_shower'"]
 
@@ -19,7 +19,9 @@ init python:
 label caught_showering:
     call remove_all(location = Player.destination)
 
-    $ Girl = renpy.random.choice(active_Girls)
+    while Girl in Player.Party:
+        $ Girl = renpy.random.choice(active_Girls)
+    
     $ Girl.wet = True
     $ Girl.location = Player.destination
     $ Girl.undress(instant = True)

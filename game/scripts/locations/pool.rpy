@@ -21,6 +21,8 @@ label swim:
     if Changers:
         show black_screen onlayer black
 
+        pause 0.4
+
         python:
             for G in Changers:
                 G.change_Outfit(G.Wardrobe.swimming_Outfit.name, instant = True)

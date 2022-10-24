@@ -39,6 +39,8 @@ label chapter_one_intro:
             "Go back to sleep":
                 show black_screen onlayer black
 
+                pause 0.4
+
                 if first_counter < 3:
                     if first_counter == 0:
                         "You close your eyes again."

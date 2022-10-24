@@ -17,10 +17,14 @@ init python:
     config.cache_surfaces = False
     config.optimize_texture_bounds = True
     config.image_cache_size = 120
+    
+    config.conditionswitch_predict_all = True
 
     config.allow_underfull_grids = True
 
     config.narrator_menu = True
+
+    config.autosave_on_choice = False
 
     config.has_sound = False
     config.has_music = False
