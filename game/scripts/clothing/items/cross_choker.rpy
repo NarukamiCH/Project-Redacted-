@@ -1,21 +1,21 @@
 init -1 python:
 
-    def wet_hair(Owner):
-        name = "wet hair"
-        string = "wet"
+    def cross_choker(Owner):
+        name = "cross choker"
+        string = "cross_choker"
         
-        type = "hair"
+        type = "neck"
         
         dialogue_lines = {}
         
         if Owner.tag == "Laura":
             dialogue_lines.update({
-                "shopping": None,
-                "purchased": None,
-                "gift": None,
-                "change": "Wet, huh?"})
+                "shopping": "I like this.",
+                "purchased": "Thanks.",
+                "gift": "Cool, thanks.",
+                "change": "Sure, I can put it on."})
         
-        price = 0
+        price = 60
         
         shame = 0
         
@@ -23,7 +23,7 @@ init -1 python:
         covers = []
         
         number_of_states = 1
-        
+
         poses = ["standing"]
         
         incompatibilities = []

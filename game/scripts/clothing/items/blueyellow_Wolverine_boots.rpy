@@ -1,27 +1,27 @@
 init -1 python:
 
-    def wet_hair(Owner):
-        name = "wet hair"
-        string = "wet"
+    def blueyellow_Wolverine_boots(Owner):
+        name = "blue-and-yellow Wolverine boots"
+        string = "blueyellow_Wolverine_boots"
         
-        type = "hair"
+        type = "boots"
         
         dialogue_lines = {}
-        
+
         if Owner.tag == "Laura":
             dialogue_lines.update({
-                "shopping": None,
-                "purchased": None,
-                "gift": None,
-                "change": "Wet, huh?"})
-        
-        price = 0
-        
+                "shopping": "Oh, cool, retro.",
+                "purchased": f"Heh, thanks, {Owner.player_petname}.",
+                "gift": "These are pretty nice.",
+                "change": "Sure, no prob."})
+
+        price = 75
+
         shame = 0
-        
+
         hides = []
         covers = []
-        
+
         number_of_states = 1
         
         poses = ["standing"]

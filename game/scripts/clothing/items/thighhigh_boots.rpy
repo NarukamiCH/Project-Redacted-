@@ -1,21 +1,21 @@
 init -1 python:
 
-    def wet_hair(Owner):
-        name = "wet hair"
-        string = "wet"
+    def thighhigh_boots(Owner):
+        name = "thigh-high boots"
+        string = "thighhigh_boots"
         
-        type = "hair"
+        type = "boots"
         
         dialogue_lines = {}
         
         if Owner.tag == "Laura":
             dialogue_lines.update({
-                "shopping": None,
-                "purchased": None,
-                "gift": None,
-                "change": "Wet, huh?"})
+                "shopping": "Hmm, these aren't bad.",
+                "purchased": f"Thanks, {Owner.player_petname}.",
+                "gift": f"Thanks, {Owner.player_petname}.",
+                "change": "I can throw them on if you want."})
         
-        price = 0
+        price = 75
         
         shame = 0
         

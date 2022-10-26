@@ -1,21 +1,21 @@
 init -1 python:
 
-    def wet_hair(Owner):
-        name = "wet hair"
-        string = "wet"
+    def cross_necklace(Owner):
+        name = "cross necklace"
+        string = "cross_necklace"
         
-        type = "hair"
+        type = "neck"
         
         dialogue_lines = {}
         
         if Owner.tag == "Laura":
             dialogue_lines.update({
-                "shopping": None,
-                "purchased": None,
-                "gift": None,
-                "change": "Wet, huh?"})
+                "shopping": "This looks cool.",
+                "purchased": "Mmm, thanks.",
+                "gift": f"Thanks for thinking of me, {Owner.player_petname}.",
+                "change": "Yeah, I like that one."})
         
-        price = 0
+        price = 80
         
         shame = 0
         
@@ -23,7 +23,7 @@ init -1 python:
         covers = []
         
         number_of_states = 1
-        
+
         poses = ["standing"]
         
         incompatibilities = []

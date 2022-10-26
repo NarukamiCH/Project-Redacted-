@@ -1,8 +1,8 @@
 init -1 python:
 
-    def wet_hair(Owner):
-        name = "wet hair"
-        string = "wet"
+    def messy_hair(Owner):
+        name = "messy hair"
+        string = "messy"
         
         type = "hair"
         
@@ -13,7 +13,7 @@ init -1 python:
                 "shopping": None,
                 "purchased": None,
                 "gift": None,
-                "change": "Wet, huh?"})
+                "change": "You like it all messed up?"})
         
         price = 0
         

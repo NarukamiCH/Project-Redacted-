@@ -154,6 +154,10 @@ init python:
                 self.player_petname = Player.name
                 self.player_petnames = ["guy", self.player_petname]
 
+                self.piercings.update({
+                    "nipple": "both",
+                    "labia": "both"})
+
                 self.pubes = "triangle"
 
                 self.used_to_anal = True
@@ -226,20 +230,26 @@ init python:
                 self.eyes = "closed"
                 self.mouth = "kiss"
             elif face == "manic":
-                self.brows = "sad"
+                self.brows = "worried"
                 self.eyes = "wide"
                 self.mouth = "smile"
-                self.blush = 2
+                
+                if not blush:
+                    blush = 1
             elif face == "perplexed":
                 self.brows = "cocked"
                 self.eyes = "neutral"
-                self.mouth = "open"
+
+                if self.tag == "Laura":
+                    self.mouth = "neutral"
+                elif self.tag == "Daenerys":
+                    self.mouth = "open"
             elif face == "sad":
                 self.brows = "worried"
                 self.eyes = "neutral"
                 self.mouth = "frown"
             elif face == "sexy":
-                self.brows = "furrowed"
+                self.brows = "neutral"
                 self.eyes = "sexy"
                 self.mouth = "lipbite"
             elif face == "sly":
@@ -251,12 +261,15 @@ init python:
                 self.eyes = "neutral"
                 self.mouth = "smile"
             elif face == "surprised":
-                self.mouth = "open"
+                if self.tag == "Laura":
+                    self.mouth = "neutral"
+                elif self.tag == "Daenerys":
+                    self.mouth = "open"
+
                 self.brows = "raised"
                 self.eyes = "wide"
 
-            if blush:
-                self.blush = blush
+            self.blush = blush
 
             if brows:
                 self.brows = brows

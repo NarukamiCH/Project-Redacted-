@@ -53,6 +53,12 @@ label Laura_meeting:
         menu:
             extend ""
             "Who are you?" if Laura.name == "???":
+                pause 0.5
+
+                $ Laura.change_out_of("face_inner_accessory")
+
+                pause 0.5
+
                 $ Laura.name = "X-23"
 
                 ch_laura "I go by \"X-23\" in the field."
@@ -97,14 +103,14 @@ label Laura_meeting:
                 $ Laura.name = "X-23"
 
                 ch_laura "Suit yourself."
-            "My name is [Player.name]" if Laura.name != "???" and "Player" not in topics:
+            "My name is [Player.name]." if Laura.name != "???" and "Player" not in topics:
                 $ topics.append("Player")
 
                 ch_laura "Ok."
 
                 menu:
                     extend ""
-                    ". . .and it's nice to meet you?":
+                    ". . . and it's nice to meet you?":
                         call change_Girl_stat(Laura, "love", 1)
 
                         ch_laura "Yeah, you too."

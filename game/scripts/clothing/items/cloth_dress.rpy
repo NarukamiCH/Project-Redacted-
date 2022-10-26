@@ -10,7 +10,7 @@ init -1 python:
         
         price = 250
         
-        shame = 0
+        shame = 1
         
         hides = ["breasts", "pussy"]
         covers = ["breasts", "pussy", "thighs"]

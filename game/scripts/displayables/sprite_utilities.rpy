@@ -91,6 +91,9 @@ label show_Character(Character, x_position = None, y_position = None, sprite_lay
 
         if color_transform:
             transform_list.append(color_transform)
+        else:
+            color_transform = get_color_transform(Player.location)
+            transform_list.append(color_transform)
 
         if animation_transform:
             transform_list.append(animation_transform)
@@ -101,6 +104,9 @@ label show_Character(Character, x_position = None, y_position = None, sprite_lay
             renpy.show(f"{Character.tag}_sprite", at_list = transform_list, zorder = Character.sprite_layer, tag = f"{Character.tag}_sprite")
 
         if transition:
+            renpy.with_statement(transition)
+        else:
+            transition = get_transition(Player.location)[0]
             renpy.with_statement(transition)
 
     return
@@ -200,7 +206,7 @@ label remove_all(location = None):
 
     return
 
-label show_blowjob(Girl, x_position = None, y_position = None, sprite_layer = None):
+label show_blowjob(Girl, x_position = None, y_position = None, sprite_layer = None, color_transform = None):
     python:
         renpy.start_predict(f"images/{Girl.tag}_blowjob/*.webp")
         renpy.stop_predict(f"images/{Girl.tag}_sex/*.webp")
@@ -215,15 +221,19 @@ label show_blowjob(Girl, x_position = None, y_position = None, sprite_layer = No
         if sprite_layer:
             Girl.sprite_layer = sprite_layer
 
-        color_transform = get_color_transform(Player.location)
-
-        transform_list = [sprite_location(Girl.sprite_location, y_position), color_transform]
+        transform_list = [sprite_location(Girl.sprite_location, y_position)]
+        
+        if color_transform:
+            transform_list.append(color_transform)
+        else:
+            color_transform = get_color_transform(Player.location)
+            transform_list.append(color_transform)
 
         renpy.show(f"{Girl.tag}_sprite blowjob", at_list = transform_list, zorder = Girl.sprite_layer, tag = f"{Girl.tag}_sprite")
 
     return
 
-label show_sex(Girl, x_position = None, y_position = None, sprite_layer = None):
+label show_sex(Girl, x_position = None, y_position = None, sprite_layer = None, color_transform = None):
     python:
         renpy.stop_predict(f"images/{Girl.tag}_blowjob/*.webp")
         renpy.start_predict(f"images/{Girl.tag}_sex/*.webp")
@@ -238,15 +248,19 @@ label show_sex(Girl, x_position = None, y_position = None, sprite_layer = None):
         if sprite_layer:
             Girl.sprite_layer = sprite_layer
 
-        color_transform = get_color_transform(Player.location)
-
-        transform_list = [sprite_location(Girl.sprite_location, y_position), color_transform]
+        transform_list = [sprite_location(Girl.sprite_location, y_position)]
+        
+        if color_transform:
+            transform_list.append(color_transform)
+        else:
+            color_transform = get_color_transform(Player.location)
+            transform_list.append(color_transform)
 
         renpy.show(f"{Girl.tag}_sprite sex", at_list = transform_list, zorder = Girl.sprite_layer, tag = f"{Girl.tag}_sprite")
 
     return
 
-label show_doggy(Girl, x_position = None, y_position = None, sprite_layer = None):
+label show_doggy(Girl, x_position = None, y_position = None, sprite_layer = None, color_transform = None):
     python:
         renpy.stop_predict(f"images/{Girl.tag}_blowjob/*.webp")
         renpy.stop_predict(f"images/{Girl.tag}_sex/*.webp")
@@ -261,9 +275,13 @@ label show_doggy(Girl, x_position = None, y_position = None, sprite_layer = None
         if sprite_layer:
             Girl.sprite_layer = sprite_layer
 
-        color_transform = get_color_transform(Player.location)
-
-        transform_list = [sprite_location(Girl.sprite_location, y_position), color_transform]
+        transform_list = [sprite_location(Girl.sprite_location, y_position)]
+        
+        if color_transform:
+            transform_list.append(color_transform)
+        else:
+            color_transform = get_color_transform(Player.location)
+            transform_list.append(color_transform)
 
         renpy.show(f"{Girl.tag}_sprite doggy", at_list = transform_list, zorder = Girl.sprite_layer, tag = f"{Girl.tag}_sprite")
 

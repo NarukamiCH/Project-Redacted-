@@ -1,35 +1,39 @@
-layeredimage Xavier_sprite old:
+layeredimage Xavier_sprite:
     always:
-        "images/Xavier/Xavier_body.webp"
+        "images/Xavier/body.webp"
 
     if Xavier.eyes in ["closed", "squint", "up"]:
-        "images/Xavier/Xavier_eyes_[Xavier.eyes].webp"
+        "images/Xavier/eyes_[Xavier.eyes].webp"
     else:
         "Xavier_blinking"
 
     always:
-        "images/Xavier/Xavier_brows_[Xavier.brows].webp"
+        "images/Xavier/brows_[Xavier.brows].webp"
 
     always:
-        "images/Xavier/Xavier_mouth_[Xavier.mouth].webp"
+        "images/Xavier/mouth_[Xavier.mouth].webp"
         
     if Xavier.psychic:
-        "images/Xavier/Xavier_psychic.webp"
+        "images/Xavier/psychic.webp"
 
     anchor (0.5, 0.0) offset (0, 500) zoom 0.55
 
 image Xavier_blinking:
-    "images/Xavier/Xavier_eyes_[Xavier.eyes].webp"
+    f"images/Xavier/eyes_{Xavier.eyes}.webp"
+    choice:
+        4.5
+    choice:
+        4.0
     choice:
         3.5
-    choice:
-        3.25
-    choice:
-        3
-    "images/Xavier/Xavier_eyes_half_blink.webp"
-    0.05
-    "images/Xavier/Xavier_eyes_closed.webp"
-    0.07
-    "images/Xavier/Xavier_eyes_half_blink.webp"
-    0.15
+    "images/Xavier/eyes_blink1.webp"
+    0.027
+    "images/Xavier/eyes_blink2.webp"
+    0.027
+    "images/Xavier/eyes_closed.webp"
+    0.054
+    "images/Xavier/eyes_blink2.webp"
+    0.018
+    "images/Xavier/eyes_blink1.webp"
+    0.072
     repeat

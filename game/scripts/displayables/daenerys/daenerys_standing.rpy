@@ -80,13 +80,13 @@ layeredimage Daenerys_sprite standing:
     always:
         "images/Daenerys_standing/head.webp"
 
-    always:
-        "images/Daenerys_standing/brows_[Daenerys.brows].webp"
-
     if Daenerys.eyes not in ["closed", "down", "side", "squint", "up"]:
         "Daenerys_standing_blinking"
     else:
         "images/Daenerys_standing/eyes_[Daenerys.eyes].webp"
+
+    always:
+        "images/Daenerys_standing/brows_[Daenerys.brows].webp"
 
     always:
         "images/Daenerys_standing/mouth_[Daenerys.mouth].webp"
@@ -95,20 +95,20 @@ layeredimage Daenerys_sprite standing:
         "images/Daenerys_standing/blush[Daenerys.blush].webp"
 
     if Daenerys.wet and Daenerys.Clothes["dress"].string == "war_dress":
-        "images/Daenerys_standing/hair_shadow_wet_war_dress.webp"
+        "images/Daenerys_standing/hair_shadow_wet_dark.webp"
     elif Daenerys.wet:
-        "images/Daenerys_standing/hair_shadow_wet.webp"
+        "images/Daenerys_standing/hair_shadow_wet_warm.webp"
     elif Daenerys.Clothes["dress"].string == "war_dress":
-        "images/Daenerys_standing/hair_shadow_[Daenerys.Clothes[hair].string]_war_dress.webp"
+        "images/Daenerys_standing/hair_shadow_[Daenerys.Clothes[hair].string]_dark.webp"
     else:
-        "images/Daenerys_standing/hair_shadow_[Daenerys.Clothes[hair].string].webp"
+        "images/Daenerys_standing/hair_shadow_[Daenerys.Clothes[hair].string]_warm.webp"
 
     if Daenerys.wet:
         "images/Daenerys_standing/hair_wet.webp"
     else:
         "images/Daenerys_standing/hair_[Daenerys.Clothes[hair].string].webp"
 
-    anchor (0.5, 0.0) offset (0, 50) zoom 0.6
+    anchor (0.5, 0.0) offset (0, 70) zoom 0.635
 
 image Daenerys_standing_blinking:
     f"images/Daenerys_standing/eyes_{Daenerys.eyes}.webp"
@@ -119,13 +119,13 @@ image Daenerys_standing_blinking:
     choice:
         3.5
     "images/Daenerys_standing/eyes_blink1.webp"
-    0.018
+    0.027
     "images/Daenerys_standing/eyes_blink2.webp"
-    0.018
+    0.027
     "images/Daenerys_standing/eyes_closed.webp"
-    0.036
+    0.054
     "images/Daenerys_standing/eyes_blink2.webp"
-    0.012
+    0.018
     "images/Daenerys_standing/eyes_blink1.webp"
-    0.048
+    0.072
     repeat

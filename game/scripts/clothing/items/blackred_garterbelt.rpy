@@ -1,29 +1,29 @@
 init -1 python:
 
-    def wet_hair(Owner):
-        name = "wet hair"
-        string = "wet"
+    def blackred_garterbelt(Owner):
+        name = "black-and-red garterbelt"
+        string = "blackred_garterbelt"
         
-        type = "hair"
+        type = "hose"
         
         dialogue_lines = {}
         
         if Owner.tag == "Laura":
             dialogue_lines.update({
-                "shopping": None,
-                "purchased": None,
-                "gift": None,
-                "change": "Wet, huh?"})
+                "shopping": "Spicy.",
+                "purchased": "Well, okay then.",
+                "gift": "Oh? Thanks.",
+                "change": "We're dressing up, huh?"})
         
-        price = 0
+        price = 70
         
-        shame = 0
+        shame = 1
         
         hides = []
         covers = []
         
         number_of_states = 1
-        
+
         poses = ["standing"]
         
         incompatibilities = []
