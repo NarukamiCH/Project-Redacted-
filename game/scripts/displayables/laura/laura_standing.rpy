@@ -52,12 +52,12 @@ layeredimage Laura_sprite standing:
     if Laura.piercings["labia"] not in ["barbell", "both"]:
         Null()
     elif Laura.Clothes["underwear"].string == "grey_panties" and Laura.Clothes["underwear"].state == 0:
-        "images/Laura_standing/labia_piercings_barbell_covered_[Laura.Clothes[underwear].string].webp"
+        "images/Laura_standing/labia_piercings_barbell_covered_grey_panties.webp"
 
     if Laura.piercings["labia"] not in ["ring", "both"]:
         Null()
     elif Laura.Clothes["underwear"].string == "grey_panties" and Laura.Clothes["underwear"].state == 0:
-        "images/Laura_standing/labia_piercings_ring_covered_[Laura.Clothes[underwear].string].webp"
+        "images/Laura_standing/labia_piercings_ring_covered_grey_panties.webp"
 
     if Laura.Clothes["socks"].string:
         "images/Laura_standing/bodysuit_[Laura.Clothes[socks].string].webp"
@@ -94,7 +94,7 @@ layeredimage Laura_sprite standing:
         Null()
     elif Laura.Clothes["dress"].string and Laura.Clothes["dress"].state == 0:
         "images/Laura_standing/nipple_piercings_barbell_covered_[Laura.Clothes[dress].string].webp"
-    elif Laura.Clothes["bra"].string and Laura.Clothes["bra"].state == 0:
+    elif Laura.Clothes["bra"].string in ["black_lace_bra", "white_tanktop"] and Laura.Clothes["bra"].state == 0:
         "images/Laura_standing/nipple_piercings_barbell_covered_[Laura.Clothes[bra].string].webp"
     elif Laura.Clothes["bodysuit"].string and Laura.Clothes["bodysuit"].state == 0:
         "images/Laura_standing/nipple_piercings_barbell_covered_[Laura.Clothes[bodysuit].string].webp"
@@ -103,7 +103,7 @@ layeredimage Laura_sprite standing:
         Null()
     elif Laura.Clothes["dress"].string and Laura.Clothes["dress"].state == 0:
         "images/Laura_standing/nipple_piercings_ring_covered_[Laura.Clothes[dress].string].webp"
-    elif Laura.Clothes["bra"].string and Laura.Clothes["bra"].state == 0:
+    elif Laura.Clothes["bra"].string in ["black_lace_bra", "white_tanktop"] and Laura.Clothes["bra"].state == 0:
         "images/Laura_standing/nipple_piercings_ring_covered_[Laura.Clothes[bra].string].webp"
     elif Laura.Clothes["bodysuit"].string and Laura.Clothes["bodysuit"].state == 0:
         "images/Laura_standing/nipple_piercings_ring_covered_[Laura.Clothes[bodysuit].string].webp"
@@ -184,9 +184,9 @@ image Laura_standing_blinking:
     choice:
         3.5
     "images/Laura_standing/eyes_blink1.webp"
-    0.027
+    0.023
     "images/Laura_standing/eyes_blink2.webp"
-    0.027
+    0.023
     "images/Laura_standing/eyes_closed.webp"
     0.054
     "images/Laura_standing/eyes_blink2.webp"

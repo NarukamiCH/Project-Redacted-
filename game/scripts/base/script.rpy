@@ -1,6 +1,6 @@
 label splashscreen:
     python:
-        Preference("gl powersave", "auto")
+        # Preference("gl powersave", "auto")
 
         renpy.start_predict("images/backgrounds/*.webp")
         renpy.start_predict("images/GUI/*.webp")

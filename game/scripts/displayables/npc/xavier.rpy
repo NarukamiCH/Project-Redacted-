@@ -27,9 +27,9 @@ image Xavier_blinking:
     choice:
         3.5
     "images/Xavier/eyes_blink1.webp"
-    0.027
+    0.023
     "images/Xavier/eyes_blink2.webp"
-    0.027
+    0.023
     "images/Xavier/eyes_closed.webp"
     0.054
     "images/Xavier/eyes_blink2.webp"

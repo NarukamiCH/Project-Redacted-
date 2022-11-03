@@ -68,7 +68,7 @@ init -2 python:
             self.covers_feet = False
 
             if "breasts" in self.hides:
-                if self.type in ["bodysuit", "dress"] and self.state < 2:
+                if self.type in ["bodysuit", "dress"] and self.state < 1:
                     self.hides_breasts = True
                 elif self.type in ["top", "jacket"] and self.state < 1:
                     self.hides_breasts = True
@@ -76,7 +76,7 @@ init -2 python:
                     self.hides_breasts = True
 
             if "breasts" in self.covers:
-                if self.type in ["bodysuit", "dress"] and self.state < 2:
+                if self.type in ["bodysuit", "dress"] and self.state < 1:
                     self.covers_breasts = True
                 elif self.type in ["top", "jacket"] and self.state < 1:
                     self.covers_breasts = True
@@ -156,9 +156,12 @@ init -2 python:
                     if not instant:
                         renpy.pause(0.15)
 
-            if Clothing.type in ["underwear", "hose"]:
-                if self.Clothes["skirt"].string and "skirt" not in covering_Clothes:
-                    self.Clothes["skirt"].take_off(instant = instant)
+            # if Clothing.type in ["underwear", "hose"]:
+            #     if self.Clothes["skirt"].string and "skirt" not in covering_Clothes:
+            #         self.Clothes["skirt"].take_off(instant = instant)
+
+            #     if self.Clothes["dress"].string and "dress" not in covering_Clothes:
+            #         self.Clothes["dress"].take_off(instant = instant)
 
             if self.Clothes[Clothing.type].name and Clothing.type in removable_Clothing_types:
                 self.Clothes[Clothing.type].take_off(instant = instant)
@@ -183,9 +186,12 @@ init -2 python:
 
             self.Clothes[Clothing.type].put_on(instant = instant)
 
-            if Clothing.type in ["underwear", "hose"]:
-                if self.Clothes["skirt"].string and "skirt" not in covering_Clothes:
-                    self.Clothes["skirt"].put_on(instant = instant)
+            # if Clothing.type in ["underwear", "hose"]:
+            #     if self.Clothes["skirt"].string and "skirt" not in covering_Clothes:
+            #         self.Clothes["skirt"].put_on(instant = instant)
+
+            #     if self.Clothes["dress"].string and "dress" not in covering_Clothes:
+            #         self.Clothes["dress"].put_on(instant = instant)
 
             for old_Clothing in temp_Clothes.values():
                 if old_Clothing.type and not self.Clothes[old_Clothing.type].string:
@@ -222,12 +228,12 @@ init -2 python:
                     if not instant:
                         renpy.pause(0.15)
 
-            if type in ["underwear", "hose"]:
-                if self.Clothes["skirt"].string and "skirt" not in covering_Clothes:
-                    self.Clothes["skirt"].take_off(instant = instant)
+            # if type in ["underwear", "hose"]:
+            #     if self.Clothes["skirt"].string and "skirt" not in covering_Clothes:
+            #         self.Clothes["skirt"].take_off(instant = instant)
 
-                if self.Clothes["dress"].string and "dress" not in covering_Clothes:
-                    self.Clothes["dress"].take_off(instant = instant)
+            #     if self.Clothes["dress"].string and "dress" not in covering_Clothes:
+            #         self.Clothes["dress"].take_off(instant = instant)
 
             self.Clothes[type].take_off(instant = instant)
             self.remove_Clothing(type)
@@ -235,12 +241,12 @@ init -2 python:
             if not instant:
                 renpy.pause(0.15)
 
-            if type in ["underwear", "hose"]:
-                if self.Clothes["skirt"].string and "skirt" not in covering_Clothes:
-                    self.Clothes["skirt"].put_on(instant = instant)
+            # if type in ["underwear", "hose"]:
+            #     if self.Clothes["skirt"].string and "skirt" not in covering_Clothes:
+            #         self.Clothes["skirt"].put_on(instant = instant)
 
-                if self.Clothes["dress"].string and "dress" not in covering_Clothes:
-                    self.Clothes["dress"].put_on(instant = instant)
+            #     if self.Clothes["dress"].string and "dress" not in covering_Clothes:
+            #         self.Clothes["dress"].put_on(instant = instant)
 
             for c in range(len(covering_Clothes)):
                 if temp_Clothes[covering_Clothes[c]].name:

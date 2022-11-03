@@ -49,11 +49,19 @@ layeredimage Daenerys_sprite standing:
     if Daenerys.Clothes["dress"].string:
         "images/Daenerys_standing/dress_[Daenerys.Clothes[dress].string]_[Daenerys.Clothes[dress].state].webp"
 
-    if Daenerys.piercings["nipple"] in ["barbell", "both"] and (Daenerys.Clothes["bra"].string or Daenerys.Clothes["dress"].string == "cloth_dress"):
-        "images/Daenerys_standing/nipple_piercings_barbell_covered.webp"
+    if Daenerys.piercings["nipple"] not in ["barbell", "both"]:
+        Null()
+    elif Daenerys.Clothes["dress"].string and Daenerys.Clothes["dress"].string != "war_dress" and Daenerys.Clothes["dress"].state == 0:
+        "images/Daenerys_standing/nipple_piercings_barbell_covered_cloth.webp"
+    elif Daenerys.Clothes["bra"].string and Daenerys.Clothes["bra"].state == 0:
+        "images/Daenerys_standing/nipple_piercings_barbell_covered_cloth.webp"
 
-    if Daenerys.piercings["nipple"] in ["ring", "both"] and (Daenerys.Clothes["bra"].string or Daenerys.Clothes["dress"].string == "cloth_dress"):
-        "images/Daenerys_standing/nipple_piercings_ring_covered.webp"
+    if Daenerys.piercings["nipple"] not in ["ring", "both"]:
+        Null()
+    elif Daenerys.Clothes["dress"].string and Daenerys.Clothes["dress"].string != "war_dress" and Daenerys.Clothes["dress"].state == 0:
+        "images/Daenerys_standing/nipple_piercings_ring_covered_cloth.webp"
+    elif Daenerys.Clothes["bra"].string and Daenerys.Clothes["bra"].state == 0:
+        "images/Daenerys_standing/nipple_piercings_ring_covered_cloth.webp"
 
     if not Daenerys.Clothes["top"].string:
         Null()
@@ -119,11 +127,11 @@ image Daenerys_standing_blinking:
     choice:
         3.5
     "images/Daenerys_standing/eyes_blink1.webp"
-    0.027
+    0.023
     "images/Daenerys_standing/eyes_blink2.webp"
-    0.027
+    0.023
     "images/Daenerys_standing/eyes_closed.webp"
-    0.054
+    0.065
     "images/Daenerys_standing/eyes_blink2.webp"
     0.018
     "images/Daenerys_standing/eyes_blink1.webp"
