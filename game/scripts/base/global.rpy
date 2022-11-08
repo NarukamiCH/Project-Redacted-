@@ -1,33 +1,6 @@
 init -1:
 
-    define ch_player = Character("[Player.name]", who_color = "#0a84b4")
-    define ch_player_nvl = Character("[Player.name]", kind = nvl)
-
-    define ch_rogue = Character("[Rogue.name]", who_color = "#2ca05aff", image = "Rogue_sprite")
-    define ch_rogue_nvl = Character("[Rogue.name]", kind = nvl)
-
-    define ch_kitty = Character("[Kitty.name]", who_color = "#9012d9", image = "Kitty_sprite")
-    define ch_kitty_nvl = Character("[Kitty.name]", kind = nvl)
-
-    define ch_laura = Character("[Laura.name]", who_color = "#d9bb12", image = "Laura_sprite")
-    define ch_laura_nvl = Character("[Laura.name]", kind = nvl)
-
-    define ch_storm = Character("[Storm.name]", who_color = "#85f2f9", image = "Storm_sprite")
-    define ch_storm_nvl = Character("[Storm.name]", kind = nvl)
-
-    define ch_jean = Character("[Jean.name]", who_color = "#d92912", image = "Jean_sprite")
-    define ch_jean_nvl = Character("[Jean.name]", kind = nvl)
-    define ch_jean_tele = Character("[Jean.name]", who_color = "#d92912", what_italic = True)
-
-    define ch_dany = Character("[Daenerys.name]", who_color = "#1945a4", image = "Daenerys_sprite")
-    define ch_dany_nvl = Character("[Daenerys.name]", kind = nvl)
-
-    define ch_xavier = Character("[Xavier.name]", who_color = "#1b867d", image = "Xavier_sprite")
-    define ch_xavier_tele = Character("[Xavier.name]", who_color = "#1b867d", what_italic = True)
-
     define ch_reporter = Character("Reporter", who_color = "#000000")
-    define ch_farouk = Character("[Farouk.name]", who_color = "#592c99")
-    define ch_farouk_tele = Character("[Farouk.name]", who_color = "#592c99", what_italic = True)
 
     default chapter = 0
 
@@ -42,6 +15,14 @@ init -1:
     default weekday = 6
     default day_of_week = week[weekday]
 
+    define stage_far_far_left = 0.15
+    define stage_far_left = 0.25
+    define stage_left = 0.35
+    define stage_center = 0.5
+    define stage_right = 0.65
+    define stage_far_right = 0.75
+    define stage_far_far_right = 0.85
+    
     default Present = []
     default Nearby = []
     default Students = []
@@ -50,16 +31,6 @@ init -1:
     default active_Girls = []
     default all_Girls = []
     default all_Characters = []
-
-    default bedrooms = ["bg_player"]
-
-    define stage_far_far_left = 0.15
-    define stage_far_left = 0.25
-    define stage_left = 0.35
-    define stage_center = 0.5
-    define stage_right = 0.65
-    define stage_far_right = 0.75
-    define stage_far_far_right = 0.85
 
     define location_names = {
         "bg_campus": "Campus",
@@ -78,6 +49,8 @@ init -1:
         "bg_shop": "Urban Big-Titter's",
         "bg_shower": "Showers",
         "hold": ""}
+
+    default bedrooms = ["bg_player"]
 
     define all_Clothing_types = ["makeup", "gag",
         "face_inner_accessory", "hair", "face_outer_accessory",

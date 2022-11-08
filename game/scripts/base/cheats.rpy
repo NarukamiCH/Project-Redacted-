@@ -21,13 +21,14 @@ label cheat_menu(Girl):
                     Girls = []
 
                     if chapter >= 2:
-                        Girls.append(Jean)
+                        for G in chapter_two_Girls:
+                            Girls.append(eval(f"create_{G}()"))
 
                     if chapter >= 1:
-                        Girls.append(Rogue)
-                        Girls.append(Kitty)
-                        Girls.append(Laura)
-                        Girls.append(Storm)
+                        for G in chapter_one_Girls:
+                            Girls.append(eval(f"create_{G}()"))
+
+                    renpy.say(None, "[Girls]")
 
                     for G in Girls:
                         if G not in active_Girls:
@@ -50,7 +51,7 @@ label cheat_menu(Girl):
             "Unlock all clothes":
                 python:
                     for G in active_Girls:
-                        Clothes = register_Clothes(G)
+                        Clothes = eval(f"all_{G.tag}_Clothes()")
 
                         for Clothing in Clothes:
                             if Clothing.name not in G.Wardrobe.Clothes.keys():

@@ -42,7 +42,7 @@ screen shopping_picker(Girl):
                 auto "exit_%s"
                 action Return("quit")
 
-            for Clothing in register_Clothes(Girl):
+            for Clothing in eval(f"all_{Girl.tag}_Clothes()"):
                 if Clothing.name not in Girl.Wardrobe.Clothes.keys():
                     imagebutton anchor (0.5, 0.5) pos (0.5, 0.5) xysize (512, 512):
                         idle "images/GUI/phone/phone_received_icon.webp" hover "images/GUI/phone/phone_send_icon.webp"

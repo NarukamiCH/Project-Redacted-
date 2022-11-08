@@ -1,19 +1,16 @@
 init -1 python:
 
-    def Item(Owner):
+    def Item():
         name = "lace panties"
         string = "lace_panties"
 
         type = "underwear"
 
-        dialogue_lines = {}
-
-        if Owner.tag == "Rogue":
-            dialogue_lines.update({
-                "shopping": "Ooh, these are cute!",
-                "purchased": f"Aw, that's sweet of you, {Owner.player_petname}.",
-                "gift": f"Thank you, {Owner.player_petname}!",
-                "change": "I do look good in those, don't I?"})
+        dialogue_lines = {
+            "shopping": "Ooh, these are cute!",
+            "purchased": f"Aw, that's sweet of you, {Girl.player_petname}.",
+            "gift": f"Thank you, {Girl.player_petname}!",
+            "change": "I do look good in those, don't I?"}
 
         price = 50
 
@@ -28,4 +25,11 @@ init -1 python:
 
         incompatibilities = []
 
-        return ClothingClass(Owner, name, string, type, dialogue_lines, price = price, shame = shame, hides = hides, covers = covers, number_of_states = number_of_states, poses = poses, incompatibilities = incompatibilities)
+        return ClothingClass(
+            Girl, 
+            name, string, type, 
+            dialogue_lines, 
+            price = price, shame = shame, 
+            hides = hides, covers = covers, 
+            number_of_states = number_of_states, poses = poses, 
+            incompatibilities = incompatibilities)

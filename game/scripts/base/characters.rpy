@@ -1,7 +1,5 @@
 init python:
 
-    import pickle
-
     class PlayerClass(object):
         def __init__(self, name, **properties):
             self.name = name
@@ -86,9 +84,7 @@ init python:
             self.tan_lines = {
                 "top": False, "bottom": False}
             self.piercings = {
-                "face": False,
-                "nipple": False,
-                "labia": False}
+                "face": False, "nipple": False, "belly": False, "labia": False}
             self.grool = 0
             self.cumshot = {
                 "hair": False, "face": False, "mouth": False, "chin": False,
@@ -130,77 +126,10 @@ init python:
             self.petname = self.name
             self.petnames = [self.name]
 
-            if self.tag == "Rogue":
-                self.player_petname = "Sugar"
-                self.player_petnames = [self.player_petname, Player.name]
-
-                self.pubes = "triangle"
-
-                self.used_to_anal = False
-
-                Students.append(self)
-            elif self.tag == "Kitty":
-                self.player_petname = Player.name[0]
-                self.player_petnames = [self.player_petname]
-
-                self.pubes = "strip"
-
-                self.used_to_anal = False
-
-                Students.append(self)
-            elif self.tag == "Laura":
-                self.names.append("X-23")
-
-                self.player_petname = Player.name
-                self.player_petnames = ["guy", self.player_petname]
-
-                self.piercings.update({
-                    "nipple": "barbell",
-                    "labia": "both"})
-
-                self.pubes = "hairy"
-
-                self.used_to_anal = True
-
-                self.claws = False
-
-                Students.append(self)
-            elif self.tag == "Storm":
-                self.player_petname = Player.name
-                self.player_petnames = [self.player_petname]
-
-                self.pubes = "triangle"
-
-                self.used_to_anal = False
-
-                self.storming = False
-
-                Professors.append(self)
-            elif self.tag == "Jean":
-                self.player_petname = Player.name
-                self.player_petnames = [self.player_petname]
-
-                self.pubes = "strip"
-
-                self.used_to_anal = False
-
-                self.psychic = False
-
-                Professors.append(self)
-            elif self.tag == "Daenerys":
-                self.player_petname = Player.name
-                self.player_petnames = [self.player_petname]
-
-                self.pubes = "triangle"
-
-                self.used_to_anal = False
-
             all_Girls.append(self)
             all_Characters.append(self)
 
             bedrooms.append(self.home)
-
-            set_default_Outfits(self)
 
         def change_face(self, face = None, **kwargs):
             face = self.default_face() if not face else face
@@ -468,11 +397,6 @@ init python:
 
             self.destination = "hold"
             self.location = "hold"
-
-            if self.tag == "Xavier":
-                self.psychic = False
-
-                Professors.append(self)
 
             all_Characters.append(self)
 

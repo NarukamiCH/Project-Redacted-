@@ -3,8 +3,8 @@ init -2 python:
     import pickle
 
     class ClothingClass(object):
-        def __init__(self, Owner, name, string, type, dialogue_lines, **properties):
-            self.Owner = Owner
+        def __init__(self, Laura, name, string, type, dialogue_lines, **properties):
+            self.Laura = Laura
 
             self.name = name
             self.string = string
@@ -113,7 +113,7 @@ init -2 python:
             self.Clothes = {}
 
             for type in all_Clothing_types:
-                self.Clothes[type] = ClothingClass(Owner = None, name = None, string = None, type = None, dialogue_lines = None)
+                self.Clothes[type] = ClothingClass(Laura = None, name = None, string = None, type = None, dialogue_lines = None)
 
             self.set_Outfit_flags()
 
@@ -127,7 +127,7 @@ init -2 python:
                 types = [types]
 
             for type in types:
-                self.Clothes[type] = ClothingClass(Owner = None, name = None, string = None, type = None, dialogue_lines = None)
+                self.Clothes[type] = ClothingClass(Laura = None, name = None, string = None, type = None, dialogue_lines = None)
 
             return
 

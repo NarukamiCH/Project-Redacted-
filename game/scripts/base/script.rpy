@@ -7,10 +7,9 @@ label splashscreen:
         renpy.start_predict("images/GUI/*/*.webp")
         renpy.start_predict("images/effects/*.webp")
 
-        for G in ["Rogue", "Kitty", "Laura", "Storm", "Jean", "Daenerys"]:
-            renpy.start_predict(f"images/{G}_standing/*.webp")
-
-        renpy.start_predict("images/Xavier/*.webp")
+        for C in Cast:
+            renpy.start_predict(f"characters/{C}/images/*.webp")
+            renpy.start_predict(f"characters/{C}/images/*/*.webp")
         
     return
 
@@ -32,48 +31,10 @@ label start:
             $ color = "black"
 
     python:
-        Player = PlayerClass(
-            name,
-            voice = ch_player, text = ch_player_nvl,
-            skin_color = color)
+        create_Player()
 
-        Rogue = GirlClass(
-            "Rogue",
-            voice = ch_rogue, text = ch_rogue_nvl,
-            love = 20, trust = 20, desire = 0)
-
-        Kitty = GirlClass(
-            "Kitty",
-            voice = ch_kitty, text = ch_kitty_nvl,
-            love = 10, trust = 10, desire = 0)
-
-        Laura = GirlClass(
-            "Laura",
-            voice = ch_laura, text = ch_laura_nvl,
-            love = 10, trust = 10, desire = 0)
-
-        Storm = GirlClass(
-            "Storm",
-            voice = ch_storm, text = ch_storm_nvl,
-            love = 10, trust = 30, desire = 0)
-
-        Jean = GirlClass(
-            "Jean",
-            voice = ch_jean, text = ch_jean_nvl,
-            love = 10, trust = 20, desire = 0)
-
-        Daenerys = GirlClass(
-            "Daenerys",
-            voice = ch_dany, text = ch_dany_nvl,
-            love = 0, trust = 0, desire = 10)
-
-        Farouk = NPCClass(
-            "Farouk",
-            voice = ch_farouk)
-
-        Xavier = NPCClass(
-            "Xavier",
-            voice = ch_xavier)
+        for C in Cast:
+            eval(f"create_{C}()")
 
         register_Events()
 
@@ -90,45 +51,9 @@ label after_load:
         for Character in all_Characters:
             all_Character_names.append(Character.tag)
 
-        if "Rogue" not in all_Character_names:
-            Rogue = GirlClass(
-                "Rogue",
-                voice = ch_rogue, text = ch_rogue_nvl,
-                love = 20, trust = 20, desire = 0)
-        elif "Kitty" not in all_Character_names:
-            Kitty = GirlClass(
-                "Kitty",
-                voice = ch_kitty, text = ch_kitty_nvl,
-                love = 10, trust = 10, desire = 0)
-        elif "Laura" not in all_Character_names:
-            Laura = GirlClass(
-                "Laura",
-                voice = ch_laura, text = ch_laura_nvl,
-                love = 10, trust = 10, desire = 0)
-        elif "Storm" not in all_Character_names:
-            Storm = GirlClass(
-                "Storm",
-                voice = ch_storm, text = ch_storm_nvl,
-                love = 10, trust = 30, desire = 0)
-        elif "Jean" not in all_Character_names:
-            Jean = GirlClass(
-                "Jean",
-                voice = ch_jean, text = ch_jean_nvl,
-                love = 10, trust = 20, desire = 0)
-        elif "Daenerys" not in all_Character_names:
-            Daenerys = GirlClass(
-                "Daenerys",
-                voice = ch_dany, text = ch_dany_nvl,
-                love = 0, trust = 0, desire = 10)
-
-        if "Farouk" not in all_Character_names:
-            Farouk = NPCClass(
-                "Farouk",
-                voice = ch_farouk)
-        elif "Xavier" not in all_Character_names:
-            Xavier = NPCClass(
-                "Xavier",
-                voice = ch_xavier)
+        for C in Cast:
+            if C not in all_Character_names:
+                eval(f"create_{C}()")
 
         for G in all_Girls:
             set_default_Outfits(G, change = False)
