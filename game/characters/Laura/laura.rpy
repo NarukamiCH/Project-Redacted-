@@ -31,6 +31,4 @@ init python:
 
         Students.append(Laura)
 
-        set_default_Outfits(Laura)
-
         return Laura

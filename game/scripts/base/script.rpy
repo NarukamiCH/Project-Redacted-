@@ -31,10 +31,13 @@ label start:
             $ color = "black"
 
     python:
-        create_Player()
+        Player = create_Player()
 
         for C in Cast:
-            eval(f"create_{C}()")
+            exec(f"{C} = create_{C}()")
+
+        for G in all_Girls:
+            set_default_Outfits(G)
 
         register_Events()
 
@@ -53,7 +56,7 @@ label after_load:
 
         for C in Cast:
             if C not in all_Character_names:
-                eval(f"create_{C}()")
+                exec(f"{C} = create_{C}()")
 
         for G in all_Girls:
             set_default_Outfits(G, change = False)

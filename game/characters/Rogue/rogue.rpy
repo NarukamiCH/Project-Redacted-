@@ -23,6 +23,4 @@ init python:
 
         Students.append(Rogue)
 
-        set_default_Outfits(Rogue)
-
         return Rogue

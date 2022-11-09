@@ -18,6 +18,4 @@ init python:
 
         Daenerys.used_to_anal = False
 
-        set_default_Outfits(Daenerys)
-
         return Daenerys

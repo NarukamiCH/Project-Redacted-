@@ -22,13 +22,11 @@ label cheat_menu(Girl):
 
                     if chapter >= 2:
                         for G in chapter_two_Girls:
-                            Girls.append(eval(f"create_{G}()"))
+                            Girls.append(eval(f"{G}"))
 
                     if chapter >= 1:
                         for G in chapter_one_Girls:
-                            Girls.append(eval(f"create_{G}()"))
-
-                    renpy.say(None, "[Girls]")
+                            Girls.append(eval(f"{G}"))
 
                     for G in Girls:
                         if G not in active_Girls:

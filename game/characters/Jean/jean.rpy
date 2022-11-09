@@ -26,6 +26,4 @@ init python:
 
         Professors.append(Jean)
 
-        set_default_Outfits(Jean)
-
         return Jean
