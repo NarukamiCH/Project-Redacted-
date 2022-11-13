@@ -302,64 +302,58 @@ init -2 python:
             for type in breast_hiding_Clothing_types:
                 Clothing = self.Clothes[type]
 
-                if Clothing:
-                    if Clothing.hides_breasts:
-                        self.breasts_hidden = True
-                        self.breasts_covered = True
+                if Clothing.hides_breasts:
+                    self.breasts_hidden = True
+                    self.breasts_covered = True
 
-                        break
-                    elif Clothing.covers_breasts:
-                        self.breasts_covered = True
+                    break
+                elif Clothing.covers_breasts:
+                    self.breasts_covered = True
 
             for type in underwear_hiding_Clothing_types:
                 Clothing = self.Clothes[type]
 
-                if Clothing:
-                    if Clothing.hides_pussy:
-                        self.underwear_hidden = True
-                        self.underwear_covered = True
+                if Clothing.hides_pussy:
+                    self.underwear_hidden = True
+                    self.underwear_covered = True
 
-                        break
-                    elif Clothing.covers_pussy:
-                        self.underwear_covered = True
+                    break
+                elif Clothing.covers_pussy:
+                    self.underwear_covered = True
 
             for type in pussy_hiding_Clothing_types:
                 Clothing = self.Clothes[type]
 
-                if Clothing:
-                    if Clothing.hides_pussy:
-                        self.pussy_hidden = True
-                        self.pussy_covered = True
+                if Clothing.hides_pussy:
+                    self.pussy_hidden = True
+                    self.pussy_covered = True
 
-                        break
-                    elif Clothing.covers_pussy:
-                        self.pussy_covered = True
+                    break
+                elif Clothing.covers_pussy:
+                    self.pussy_covered = True
 
             for type in thigh_covering_Clothing_types:
                 Clothing = self.Clothes[type]
 
-                if Clothing:
-                    if Clothing.covers_thighs:
-                        self.thighs_covered = True
+                if Clothing.covers_thighs:
+                    self.thighs_covered = True
 
-                        break
+                    break
 
             for type in feet_covering_Clothing_types:
                 Clothing = self.Clothes[type]
 
-                if Clothing:
-                    if Clothing.covers_feet:
-                        self.feet_covered = True
+                if Clothing.covers_feet:
+                    self.feet_covered = True
 
-                        break
+                    break
 
             for type in removable_Clothing_types:
                 Clothing = self.Clothes[type]
 
-                if Clothing:
-                    self.fully_nude = False
+                self.fully_nude = False
 
-                    break
+                break
 
             self.shame = 0
 
@@ -409,7 +403,7 @@ init -2 python:
             self.last_Outfit = pickle.loads(pickle.dumps(self.public_Outfit, -1))
 
         def add_Clothing(self, Clothing):
-            if Clothing not in self.Clothes:
+            if Clothing.name not in self.Clothes.keys():
                 self.Clothes[Clothing.name] = Clothing
 
             return

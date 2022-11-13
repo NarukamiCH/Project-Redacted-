@@ -55,7 +55,7 @@ label Laura_meeting:
             "Who are you?" if Laura.name == "???":
                 pause 0.5
 
-                $ Laura.change_out_of("face_inner_accessory")
+                $ Laura.change_out_of("face_outer_accessory")
 
                 pause 0.5
 

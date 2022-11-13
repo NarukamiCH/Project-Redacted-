@@ -1,19 +1,19 @@
 init -1 python:
 
-    def Rogue_towel():
-        name = "towel"
-        string = "towel"
+    def Rogue_brown_jacket():
+        name = "brown jacket"
+        string = "brown_jacket"
 
-        type = "dress"
+        type = "jacket"
 
         dialogue_lines = {}
 
-        price = 50
+        price = 150
 
-        shame = 2
+        shame = 0
 
-        hides = ["breasts", "pussy"]
-        covers = ["breasts", "pussy"]
+        hides = ["breasts"]
+        covers = ["breasts"]
 
         number_of_states = 2
 

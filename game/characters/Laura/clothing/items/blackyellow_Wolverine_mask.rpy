@@ -4,7 +4,7 @@ init -1 python:
         name = "black-and-yellow Wolverine mask"
         string = "blackyellow_Wolverine_mask"
 
-        type = "face_inner_accessory"
+        type = "face_outer_accessory"
 
         dialogue_lines = {
             "shopping": "I could get used to wearing this.",

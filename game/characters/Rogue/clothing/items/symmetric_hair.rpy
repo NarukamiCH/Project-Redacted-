@@ -1,18 +1,14 @@
 init -1 python:
 
-    def Laura_blueyellow_Wolverine_mask():
-        name = "blue-and-yellow Wolverine mask"
-        string = "blueyellow_Wolverine_mask"
+    def Rogue_symmetric_hair():
+        name = "symmetric hair"
+        string = "symmetric"
 
-        type = "face_outer_accessory"
+        type = "hair"
 
-        dialogue_lines = {
-            "shopping": "I could get used to wearing this.",
-            "purchased": f"Thanks, {Laura.player_petname}.",
-            "gift": "Ha, cool.",
-            "change": f"Feeling adventurous, {Laura.player_petname}?"}
+        dialogue_lines = {}
 
-        price = 100
+        price = 0
 
         shame = 0
 
@@ -26,7 +22,7 @@ init -1 python:
         incompatibilities = []
 
         return ClothingClass(
-            Laura, 
+            Rogue, 
             name, string, type, 
             dialogue_lines, 
             price = price, shame = shame, 

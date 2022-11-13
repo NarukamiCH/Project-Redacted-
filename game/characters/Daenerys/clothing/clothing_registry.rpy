@@ -15,38 +15,44 @@ init python:
         return Clothes
 
     def default_Daenerys_Outfits(Outfits):
+        braided_hair = Daenerys_braided_hair()
+        cloth_bra = Daenerys_cloth_bra()
+        cloth_panties = Daenerys_cloth_panties()
+        loose_hair = Daenerys_loose_hair()
+        war_dress = Daenerys_war_dress()
+
         for Outfit in Outfits:
             update = {}
 
             if Outfit.name == "casual":
                 update = {
-                    "hair": Daenerys_loose_hair(),
-                    "underwear": Daenerys_cloth_panties(),
+                    "hair": loose_hair,
+                    "underwear": cloth_panties,
                     "dress": Daenerys_cloth_dress(),
                     "sleeves": Daenerys_arm_band()}
             elif Outfit.name == "alternate":
                 update = {
-                    "hair": Daenerys_braided_hair(),
-                    "underwear": Daenerys_cloth_panties(),
-                    "dress": Daenerys_war_dress()}
+                    "hair": braided_hair,
+                    "underwear": cloth_panties,
+                    "dress": war_dress}
             elif Outfit.name == "hero":
                 update = {
-                    "hair": Daenerys_braided_hair(),
-                    "underwear": Daenerys_cloth_panties(),
-                    "dress": Daenerys_war_dress()}
+                    "hair": braided_hair,
+                    "underwear": cloth_panties,
+                    "dress": war_dress}
             elif Outfit.name == "swimsuit":
                 update = {
-                    "hair": Daenerys_braided_hair(),
-                    "underwear": Daenerys_cloth_panties(),
-                    "bra": Daenerys_cloth_bra()}
+                    "hair": braided_hair,
+                    "underwear": cloth_panties,
+                    "bra": cloth_bra}
             elif Outfit.name == "pajamas":
                 update = {
-                    "hair": Daenerys_loose_hair(),
-                    "underwear": Daenerys_cloth_panties(),
-                    "bra": Daenerys_cloth_bra()}
+                    "hair": loose_hair,
+                    "underwear": cloth_panties,
+                    "bra": cloth_bra}
             elif Outfit.name == "shower":
                 update = {
-                    "hair": Daenerys_loose_hair(),
+                    "hair": loose_hair,
                     "top": Daenerys_towel()}
 
             Outfit.update_Clothes(update)

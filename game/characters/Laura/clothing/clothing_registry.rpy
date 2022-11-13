@@ -16,7 +16,7 @@ init python:
             Laura_blueyellow_Wolverine_boots(),
             Laura_blueyellow_Wolverine_mask(),
             Laura_blueyellow_Wolverine_suit(),
-            Laura_combat_boots(),
+            # Laura_combat_boots(),
             Laura_cross_choker(),
             Laura_cross_necklace(),
             Laura_grey_panties(),
@@ -55,7 +55,7 @@ init python:
                     "neck": Laura_cross_necklace()}
             elif Outfit.name == "hero":
                 update = {
-                    "face_inner_accessory": Laura_blackyellow_Wolverine_mask(), "hair": Laura_straight_hair(),
+                    "face_outer_accessory": Laura_blackyellow_Wolverine_mask(), "hair": Laura_straight_hair(),
                     "underwear": Laura_grey_panties(),
                     "bodysuit": Laura_blackyellow_Wolverine_suit(),
                     "belt": Laura_Wolverine_belt()}
@@ -71,7 +71,7 @@ init python:
             elif Outfit.name == "shower":
                 update = {
                     "hair": Laura_straight_hair(),
-                    "top": Laura_towel()}
+                    "dress": Laura_towel()}
 
             Outfit.update_Clothes(update)
                 

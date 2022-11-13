@@ -1,5 +1,5 @@
 layeredimage Laura_sprite standing:
-    if Laura.Clothes["face_inner_accessory"].string:
+    if Laura.Clothes["face_outer_accessory"].string:
         "characters/Laura/images/standing/hair_back_mask.webp"
     else:
         "characters/Laura/images/standing/hair_back.webp"
@@ -46,6 +46,9 @@ layeredimage Laura_sprite standing:
     if Laura.piercings["nipple"] in ["ring", "both"]:
         "characters/Laura/images/standing/nipple_piercings_ring.webp"
 
+    if Laura.Clothes["socks"].string:
+        "characters/Laura/images/standing/bodysuit_[Laura.Clothes[socks].string].webp"
+
     if Laura.Clothes["underwear"].string:
         "characters/Laura/images/standing/underwear_[Laura.Clothes[underwear].string]_[Laura.Clothes[underwear].state].webp"
 
@@ -58,9 +61,6 @@ layeredimage Laura_sprite standing:
         Null()
     elif Laura.Clothes["underwear"].string == "grey_panties" and Laura.Clothes["underwear"].state == 0:
         "characters/Laura/images/standing/labia_piercings_ring_covered_grey_panties.webp"
-
-    if Laura.Clothes["socks"].string:
-        "characters/Laura/images/standing/bodysuit_[Laura.Clothes[socks].string].webp"
 
     if Laura.Clothes["hose"].string:
         "characters/Laura/images/standing/bodysuit_[Laura.Clothes[hose].string].webp"
@@ -101,26 +101,38 @@ layeredimage Laura_sprite standing:
 
     if Laura.piercings["nipple"] not in ["ring", "both"]:
         Null()
-    elif Laura.Clothes["dress"].string and Laura.Clothes["dress"].state == 0:
+    elif Laura.Clothes["dress"].string == "black_dress" and Laura.Clothes["dress"].state == 0:
         "characters/Laura/images/standing/nipple_piercings_ring_covered_[Laura.Clothes[dress].string].webp"
     elif Laura.Clothes["bra"].string in ["black_lace_bra", "white_tanktop"] and Laura.Clothes["bra"].state == 0:
         "characters/Laura/images/standing/nipple_piercings_ring_covered_[Laura.Clothes[bra].string].webp"
     elif Laura.Clothes["bodysuit"].string and Laura.Clothes["bodysuit"].state == 0:
         "characters/Laura/images/standing/nipple_piercings_ring_covered_[Laura.Clothes[bodysuit].string].webp"
 
-    if Laura.Clothes["top"].string:
-        "characters/Laura/images/standing/top_[Laura.Clothes[top].string]_[Laura.Clothes[top].state].webp"
+    if Laura.Clothes["neck"].string:
+        "characters/Laura/images/standing/neck_[Laura.Clothes[neck].string].webp"
 
     if Laura.Clothes["jacket"].string:
         "characters/Laura/images/standing/jacket_[Laura.Clothes[jacket].string].webp"
 
-    if Laura.Clothes["neck"].string:
-        "characters/Laura/images/standing/neck_[Laura.Clothes[neck].string].webp"
+    if Laura.arm_pose == 1:
+        "characters/Laura/images/standing/left_arm1.webp"
+
+    if Laura.arm_pose == 1 and Laura.Clothes["gloves"].string:
+        "characters/Laura/images/standing/gloves_[Laura.Clothes[gloves].string]_left1.webp"
+
+    if Laura.arm_pose == 1 and Laura.Clothes["bodysuit"].string in ["blackyellow_Wolverine_suit", "blueyellow_Wolverine_suit"]:
+        "characters/Laura/images/standing/bodysuit_[Laura.Clothes[bodysuit].string]_left_sleeve1.webp"
+
+    if Laura.arm_pose == 1 and Laura.Clothes["jacket"].string:
+        "characters/Laura/images/standing/jacket_[Laura.Clothes[jacket].string]_left_sleeve1.webp"
+
+    if Laura.arm_pose == 1 and Laura.claws:
+        "characters/Laura/images/standing/left_claws1.webp"
 
     always:
         "characters/Laura/images/standing/head.webp"
 
-    if Laura.Clothes["face_inner_accessory"].string:
+    if Laura.Clothes["face_outer_accessory"].string:
         "characters/Laura/images/standing/hair_mask.webp"
 
     if Laura.eyes in ["closed", "down", "side", "squint", "up"]:
@@ -137,41 +149,41 @@ layeredimage Laura_sprite standing:
     if Laura.blush:
         "characters/Laura/images/standing/blush[Laura.blush].webp"
 
-    if Laura.Clothes["face_inner_accessory"].string:
+    if Laura.Clothes["face_outer_accessory"].string:
         Null()
     elif Laura.wet:
         "characters/Laura/images/standing/hair_shadow_wet.webp"
     else:
         "characters/Laura/images/standing/hair_shadow_[Laura.Clothes[hair].string].webp"
 
-    if Laura.Clothes["face_inner_accessory"].string:
+    if Laura.Clothes["face_outer_accessory"].string:
         Null()
     elif Laura.wet:
         "characters/Laura/images/standing/hair_wet.webp"
     else:
         "characters/Laura/images/standing/hair_[Laura.Clothes[hair].string].webp"
 
-    if not Laura.Clothes["face_inner_accessory"].string:
+    if not Laura.Clothes["face_outer_accessory"].string:
         Null()
     elif Laura.mouth in ["agape", "open", "tongue"]:
-        "characters/Laura/images/standing/face_inner_accessory_[Laura.Clothes[face_inner_accessory].string]_open.webp"
+        "characters/Laura/images/standing/face_outer_accessory_[Laura.Clothes[face_outer_accessory].string]_open.webp"
     else:
-        "characters/Laura/images/standing/face_inner_accessory_[Laura.Clothes[face_inner_accessory].string].webp"
+        "characters/Laura/images/standing/face_outer_accessory_[Laura.Clothes[face_outer_accessory].string].webp"
 
-    always:
-        "characters/Laura/images/standing/left_arm[Laura.arm_pose].webp"
+    if Laura.arm_pose == 2:
+        "characters/Laura/images/standing/left_arm2.webp"
 
-    if Laura.Clothes["gloves"].string:
-        "characters/Laura/images/standing/gloves_[Laura.Clothes[gloves].string]_left[Laura.arm_pose].webp"
+    if Laura.arm_pose == 2 and Laura.Clothes["gloves"].string:
+        "characters/Laura/images/standing/gloves_[Laura.Clothes[gloves].string]_left2.webp"
 
-    if Laura.Clothes["bodysuit"].string in ["blackyellow_Wolverine_suit", "blueyellow_Wolverine_suit"]:
-        "characters/Laura/images/standing/bodysuit_[Laura.Clothes[bodysuit].string]_left_sleeve[Laura.arm_pose].webp"
+    if Laura.arm_pose == 2 and Laura.Clothes["bodysuit"].string in ["blackyellow_Wolverine_suit", "blueyellow_Wolverine_suit"]:
+        "characters/Laura/images/standing/bodysuit_[Laura.Clothes[bodysuit].string]_left_sleeve2.webp"
 
-    if Laura.Clothes["jacket"].string:
-        "characters/Laura/images/standing/jacket_[Laura.Clothes[jacket].string]_left_sleeve[Laura.arm_pose].webp"
+    if Laura.arm_pose == 2 and Laura.Clothes["jacket"].string:
+        "characters/Laura/images/standing/jacket_[Laura.Clothes[jacket].string]_left_sleeve2.webp"
 
-    if Laura.claws:
-        "characters/Laura/images/standing/left_claws[Laura.arm_pose].webp"
+    if Laura.arm_pose == 2 and Laura.claws:
+        "characters/Laura/images/standing/left_claws2.webp"
 
     anchor (0.5, 0.0) offset (0, -10) zoom 0.6
 

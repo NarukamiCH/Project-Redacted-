@@ -52,8 +52,7 @@ label cheat_menu(Girl):
                         Clothes = eval(f"all_{G.tag}_Clothes()")
 
                         for Clothing in Clothes:
-                            if Clothing.name not in G.Wardrobe.Clothes.keys():
-                                G.Wardrobe.Clothes[Clothing.name] = Clothing
+                            G.give(Clothing)
             "Done":
                 return
 

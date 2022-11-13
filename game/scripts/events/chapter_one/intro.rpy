@@ -153,6 +153,8 @@ label chapter_one_intro:
         "Sounds good to me!":
             ch_xavier ". . . Really? Just like that?"
 
+    $ Rogue.change_Outfit("casual", instant = True)
+
     call show_Character(Rogue, x_position = stage_right, transition = easeinright)
 
     $ Player.focused_Girl = Rogue

@@ -1,26 +1,26 @@
 init -1 python:
 
-    def Rogue_towel():
-        name = "towel"
-        string = "towel"
-
-        type = "dress"
-
+    def Rogue_black_stockings():
+        name = "black stockings"
+        string = "black_stockings"
+        
+        type = "socks"
+        
         dialogue_lines = {}
-
-        price = 50
-
-        shame = 2
-
-        hides = ["breasts", "pussy"]
-        covers = ["breasts", "pussy"]
-
-        number_of_states = 2
+        
+        price = 35
+        
+        shame = 1
+        
+        hides = []
+        covers = []
+        
+        number_of_states = 1
 
         poses = ["standing"]
-
+        
         incompatibilities = []
-
+        
         return ClothingClass(
             Rogue, 
             name, string, type, 

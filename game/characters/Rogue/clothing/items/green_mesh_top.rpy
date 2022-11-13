@@ -1,26 +1,26 @@
 init -1 python:
 
-    def Rogue_towel():
-        name = "towel"
-        string = "towel"
-
-        type = "dress"
-
+    def Rogue_green_mesh_top():
+        name = "green mesh top"
+        string = "green_mesh_top"
+        
+        type = "top"
+        
         dialogue_lines = {}
-
+        
         price = 50
-
-        shame = 2
-
-        hides = ["breasts", "pussy"]
-        covers = ["breasts", "pussy"]
-
-        number_of_states = 2
-
+        
+        shame = 1
+        
+        hides = []
+        covers = ["breasts"]
+        
+        number_of_states = 1
+        
         poses = ["standing"]
-
+        
         incompatibilities = []
-
+        
         return ClothingClass(
             Rogue, 
             name, string, type, 

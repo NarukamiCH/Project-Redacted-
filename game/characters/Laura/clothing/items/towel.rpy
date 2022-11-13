@@ -4,7 +4,7 @@ init -1 python:
         name = "towel"
         string = "towel"
 
-        type = "top"
+        type = "dress"
 
         dialogue_lines = {
             "shopping": "I do need one.",
