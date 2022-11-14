@@ -153,7 +153,11 @@ init python:
             elif face == "confused":
                 self.brows = "cocked"
                 self.eyes = "squint"
-                self.mouth = "kiss"
+
+                if self.tag == "Rogue":
+                    self.mouth = "neutral"
+                else:
+                    self.mouth = "kiss"
             elif face == "kiss":
                 self.brows = "worried"
                 self.eyes = "closed"
@@ -161,7 +165,11 @@ init python:
             elif face == "manic":
                 self.brows = "worried"
                 self.eyes = "wide"
-                self.mouth = "smile"
+
+                if self.tag == "Rogue":
+                    self.mouth = "open"
+                else:
+                    self.mouth = "smile"
                 
                 if not blush:
                     blush = 1
@@ -171,7 +179,7 @@ init python:
 
                 if self.tag == "Laura":
                     self.mouth = "neutral"
-                elif self.tag == "Daenerys":
+                else:
                     self.mouth = "open"
             elif face == "sad":
                 self.brows = "worried"
@@ -192,7 +200,7 @@ init python:
             elif face == "surprised":
                 if self.tag == "Laura":
                     self.mouth = "neutral"
-                elif self.tag == "Daenerys":
+                else:
                     self.mouth = "open"
 
                 self.brows = "raised"

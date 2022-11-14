@@ -55,7 +55,7 @@ init python:
                     "neck": Laura_cross_necklace()}
             elif Outfit.name == "hero":
                 update = {
-                    "face_outer_accessory": Laura_blackyellow_Wolverine_mask(), "hair": Laura_straight_hair(),
+                    "hair": Laura_straight_hair(), "face_outer_accessory": Laura_blackyellow_Wolverine_mask(), 
                     "underwear": Laura_grey_panties(),
                     "bodysuit": Laura_blackyellow_Wolverine_suit(),
                     "belt": Laura_Wolverine_belt()}

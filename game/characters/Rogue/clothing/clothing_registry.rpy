@@ -13,12 +13,16 @@ init python:
             Rogue_black_tights(),
             Rogue_black_top(),
             Rogue_brown_jacket(),
+            Rogue_classic_hair(),
             Rogue_green_bikini_bottoms(),
             Rogue_green_bikini_top(),
             Rogue_green_dress(),
+            Rogue_green_headband(),
             Rogue_green_mesh_top(),
             Rogue_green_nighty(),
+            Rogue_green_panties(),
             Rogue_leather_skirt(),
+            Rogue_purple_eyeshadow(),
             Rogue_Rogue_belt(),
             Rogue_Rogue_suit(),
             Rogue_spiked_bracelets(),
@@ -32,10 +36,11 @@ init python:
         return Clothes
 
     def default_Rogue_Outfits(Outfits):
-        asymmetric_hair = Rogue_asymmetric_hair()
         black_gloves = Rogue_black_gloves()
         black_tanktop = Rogue_black_tanktop()
-        green_bikini_bottoms = Rogue_green_bikini_bottoms()
+        classic_hair = Rogue_classic_hair()
+        green_panties = Rogue_green_panties()
+        purple_eyeshadow = Rogue_purple_eyeshadow()
         spiked_bracelets = Rogue_spiked_bracelets()
         spiked_collar = Rogue_spiked_collar()
 
@@ -44,41 +49,44 @@ init python:
 
             if Outfit.name == "casual":
                 update = {
-                    "hair": asymmetric_hair,
-                    "underwear": green_bikini_bottoms, "hose": Rogue_black_tights(),
+                    "makeup": purple_eyeshadow,
+                    "hair": classic_hair,
+                    "underwear": green_panties, "hose": Rogue_black_tights(),
                     "skirt": Rogue_leather_skirt(),
                     "bra": black_tanktop, "top": Rogue_green_mesh_top(),
                     "neck": spiked_collar, "gloves": black_gloves, "sleeves": spiked_bracelets}
             elif Outfit.name == "alternate":
                 update = {
-                    "hair": asymmetric_hair,
-                    "underwear": green_bikini_bottoms,
+                    "makeup": purple_eyeshadow,
+                    "hair": classic_hair,
+                    "underwear": green_panties,
                     "pants": Rogue_black_jeans(),
                     "bra": black_tanktop, "top": Rogue_black_top(),
-                    "neck": spiked_collar, "gloves": black_gloves, "sleeves": spiked_bracelets}
+                    "gloves": black_gloves}
             elif Outfit.name == "hero":
                 update = {
-                    "hair": asymmetric_hair,
-                    "underwear": green_bikini_bottoms,
+                    "makeup": purple_eyeshadow,
+                    "face_inner_accessory": Rogue_green_headband(), "hair": classic_hair,
+                    "underwear": green_panties,
                     "bodysuit": Rogue_Rogue_suit(),
+                    "boots": Rogue_yellow_boots(),
                     "belt": Rogue_Rogue_belt(),
                     "gloves": Rogue_yellow_gloves(),
                     "jacket": Rogue_brown_jacket()}
             elif Outfit.name == "swimsuit":
                 update = {
-                    "hair": asymmetric_hair,
-                    "underwear": green_bikini_bottoms,
-                    "bra": Rogue_green_bikini_top(),
-                    "neck": spiked_collar, "gloves": black_gloves, "sleeves": spiked_bracelets}
+                    "makeup": purple_eyeshadow,
+                    "hair": classic_hair,
+                    "underwear": Rogue_green_bikini_bottoms(),
+                    "bra": Rogue_green_bikini_top()}
             elif Outfit.name == "pajamas":
                 update = {
-                    "hair": asymmetric_hair,
-                    "underwear": green_bikini_bottoms,
-                    "bra": black_tanktop,
-                    "neck": spiked_collar, "gloves": black_gloves, "sleeves": spiked_bracelets}
+                    "hair": classic_hair,
+                    "underwear": green_panties,
+                    "bra": black_tanktop}
             elif Outfit.name == "shower":
                 update = {
-                    "hair": asymmetric_hair,
+                    "hair": classic_hair,
                     "dress": Rogue_towel()}
 
             Outfit.update_Clothes(update)

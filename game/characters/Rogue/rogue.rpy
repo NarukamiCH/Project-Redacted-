@@ -17,7 +17,7 @@ init python:
         Rogue.player_petname = "Sugar"
         Rogue.player_petnames = [Rogue.player_petname, Player.name]
 
-        Laura.piercings["belly"] = True
+        Rogue.piercings["belly"] = True
 
         Rogue.pubes = "hairy"
 

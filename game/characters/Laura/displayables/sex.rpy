@@ -1,34 +1,99 @@
+image Laura_sex_right_hand:
+    "characters/Laura/images/sex/right_hand.webp"
+
+    anchor (0.5, 0.5)
+
 image Laura_sex_body:
-    "images/Laura_sex/Laura_sex_body.webp"
+    "characters/Laura/images/sex/body.webp"
 
     anchor (0.5, 0.5)
 
 layeredimage Laura_sex_legs:
     always:
-        "images/Laura_sex/Laura_sex_legs.webp"
+        "characters/Laura/images/sex/legs.webp"
 
     # always:
-    #     "images/Laura_sex/Laura_sex_pussy_anus_reference.webp"
+    #     "characters/Laura/images/sex/reference.webp"
 
     if Laura.ass_Action.type == "anal":
-        "Laura_sex_anus_animation[Laura.ass_Action.speed]" pos (0.6, 1.115)
+        "Laura_sex_anus_animation[Laura.ass_Action.speed]" pos (0.54, 1.115)
     else:
-        "images/Laura_sex/Laura_sex_anus_closed.webp" anchor (0.5, 0.5) pos (0.6, 1.115)
+        "characters/Laura/images/sex/anus_closed.webp" anchor (0.5, 0.5) pos (0.54, 1.115)
 
     if Laura.pussy_Action.type == "sex":
-        "Laura_sex_pussy_animation[Laura.pussy_Action.speed]" pos (0.575, 1.036)
+        "Laura_sex_pussy_animation[Laura.pussy_Action.speed]" pos (0.515, 1.04)
     else:
-        "images/Laura_sex/Laura_sex_pussy_closed.webp" anchor (0.5, 0.5) pos (0.575, 1.036)
+        "characters/Laura/images/sex/pussy_closed.webp" anchor (0.5, 0.5) pos (0.515, 1.04)
 
     if Laura.pubes:
-        "images/Laura_sex/Laura_sex_pubes_[Laura.pubes].webp"
+        "characters/Laura/images/sex/pubes_[Laura.pubes].webp"
 
     anchor (0.5, 0.5)
 
 image Laura_sex_feet:
-    "images/Laura_sex/Laura_sex_feet.webp"
+    "characters/Laura/images/sex/feet.webp"
 
     anchor (0.5, 0.5)
+
+image Laura_sex_right_hand_animation0:
+    "Laura_sex_right_hand"
+
+image Laura_sex_right_hand_animation1:
+    animation
+    "Laura_sex_right_hand"
+
+    subpixel True
+    pos (0.0, 0.015)
+    parallel:
+        pause 0.1
+        ease 0.2 ypos 0.01
+        pause 0.1
+        ease 1.6 ypos 0.015
+        repeat
+    parallel:
+        pause 0.1
+        ease 0.2 xpos -0.01
+        pause 0.1
+        ease 1.6 xpos 0.0
+        repeat
+
+image Laura_sex_right_hand_animation2:
+    animation
+    "Laura_sex_right_hand"
+
+    subpixel True
+    pos (0.0, 0.015)
+    parallel:
+        pause 0.1
+        ease 0.2 ypos 0.01
+        pause 0.1
+        ease 1.6 ypos 0.015
+        repeat
+    parallel:
+        pause 0.1
+        ease 0.2 xpos -0.01
+        pause 0.1
+        ease 1.6 xpos 0.0
+        repeat
+
+image Laura_sex_right_hand_animation3:
+    animation
+    "Laura_sex_right_hand"
+
+    subpixel True
+    pos (0.0, 0.015)
+    parallel:
+        pause 0.1
+        ease 0.2 ypos 0.01
+        pause 0.1
+        ease 1.6 ypos 0.015
+        repeat
+    parallel:
+        pause 0.1
+        ease 0.2 xpos -0.01
+        pause 0.1
+        ease 1.6 xpos 0.0
+        repeat
 
 image Laura_sex_body_animation0:
     "Laura_sex_body"
@@ -43,13 +108,13 @@ image Laura_sex_body_animation1:
         pause 0.1
         ease 0.2 ypos 0.0
         pause 0.1
-        ease 1.8 ypos 0.015
+        ease 1.6 ypos 0.015
         repeat
     parallel:
         pause 0.1
         ease 0.2 xpos -0.015
         pause 0.1
-        ease 1.8 xpos 0.0
+        ease 1.6 xpos 0.0
         repeat
 
 image Laura_sex_body_animation2:
@@ -62,13 +127,13 @@ image Laura_sex_body_animation2:
         pause 0.1
         ease 0.2 ypos 0.0
         pause 0.1
-        ease 1.8 ypos 0.015
+        ease 1.6 ypos 0.015
         repeat
     parallel:
         pause 0.1
         ease 0.2 xpos -0.015
         pause 0.1
-        ease 1.8 xpos 0.0
+        ease 1.6 xpos 0.0
         repeat
 
 image Laura_sex_body_animation3:
@@ -81,13 +146,13 @@ image Laura_sex_body_animation3:
         pause 0.1
         ease 0.2 ypos 0.0
         pause 0.1
-        ease 1.8 ypos 0.015
+        ease 1.6 ypos 0.015
         repeat
     parallel:
         pause 0.1
         ease 0.2 xpos -0.015
         pause 0.1
-        ease 1.8 xpos 0.0
+        ease 1.6 xpos 0.0
         repeat
 
 image Laura_sex_legs_animation0:
@@ -103,13 +168,13 @@ image Laura_sex_legs_animation1:
         pause 0.05
         ease 0.2 ypos -0.02
         easeout 0.45 ypos -0.015
-        easein 1.5 ypos 0.0
+        easein 1.3 ypos 0.0
         repeat
     parallel:
         pause 0.05
         ease 0.2 xpos -0.02
         easeout 0.45 xpos -0.015
-        easein 1.5 xpos 0.0
+        easein 1.3 xpos 0.0
         repeat
 
 image Laura_sex_legs_animation2:
@@ -122,13 +187,13 @@ image Laura_sex_legs_animation2:
         pause 0.05
         ease 0.2 ypos -0.02
         easeout 0.45 ypos -0.015
-        easein 1.5 ypos 0.0
+        easein 1.3 ypos 0.0
         repeat
     parallel:
         pause 0.05
         ease 0.2 xpos -0.02
         easeout 0.45 xpos -0.015
-        easein 1.5 xpos 0.0
+        easein 1.3 xpos 0.0
         repeat
 
 image Laura_sex_legs_animation3:
@@ -141,13 +206,13 @@ image Laura_sex_legs_animation3:
         pause 0.05
         ease 0.2 ypos -0.02
         easeout 0.45 ypos -0.015
-        easein 1.5 ypos 0.0
+        easein 1.3 ypos 0.0
         repeat
     parallel:
         pause 0.05
         ease 0.2 xpos -0.02
         easeout 0.45 xpos -0.015
-        easein 1.5 xpos 0.0
+        easein 1.3 xpos 0.0
         repeat
 
 image Laura_sex_feet_animation0:
@@ -163,13 +228,13 @@ image Laura_sex_feet_animation1:
         pause 0.05
         ease 0.2 ypos -0.02
         easeout 0.45 ypos -0.015
-        easein 1.5 ypos 0.0
+        easein 1.3 ypos 0.0
         repeat
     parallel:
         pause 0.05
         ease 0.2 xpos -0.02
         easeout 0.45 xpos -0.015
-        easein 1.5 xpos 0.0
+        easein 1.3 xpos 0.0
         repeat
 
 image Laura_sex_feet_animation2:
@@ -182,13 +247,13 @@ image Laura_sex_feet_animation2:
         pause 0.05
         ease 0.2 ypos -0.02
         easeout 0.45 ypos -0.015
-        easein 1.5 ypos 0.0
+        easein 1.3 ypos 0.0
         repeat
     parallel:
         pause 0.05
         ease 0.2 xpos -0.02
         easeout 0.45 xpos -0.015
-        easein 1.5 xpos 0.0
+        easein 1.3 xpos 0.0
         repeat
 
 image Laura_sex_feet_animation3:
@@ -201,95 +266,95 @@ image Laura_sex_feet_animation3:
         pause 0.05
         ease 0.2 ypos -0.02
         easeout 0.45 ypos -0.015
-        easein 1.5 ypos 0.0
+        easein 1.3 ypos 0.0
         repeat
     parallel:
         pause 0.05
         ease 0.2 xpos -0.02
         easeout 0.45 xpos -0.015
-        easein 1.5 xpos 0.0
+        easein 1.3 xpos 0.0
         repeat
 
 image Laura_sex_pussy_animation0:
-    "images/Laura_sex/Laura_sex_pussy_closed.webp"
+    "characters/Laura/images/sex/pussy_closed.webp"
 
     anchor (0.5, 0.5)
 
 image Laura_sex_pussy_animation1:
     animation
-    "images/Laura_sex/Laura_sex_pussy_open.webp"
+    "characters/Laura/images/sex/pussy_open.webp"
 
     subpixel True
     anchor (0.5, 0.5)
     block:
-        ease 0.2 zoom 1.02
-        easeout 0.5 zoom 1.0
-        easein 1.5 zoom 1.0
+        ease 0.2 zoom 1.025
+        easeout 0.5 zoom 1.015
+        easein 1.3 zoom 1.0
         repeat
 
 image Laura_sex_pussy_animation2:
     animation
-    "images/Laura_sex/Laura_sex_pussy_fucking.webp"
+    "characters/Laura/images/sex/pussy_penetrated.webp"
 
     subpixel True
     anchor (0.5, 0.5)
     block:
-        ease 0.2 zoom 1.02
-        easeout 0.5 zoom 1.0
-        easein 1.5 zoom 1.0
+        ease 0.2 zoom 1.025
+        easeout 0.5 zoom 1.015
+        easein 1.3 zoom 1.0
         repeat
 
 image Laura_sex_pussy_animation3:
     animation
-    "images/Laura_sex/Laura_sex_pussy_fucking.webp"
+    "characters/Laura/images/sex/pussy_penetrated.webp"
 
     subpixel True
     anchor (0.5, 0.5)
     block:
-        ease 0.2 zoom 1.02
-        easeout 0.5 zoom 1.0
-        easein 1.5 zoom 1.0
+        ease 0.2 zoom 1.025
+        easeout 0.5 zoom 1.015
+        easein 1.3 zoom 1.0
         repeat
 
 image Laura_sex_anus_animation0:
-    "images/Laura_sex/Laura_sex_anus_closed.webp"
+    "characters/Laura/images/sex/anus_closed.webp"
 
     anchor (0.5, 0.5)
 
 image Laura_sex_anus_animation1:
     animation
-    "images/Laura_sex/Laura_sex_anus_open.webp"
+    "characters/Laura/images/sex/anus_open.webp"
 
     subpixel True
     anchor (0.5, 0.5)
     block:
-        ease 0.2 zoom 1.02
-        easeout 0.5 zoom 1.0
-        easein 1.5 zoom 1.0
+        ease 0.2 zoom 1.03
+        easeout 0.5 zoom 1.02
+        easein 1.3 zoom 1.0
         repeat
 
 image Laura_sex_anus_animation2:
     animation
-    "images/Laura_sex/Laura_sex_anus_fucking.webp"
+    "characters/Laura/images/sex/anus_penetrated.webp"
 
     subpixel True
     anchor (0.5, 0.5)
     block:
-        ease 0.2 zoom 1.02
-        easeout 0.5 zoom 1.0
-        easein 1.5 zoom 1.0
+        ease 0.2 zoom 1.03
+        easeout 0.5 zoom 1.02
+        easein 1.3 zoom 1.0
         repeat
 
 image Laura_sex_anus_animation3:
     animation
-    "images/Laura_sex/Laura_sex_anus_fucking.webp"
+    "characters/Laura/images/sex/anus_penetrated.webp"
 
     subpixel True
     anchor (0.5, 0.5)
     block:
-        ease 0.2 zoom 1.02
-        easeout 0.5 zoom 1.0
-        easein 1.5 zoom 1.0
+        ease 0.2 zoom 1.03
+        easeout 0.5 zoom 1.02
+        easein 1.3 zoom 1.0
         repeat
 
 image Laura_sex_cock_animation0:
@@ -407,6 +472,10 @@ layeredimage Laura_sex_cock_animations:
         "Laura_sex_cock_anal_animation[Player.cock_Action.speed]" offset (150, 250) rotate -35 zoom 1.25
 
 image Laura_sprite sex:
+    contains:
+        ConditionSwitch(
+            "Laura in Player.cock_Action.Actors", "Laura_sex_right_hand_animation[Player.cock_Action.speed]",
+            "True", "Laura_sex_right_hand_animation0")
     contains:
         ConditionSwitch(
             "Laura in Player.cock_Action.Actors", "Laura_sex_body_animation[Player.cock_Action.speed]",

@@ -19,7 +19,7 @@ init -1 python:
         
         poses = ["standing"]
         
-        incompatibilities = []
+        incompatibilities = ["belt", "jacket"]
         
         return ClothingClass(
             Rogue, 

@@ -38,8 +38,17 @@ layeredimage Rogue_sprite standing:
     if Rogue.pubes:
         "characters/Rogue/images/standing/pubes_[Rogue.pubes].webp"
 
+    if Rogue.Clothes["socks"].string:
+        "characters/Rogue/images/standing/socks_[Rogue.Clothes[socks].string].webp"
+
+    if Rogue.Clothes["underwear"].string:
+        "characters/Rogue/images/standing/underwear_[Rogue.Clothes[underwear].string]_[Rogue.Clothes[underwear].state].webp"
+
     if Rogue.piercings["belly"]:
-        "characters/Rogue/images/standing/belly_button_piercing.webp"
+        "characters/Rogue/images/standing/belly_piercing.webp"
+
+    if Rogue.Clothes["hose"].string:
+        "characters/Rogue/images/standing/hose_[Rogue.Clothes[hose].string]_[Rogue.Clothes[hose].state].webp"
 
     always:
         "characters/Rogue/images/standing/breasts.webp"
@@ -52,15 +61,6 @@ layeredimage Rogue_sprite standing:
 
     if Rogue.piercings["nipple"] in ["ring", "both"]:
         "characters/Rogue/images/standing/nipple_piercings_ring.webp"
-
-    if Rogue.Clothes["socks"].string:
-        "characters/Rogue/images/standing/socks_[Rogue.Clothes[socks].string].webp"
-
-    if Rogue.Clothes["underwear"].string:
-        "characters/Rogue/images/standing/underwear_[Rogue.Clothes[underwear].string]_[Rogue.Clothes[underwear].state].webp"
-
-    if Rogue.Clothes["hose"].string:
-        "characters/Rogue/images/standing/hose_[Rogue.Clothes[hose].string]_[Rogue.Clothes[hose].state].webp"
 
     if Rogue.Clothes["bodysuit"].string:
         "characters/Rogue/images/standing/bodysuit_[Rogue.Clothes[bodysuit].string].webp"
@@ -134,11 +134,6 @@ layeredimage Rogue_sprite standing:
         "characters/Rogue/images/standing/face_inner_accessory_[Rogue.Clothes[face_inner_accessory].string].webp"
 
     if Rogue.wet:
-        "characters/Rogue/images/standing/hair_shadow_wet.webp"
-    else:
-        "characters/Rogue/images/standing/hair_shadow_[Rogue.Clothes[hair].string].webp"
-
-    if Rogue.wet:
         "characters/Rogue/images/standing/hair_wet.webp"
     else:
         "characters/Rogue/images/standing/hair_[Rogue.Clothes[hair].string].webp"
@@ -168,8 +163,7 @@ layeredimage Rogue_sprite standing:
     if Rogue.Clothes["gloves"].string == "yellow_gloves":
         "characters/Rogue/images/standing/gloves_yellow_gloves_left[Rogue.arm_pose].webp"
 
-
-    anchor (0.5, 0.0) offset (0, 10) zoom 0.6
+    anchor (0.5, 0.0) offset (0, 50) zoom 0.62
 
 image Rogue_standing_blinking:
     f"characters/Rogue/images/standing/eyes_{Rogue.eyes}.webp"
