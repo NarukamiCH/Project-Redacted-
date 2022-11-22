@@ -100,7 +100,7 @@ label wardrobe_editor(Girl):
                                     break
 
                             if currently_wearing:
-                                Girl.change_out_of(new_Clothing.type)
+                                Girl.take_off(new_Clothing.type)
                             else:
                                 Girl.change_into(new_Clothing.name)
                         else:

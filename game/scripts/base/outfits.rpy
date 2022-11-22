@@ -131,7 +131,7 @@ init -2 python:
 
             return
 
-        def change_into(self, Clothing, instant = False):
+        def change_into(self, Clothing, instant = False):                
             if self.Clothes[Clothing.type].string:
                 if Clothing.name == self.Clothes[Clothing.type].name:
                     return

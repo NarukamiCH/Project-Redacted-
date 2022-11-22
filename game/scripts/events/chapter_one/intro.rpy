@@ -107,10 +107,16 @@ label chapter_one_intro:
     ch_xavier "You were attacked by. . . an evil entity. One I've faced before."
     ch_xavier "It seems he wanted something from you."
     ch_player "That thing inside my head? What? What would it want from me?"
+
+    $ Xavier.change_face("smile")
+
     ch_xavier "You're a mutant, [Player.name]. Like me."
     ch_xavier "Your abilities emerged yesterday while you were under duress, although I believe Mr. Farouk has been watching you for some time already."
     ch_player "Farouk??? That was him???"
     ch_player "Jesus, I thought he was just a shitty professor."
+
+    $ Xavier.change_face("neutral")
+
     ch_xavier "That too. I don't know why he has developed an interest in you, but you are safe here from him."
     ch_xavier "You see, this is both a school and a haven that I have built for people like you and me."
     ch_xavier "There are many forces out there that wish to harm or use mutants like yourself. I fear Mr. Farouk is not the worst of them."
@@ -128,7 +134,7 @@ label chapter_one_intro:
                 $ asked_mutant = True
             "So. . . what's your power?" if asked_mutant and not asked_Xavier:
                 $ Xavier.psychic = True
-                $ Xavier.change_face("stunned")
+                $ Xavier.brows = "furrowed"
 
                 ch_xavier_tele "I'm a telepath, not unlike your old professor. A professor myself as well, in fact. But that is where the similarities end."
 
@@ -138,7 +144,11 @@ label chapter_one_intro:
                 $ asked_Xavier = True
             "Well, I'm out of questions.":
                 if not asked_mutant and not asked_Xavier:
+                    $ Xavier.change_face("confused")
+
                     ch_xavier ". . . Okay. . ."
+
+                    $ Xavier.change_face("neutral")
 
                 $ chatting = False
 
@@ -151,6 +161,8 @@ label chapter_one_intro:
         "I don't know. . .":
             pass
         "Sounds good to me!":
+            $ Xavier.change_face("surprised")
+
             ch_xavier ". . . Really? Just like that?"
 
     $ Rogue.change_Outfit("casual", instant = True)
@@ -160,38 +172,57 @@ label chapter_one_intro:
     $ Player.focused_Girl = Rogue
 
     $ Rogue.name = "???"
+    $ Rogue.change_face("perplexed")
 
     ch_rogue "Professor? You wanted to see me?"
+
+    $ Xavier.change_face("smile")
+
     ch_xavier "Ah, yes, thank you, Rogue."
 
     $ Rogue.name = "Rogue"
 
     ch_xavier "[Player.name], I would like you to meet one of our students. [Rogue.name], this is [Player.name]."
+    
+    $ Rogue.change_face("smile")
+
     ch_rogue "Pleasure to meet ya, [Rogue.player_petname]!"
 
     menu:
         extend ""
         "You've convinced me, [Xavier.name]. I'll stay.":
+            $ Rogue.change_face("confused")
+
             ch_rogue "I. . . what?"
         "It's a pleasure to meet you too!":
+            $ Rogue.change_face("sexy")
+
             call change_Girl_stat(Rogue, "love", 1)
 
     ch_xavier "[Rogue.name], I was hoping that you might be able to help show [Player.name] around. You know, introduce him to the other students and make him feel welcome."
+    
+    $ Rogue.change_face("smile")
+
     ch_rogue "Well sure, Prof!"
     ch_xavier "[Player.name], I leave you in [Rogue.name]'s capable hands."
 
     menu:
         extend ""
         "Bless you, old man":
+            $ Xavier.change_face("confused")
+
             ch_xavier ". . ."
         "Capable hands indeed.":
             call change_Girl_stat(Rogue, "love", 1)
+            $ Rogue.change_face("sly")
 
             ch_rogue "Heh, okay Romeo."
 
     call hide_Character(Xavier, transition = easeoutright)
 
     $ Xavier.name = "Xavier"
+
+    $ Rogue.change_face("smile")
 
     ch_rogue "Shall we, [Rogue.player_petname]?"
 
@@ -207,8 +238,12 @@ label chapter_one_intro_1A:
     menu:
         extend ""
         "That's. . . awesome!":
+            $ Xavier.brows = "raised"
+
             ch_xavier "I'm. . . glad you're taking this so well, [Player.name]."
         "Oh, godammit.":
+            $ Xavier.change_face("smile")
+
             ch_xavier "Come now, [Player.name], you are still the same person you were yesterday."
             ch_player "That's. . . not very comforting."
         "Huh.":
@@ -220,6 +255,9 @@ label chapter_one_intro_1A:
         ch_player "Other than. . . well, you know."
 
     ch_player "I hope I can fly."
+
+    $ Xavier.change_face("neutral")
+
     ch_xavier "Our scans indicate that you have a very unique ability: close contact with you seems to. . . nullify other mutants' powers."
     ch_xavier "Accordingly, you seem to be impervious to the effects of {i}some{/i} mutant powers."
     ch_xavier "We don't fully understand how it works, and I suspect it will take much time - and training - before you are able to control it reliably."
@@ -227,9 +265,13 @@ label chapter_one_intro_1A:
     menu:
         extend ""
         "Huh. That's kind of lame isn't it?":
+            $ Xavier.change_face("sad")
+
             ch_xavier "If you only knew the lengths some mutants would go to have their abilities removed. . ."
         "Oh, that's cool I guess?":
             pass
+
+    $ Xavier.change_face("neutral")
 
     ch_xavier "Indeed, news of your arrival has already caused a bit of a stir around here."
 
@@ -239,6 +281,8 @@ label chapter_one_tour:
     call hide_Character(Rogue)
     call set_the_scene(location = "bg_player", fade = True)
     call add_Characters(Rogue)
+
+    $ Rogue.change_face("neutral")
 
     ch_rogue "You've already seen your room, right [Rogue.player_petname]? We each get private rooms now that the campus has been expanded."
     ch_player "Nice, where's yours?"
@@ -259,18 +303,29 @@ label chapter_one_tour:
             call change_Girl_stat(Rogue, "love", -2)
             call change_Girl_stat(Rogue, "trust", -1)
 
+            $ Rogue.change_face("sad", mouth = "neutral")
+
             ch_rogue "'Fraid so, [Rogue.player_petname]."
 
     if approval_check(Rogue, threshold = 40):
+        $ Rogue.change_face("sexy")
+
         ch_rogue "Ya know, if you sign up for a class with me, we could study together…"
 
     call hide_Character(Rogue)
     call set_the_scene(location = "bg_danger", fade = True)
     call add_Characters(Rogue)
 
+    $ Rogue.change_face("neutral")
+
     ch_rogue "This is the Danger Room. It's decked out with all sorts of advanced tech. It can even simulate realistic battlefield scenarios."
     ch_rogue "You'll spend a lot of time here with the rest of us, training to use our powers."
+    
+    $ Rogue.change_face("smile")
+    
     ch_rogue "If you show some combat promise, you'll do teamwork exercises with your X-squad here too."
+
+    $ Rogue.change_face("neutral")
 
     call hide_Character(Rogue)
     call set_the_scene(location = "bg_campus", fade = True)
@@ -278,7 +333,12 @@ label chapter_one_tour:
 
     ch_player "Wow, nice place."
     ch_rogue "Yeah, it's a treat getting to live here. Prof. X was really generous to turn his mansion into the Institute."    
+    
     ch_rogue "Well [Rogue.player_petname], that's the end of the tour."
+
+    $ Rogue.change_face("sly", eyes = "side")
+    $ Rogue.arm_pose = 2
+    
     ch_rogue "So uh. . . is it true what Xavier said? That other mutants' abilities don't work on you?"
 
     menu:
@@ -291,12 +351,21 @@ label chapter_one_tour:
 
             ch_rogue "Well, my power is the ability to absorb the mutant powers and memories of those I touch."
 
+    $ Rogue.arm_pose = 1
+
+    $ Rogue.change_face("neutral", eyes = "down")
+
     ch_rogue "Only, I still can't really control it. I can't touch people without hurting them, and I might even put them into a coma if I'm not careful."
+    
+    $ Rogue.change_face("sad")
+
     ch_rogue "I haven't been able to touch someone in a really long time. . ."
 
     menu:
         extend ""
         "So? Whatcha waiting for?":
+            $ Rogue.change_face("surprised")
+
             ch_rogue ". . . Really? You don't mind?"
 
             menu:
@@ -305,21 +374,37 @@ label chapter_one_tour:
                     call change_Girl_stat(Rogue, "love", 5)
                     call change_Girl_stat(Rogue, "trust", 2)
 
+                    $ Rogue.change_face("smile")
+
                     ch_rogue "Wow, thanks, [Rogue.player_petname]!"
+
+                    $ Rogue.arm_pose = 2
+                    $ Rogue.take_off("gloves")
+
                     "She takes off her gloves and reaches out to touch your face."
                     "Her fingers brush against your skin, and she shivers slightly. She pulls away shyly."
                 "What about a kiss?":
                     if approval_check(Rogue, "love", 40):
+                        $ Rogue.change_face("sexy")
+
                         ch_rogue "Hmm. . . okay. . ."
 
-                        call smooch(Rogue)
+                        $ Rogue.change_face("kiss")
 
                         "She gives you a little peck on the cheek."
                     else:
+                        $ Rogue.change_face("neutral", eyes = "side")
+
                         ch_rogue "Heh, no thanks, [Rogue.player_petname]."
                         ch_rogue "But maybe. . ."
+
+                        $ Rogue.arm_pose = 2
+                        $ Rogue.take_off("gloves")
+
                         "She takes off her gloves and reaches out to touch your face."
                         "Her fingers brush against your skin, and she shivers slightly. She pulls away shyly."
+
+            $ Rogue.arm_pose = 1
 
             $ Rogue.craving_rate += 1
 
@@ -330,8 +415,12 @@ label chapter_one_tour:
             call change_Girl_stat(Rogue, "love", 2)
             call change_Girl_stat(Rogue, "trust", 2)
 
+            $ Rogue.change_into("black gloves")
+
             ch_rogue "Thanks, [Rogue.player_petname], I. . . really appreciate it."
         "[[Move in for a kiss]":
+            $ Rogue.change_face("angry")
+
             "She pushes you away." with vpunch
 
             call change_Girl_stat(Rogue, "trust", -5)
@@ -341,11 +430,17 @@ label chapter_one_tour:
             call change_Girl_stat(Rogue, "love", -2)
             call change_Girl_stat(Rogue, "trust", -1)
 
+            $ Rogue.change_face("sad")
+
             ch_rogue "Yeah. . . anyways. . ."
 
     if approval_check(Rogue, threshold = 80):
+        $ Rogue.change_face("smile")
+
         ch_rogue "Let's hang out later!"
     else:
+        $ Rogue.change_face("neutral", mouth = "lipbite")
+
         ch_rogue "I'll uh. . . I'll see you later!"
 
     call hide_Character(Rogue)

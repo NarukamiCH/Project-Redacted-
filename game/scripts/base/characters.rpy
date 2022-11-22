@@ -196,7 +196,11 @@ init python:
             elif face == "smile":
                 self.brows = "neutral"
                 self.eyes = "neutral"
-                self.mouth = "smile"
+
+                if self.tag == "Rogue":
+                    self.mouth = "smirk"
+                else:
+                    self.mouth = "smile"
             elif face == "surprised":
                 if self.tag == "Laura":
                     self.mouth = "neutral"
@@ -291,11 +295,6 @@ init python:
                 return
 
             self.Outfit.change_into(self.Wardrobe.Clothes[Clothing_name], instant = instant)
-
-            return
-
-        def change_out_of(self, type, instant = False):
-            self.Outfit.change_out_of(type, instant = instant)
 
             return
 
