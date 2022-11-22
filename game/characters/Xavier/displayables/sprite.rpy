@@ -16,7 +16,7 @@ layeredimage Xavier_sprite:
     if Xavier.psychic:
         "characters/Xavier/images/psychic.webp"
 
-    anchor (0.5, 0.0) offset (0, 500) zoom 0.55
+    anchor (0.5, 0.0) offset (0, 400) zoom 0.55
 
 image Xavier_blinking:
     f"characters/Xavier/images/eyes_{Xavier.eyes}.webp"

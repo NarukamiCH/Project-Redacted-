@@ -19,8 +19,11 @@ init python:
 label caught_showering:
     call remove_all(location = Player.destination)
 
-    while Girl in Player.Party:
-        $ Girl = renpy.random.choice(active_Girls)
+    python:
+        Girl = None
+        
+        while not Girl or Girl in Player.Party:
+            Girl = renpy.random.choice(active_Girls)
     
     $ Girl.wet = True
     $ Girl.location = Player.destination

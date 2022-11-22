@@ -130,14 +130,6 @@ layeredimage Rogue_sprite standing:
     if Rogue.blush:
         "characters/Rogue/images/standing/blush[Rogue.blush].webp"
 
-    if Rogue.Clothes["face_inner_accessory"].string:
-        "characters/Rogue/images/standing/face_inner_accessory_[Rogue.Clothes[face_inner_accessory].string].webp"
-
-    if Rogue.wet:
-        "characters/Rogue/images/standing/hair_wet.webp"
-    else:
-        "characters/Rogue/images/standing/hair_[Rogue.Clothes[hair].string].webp"
-
     always:
         "characters/Rogue/images/standing/left_arm[Rogue.arm_pose].webp"
 
@@ -163,7 +155,15 @@ layeredimage Rogue_sprite standing:
     if Rogue.Clothes["gloves"].string == "yellow_gloves":
         "characters/Rogue/images/standing/gloves_yellow_gloves_left[Rogue.arm_pose].webp"
 
-    anchor (0.5, 0.0) offset (0, 50) zoom 0.62
+    if Rogue.Clothes["face_inner_accessory"].string:
+        "characters/Rogue/images/standing/face_inner_accessory_[Rogue.Clothes[face_inner_accessory].string].webp"
+
+    if Rogue.wet:
+        "characters/Rogue/images/standing/hair_wet.webp"
+    else:
+        "characters/Rogue/images/standing/hair_[Rogue.Clothes[hair].string].webp"
+
+    anchor (0.5, 0.0) offset (0, -90) zoom 0.65
 
 image Rogue_standing_blinking:
     f"characters/Rogue/images/standing/eyes_{Rogue.eyes}.webp"

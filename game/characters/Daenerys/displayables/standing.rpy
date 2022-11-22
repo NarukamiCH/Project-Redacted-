@@ -116,7 +116,7 @@ layeredimage Daenerys_sprite standing:
     else:
         "characters/Daenerys/images/standing/hair_[Daenerys.Clothes[hair].string].webp"
 
-    anchor (0.5, 0.0) offset (0, 70) zoom 0.635
+    anchor (0.5, 0.0) offset (0, 10) zoom 0.635
 
 image Daenerys_standing_blinking:
     f"characters/Daenerys/images/standing/eyes_{Daenerys.eyes}.webp"

@@ -185,7 +185,7 @@ layeredimage Laura_sprite standing:
     if Laura.arm_pose == 2 and Laura.claws:
         "characters/Laura/images/standing/left_claws2.webp"
 
-    anchor (0.5, 0.0) offset (0, -10) zoom 0.6
+    anchor (0.5, 0.0) offset (0, 20) zoom 0.62
 
 image Laura_standing_blinking:
     f"characters/Laura/images/standing/eyes_{Laura.eyes}.webp"
@@ -196,9 +196,9 @@ image Laura_standing_blinking:
     choice:
         3.5
     "characters/Laura/images/standing/eyes_blink1.webp"
-    0.023
+    0.027
     "characters/Laura/images/standing/eyes_blink2.webp"
-    0.023
+    0.027
     "characters/Laura/images/standing/eyes_closed.webp"
     0.054
     "characters/Laura/images/standing/eyes_blink2.webp"
