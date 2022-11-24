@@ -24,7 +24,7 @@ label swim:
 
         hide black_screen onlayer black
 
-    call show_swimming(Swimmers[:])
+    # call show_swimming(Swimmers[:])
 
     $ D20 = renpy.random.randint(1, 20)
 

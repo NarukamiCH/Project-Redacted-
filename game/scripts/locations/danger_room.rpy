@@ -4,7 +4,7 @@ label train:
     if selected_Event:
         $ selected_Event.start()
 
-        _return
+        return
 
     $ D20 = renpy.random.randint(1, 20)
 

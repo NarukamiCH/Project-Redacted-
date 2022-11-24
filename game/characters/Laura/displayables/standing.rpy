@@ -92,7 +92,7 @@ layeredimage Laura_sprite standing:
 
     if Laura.piercings["nipple"] not in ["barbell", "both"]:
         Null()
-    elif Laura.Clothes["dress"].string and Laura.Clothes["dress"].state == 0:
+    elif Laura.Clothes["dress"].string == "black_dress" and Laura.Clothes["dress"].state == 0:
         "characters/Laura/images/standing/nipple_piercings_barbell_covered_[Laura.Clothes[dress].string].webp"
     elif Laura.Clothes["bra"].string in ["black_lace_bra", "white_tanktop"] and Laura.Clothes["bra"].state == 0:
         "characters/Laura/images/standing/nipple_piercings_barbell_covered_[Laura.Clothes[bra].string].webp"
