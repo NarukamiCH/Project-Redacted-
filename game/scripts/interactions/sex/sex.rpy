@@ -99,7 +99,7 @@ label continue_Actions:
         renpy.random.shuffle(unique_Actions)
 
     while unique_Actions:
-        call expression f"{unique_Actions[0].type}_narrations" pass (unique_Actions[0])
+        # call expression f"{unique_Actions[0].type}_narrations" pass (unique_Actions[0])
 
         $ unique_Actions.remove(unique_Actions[0])
 

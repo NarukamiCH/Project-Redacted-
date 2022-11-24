@@ -9,31 +9,6 @@ label take_a_shower:
         renpy.random.shuffle(showering_Girls)
 
     if showering_Girls:
-        ch_player "I'm taking a shower, care to join me?"
-
-        python:
-            for G in showering_Girls:
-                G.undress()
-                G.wet = True
-
-    if showering_Girls:
-        if len(showering_Girls) > 2:
-            "You take a quick shower with the girls."
-        elif len(showering_Girls) == 2:
-            "You take a quick shower with [showering_Girls[0].name] and [showering_Girls[1].name]."
-        else:
-            "You take a quick shower with [showering_Girls[0].name]."
-    else:
-        "You take a quick shower."
-
-        $ line = renpy.random.choice([
-            "It was fairly uneventful.",
-            "A few people came and went as you did so.",
-            "That was refreshing."])
-
-        "[line]"
-
-    if showering_Girls:
         python:
             for G in showering_Girls:
                 G.change_into("towel")
