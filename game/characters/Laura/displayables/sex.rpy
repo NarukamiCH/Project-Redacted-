@@ -476,6 +476,7 @@ image Laura_sprite sex:
         ConditionSwitch(
             "Laura in Player.cock_Action.Actors", "Laura_sex_right_hand_animation[Player.cock_Action.speed]",
             "True", "Laura_sex_right_hand_animation0")
+            
     contains:
         ConditionSwitch(
             "Laura in Player.cock_Action.Actors", "Laura_sex_body_animation[Player.cock_Action.speed]",

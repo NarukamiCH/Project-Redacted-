@@ -16,6 +16,7 @@ init python:
 
             self.naked = False
             self.cock_out = False
+            self.grool = False
 
             self.destination = "bg_entrance"
             self.location = "bg_entrance"
